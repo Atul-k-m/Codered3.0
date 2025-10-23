@@ -1,0 +1,50 @@
+@import "tailwindcss";
+:root {
+--bg-black: #070607;
+--accent-red: #e11d2f; /* vivid red */
+--muted-white: #f5f5f7;
+--window-yellow: #ffd94d;
+}
+
+
+body {
+background: var(--bg-black);
+color: var(--muted-white);
+font-family: 'Valorant', 'Bebas Neue', 'Orbitron', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+
+/* small utility for glow */
+.glow {
+text-shadow: 0 2px 8px rgba(225,29,47,0.35);
+}
+
+
+/* skyline animation */
+@keyframes floatBuildings { 0%{ transform: translateY(0px)} 50%{ transform: translateY(-6px)} 100%{ transform: translateY(0px)} }
+.building { animation: floatBuildings 6s ease-in-out infinite; transform-origin: center; }
+
+
+/* subtle star/particle animation */
+.particles { position:absolute; inset:0; pointer-events:none; }
+.particle { position:absolute; width:4px; height:4px; border-radius:999px; opacity:0.9; animation: twinkle 4s linear infinite; }
+@keyframes twinkle { 0% { opacity: 0.1 } 50% { opacity: 0.9 } 100% { opacity: 0.1 } }
+
+
+/* responsive constraints for hero content */
+.hero-container { max-width: 1200px; margin: 0 auto; padding: 2.5rem; }
+
+
+/* topbar sticky */
+.topbar { position: absolute; top:0; left:0; right:0; z-index:40; }
+
+
+/* CTA buttons */
+.btn-ghost { background:transparent; border: 1px solid rgba(255,255,255,0.12); padding:0.6rem 1rem; border-radius:10px; }
+.btn-primary { background: linear-gradient(90deg, #ff3b3b, #e11d2f); padding:0.6rem 1.1rem; border-radius:10px; color: white; }
+
+
+/* small responsive tweaks */
+@media (max-width: 768px){
+.hero-container{ padding:1.5rem }
+}
