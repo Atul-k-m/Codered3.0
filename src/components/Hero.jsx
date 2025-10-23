@@ -299,11 +299,57 @@ export default function Hero() {
     
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex justify-end items-center bg-black/80 backdrop-blur-sm border-b border-red-900/30">
-        <button className="bg-red-600 hover:bg-red-700 transition-colors px-6 py-2 rounded-full flex items-center gap-2 text-sm tracking-wide">
-          Register Now
-          <ArrowRight size={16} />
-        </button>
+      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-2 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
+          {/* Left side - Logo */}
+          <div className="flex items-center">
+            <img 
+              src="/crlogo.png" 
+              alt="CodeRed 3.0" 
+              className="h-20 w-20 object-contain"
+            />
+          </div>
+          
+          {/* Center - Navigation Links */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#problem-statements" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
+              Problem Statements
+            </a>
+            <a href="#team" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
+              Team
+            </a>
+            <a href="#faq" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
+              FAQ
+            </a>
+            <a href="#sponsors" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
+              Sponsors
+            </a>
+          </div>
+          
+          {/* Right side - Register Button */}
+          <button className="bg-red-600 hover:bg-red-700 transition-colors px-6 py-2 rounded-full flex items-center gap-2 text-sm tracking-wide">
+            Register Now
+            <ArrowRight size={16} />
+          </button>
+        </div>
+        
+        {/* Mobile Navigation */}
+        <div className="md:hidden mt-4 flex justify-center">
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="#problem-statements" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
+              Problem Statements
+            </a>
+            <a href="#team" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
+              Team
+            </a>
+            <a href="#faq" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
+              FAQ
+            </a>
+            <a href="#sponsors" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
+              Sponsors
+            </a>
+          </div>
+        </div>
       </nav>
 
       {/* Hero Content */}
