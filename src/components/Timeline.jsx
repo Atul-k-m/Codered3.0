@@ -1,52 +1,142 @@
-// Timeline.jsx
-import React from "react";
+import { useState, useEffect, useRef } from 'react';
 
-const eventTimeline = [
-  { date: "Jan 2024", title: "Hackathon Kickoff", description: "Codered 3.0 officially launched with our annual hackathon." },
-  { date: "Feb 2024", title: "Web Dev Workshop", description: "Hands-on workshop on React, Tailwind & modern web development." },
-  { date: "Mar 2024", title: "IoT Workshop", description: "Embedded systems and IoT project challenges." },
-  { date: "Apr 2024", title: "AI Meetup", description: "Introduction to AI/ML applications in IoT projects." },
-  { date: "May 2024", title: "Cybersecurity Seminar", description: "Understanding intrusion detection and cybersecurity best practices." },
-  { date: "Jun 2024", title: "Cloud Computing Session", description: "Explore cloud architecture and deployment strategies." },
-  { date: "Aug 2024", title: "AI & ML Meetup", description: "Deep dive into AI/ML applied projects." },
-  { date: "Oct 2024", title: "Codered Mini Hack", description: "Small hackathon focusing on problem-solving and coding challenges." },
-  { date: "Dec 2024", title: "Year-End Showcase", description: "Showcasing all projects and achievements of Codered 3.0." },
-];
+export default function Timeline() {
+  const [visibleItems, setVisibleItems] = useState(new Set());
+  const observerRef = useRef(null);
 
-const Timeline = () => {
+  const timelineEvents = [
+    {
+      time: "Day 1 - 10:00 AM",
+      title: "Registration & Check-in",
+      description: "Get your badge, meet the team, and settle in."
+    },
+    {
+      time: "11:00 AM",
+      title: "Opening Ceremony",
+      description: "Welcome address and track introductions."
+    },
+    {
+      time: "12:00 PM",
+      title: "Hacking Begins",
+      description: "Teams assemble. Ideas come to life."
+    },
+    {
+      time: "2:00 PM",
+      title: "Lunch Break",
+      description: "Fuel up with food and refreshments."
+    },
+    {
+      time: "6:00 PM",
+      title: "Workshop: AI & Agents",
+      description: "Learn AI integration from industry experts."
+    },
+    {
+      time: "8:00 PM",
+      title: "Dinner & Networking",
+      description: "Connect with fellow hackers and mentors."
+    },
+    {
+      time: "10:00 PM",
+      title: "Late Night Coding",
+      description: "The energy peaks as projects take shape."
+    }
+  ];
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleItems((prev) => new Set([...prev, entry.target.dataset.index]));
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('[data-timeline-item]');
+    elements.forEach((el) => {
+      if (observerRef.current) {
+        observerRef.current.observe(el);
+      }
+    });
+
+    return () => {
+      elements.forEach((el) => {
+        if (observerRef.current) {
+          observerRef.current.unobserve(el);
+        }
+      });
+    };
+  }, []);
+
   return (
-    <div className="bg-black text-white py-16 px-4 min-h-screen flex flex-col items-center">
-      <h2 className="text-4xl font-bold text-red-600 mb-12">Event Timeline</h2>
-      <div className="relative w-full max-w-5xl">
-        {/* Vertical Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-red-600 h-full"></div>
+    <div className="min-h-screen bg-black">
+      {/* Header */}
+      <section className="px-6 pt-16 pb-12 md:pt-24 md:pb-20">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-3 text-white">
+            Event Timeline
+          </h1>
+          <p className="text-gray-500 text-base md:text-xl lg:text-2xl">
+            26 hours of hacking, learning, and building.
+          </p>
+        </div>
+      </section>
 
-        {eventTimeline.map((event, index) => (
-          <div
-            key={index}
-            className={`mb-12 flex flex-col md:flex-row items-center w-full transition-all duration-700
-              ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
-          >
-            {/* Date */}
-            <div className="md:w-1/2 flex justify-center md:justify-end md:pr-8">
-              <div className="bg-red-600 text-black font-bold px-4 py-2 rounded-lg shadow-lg">
-                {event.date}
+      {/* Timeline */}
+      <section className="px-6 pb-24 md:pb-32">
+        <div className="max-w-5xl mx-auto">
+          <div className="space-y-6 md:space-y-12 lg:space-y-16">
+            {timelineEvents.map((event, i) => (
+              <div 
+                key={i}
+                data-timeline-item
+                data-index={i}
+                className={`flex gap-6 md:gap-12 lg:gap-16 group transition-all duration-700 ease-out ${
+                  visibleItems.has(String(i))
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-8'
+                }`}
+              >
+                {/* Time */}
+                <div className="w-24 md:w-40 lg:w-48 flex-shrink-0 pt-1">
+                  <span className="text-red-500 text-sm md:text-lg lg:text-xl font-medium block transition-all duration-300 group-hover:text-red-400">
+                    {event.time}
+                  </span>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 pb-6 md:pb-12 lg:pb-16 border-l border-zinc-800 pl-6 md:pl-12 lg:pl-16 relative transition-all duration-300 group-hover:border-zinc-700">
+                  {/* Dot */}
+                  <div className="absolute -left-[5px] md:-left-[6px] top-2 w-2.5 h-2.5 md:w-3 md:h-3 bg-red-600 rounded-full transition-all duration-300 group-hover:scale-150 group-hover:bg-red-500 group-hover:shadow-lg group-hover:shadow-red-500/50" />
+                  
+                  <h3 className="text-white font-semibold text-lg md:text-2xl lg:text-3xl mb-2 md:mb-3 transition-colors duration-300 group-hover:text-gray-100">
+                    {event.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm md:text-lg lg:text-xl leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
+                    {event.description}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            {/* Connector */}
-            <div className="w-8 h-8 bg-yellow-500 rounded-full z-10 flex-shrink-0 mx-4 md:mx-0"></div>
-
-            {/* Event Content */}
-            <div className="md:w-1/2 bg-gray-900 border border-red-600 rounded-lg p-6 shadow-lg transition-transform transform hover:scale-105">
-              <h3 className="text-2xl font-semibold text-red-500 mb-2">{event.title}</h3>
-              <p className="text-yellow-400">{event.description}</p>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
+
+      <style jsx>{`
+        * {
+          scroll-behavior: smooth;
+        }
+      `}</style>
     </div>
   );
-};
-
-export default Timeline;
+}
