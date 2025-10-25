@@ -318,7 +318,7 @@ export default function Hero() {
             <a href="#team" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
               Team
             </a>
-            <a href="#faq" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
+            <a href="/faq" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
               FAQ
             </a>
             <a href="#sponsors" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
@@ -342,7 +342,7 @@ export default function Hero() {
             <a href="#team" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
               Team
             </a>
-            <a href="#faq" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
+            <a href="/faq" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
               FAQ
             </a>
             <a href="#sponsors" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
