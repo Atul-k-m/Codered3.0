@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Timeline from "./components/Timeline";
 import Footnote from "./components/Footnote";
+import Gallery from "./components/Gallery";
 import FAQPage from "./pages/FAQPage";
 
 function HomePage() {
@@ -11,6 +12,12 @@ function HomePage() {
       <Hero />
       <About />
         <Timeline />
+       <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+  <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem', color: '#fff', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+    Gallery
+  </h1>
+  <Gallery />
+</div>
       <FAQPage/>
       <Footnote />
     </div>
