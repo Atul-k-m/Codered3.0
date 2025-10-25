@@ -1,3 +1,5 @@
+import { InteractiveHoverButton } from "./ui/interactive-hover-button";
+
 export default function About() {
   return (
     <div 
@@ -62,9 +64,9 @@ export default function About() {
             </div>
           </div>
 
-          <button className="bg-red-600 hover:bg-red-700 transition-all transform hover:scale-105 px-10 py-3 rounded-full font-bold shadow-lg shadow-red-600/50">
+          <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-10 py-3 font-bold shadow-lg shadow-red-600/50">
             Register Now
-          </button>
+          </InteractiveHoverButton>
         </div>
       </section>
 

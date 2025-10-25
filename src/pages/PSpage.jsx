@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 const problemStatements = [
   {
-    track: "Track 1",
+    track: "Software",
     problems: [
       {
         id: "PS1",
@@ -23,7 +23,7 @@ const problemStatements = [
     ]
   },
   {
-    track: "Track 2",
+    track: "Hardware",
     problems: [
       {
         id: "PS4",
@@ -89,7 +89,7 @@ export default function ProblemStatementPage() {
               <span 
                 className="block"
                 style={{
-                  WebkitTextStroke: "1.5px #ef4444",
+                  WebkitTextStroke: "1.5px white",
                   WebkitTextFillColor: "transparent",
                   letterSpacing: "0.04em",
                 }}

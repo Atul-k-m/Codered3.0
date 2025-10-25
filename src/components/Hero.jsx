@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import DotGrid from "../background/Dotgrid.jsx";
 import { Particles } from "react-tsparticles";
+import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 
 
 
@@ -327,10 +328,11 @@ export default function Hero() {
           </div>
           
           {/* Right side - Register Button */}
-          <button className="bg-red-600 hover:bg-red-700 transition-colors px-6 py-2 rounded-full flex items-center gap-2 text-sm tracking-wide">
+          <InteractiveHoverButton 
+            className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-2 text-sm tracking-wide font-semibold"
+          >
             Register Now
-            <ArrowRight size={16} />
-          </button>
+          </InteractiveHoverButton>
         </div>
         
         {/* Mobile Navigation */}
