@@ -4,6 +4,8 @@ import About from "./components/About";
 import Timeline from "./components/Timeline";
 import Footnote from "./components/Footnote";
 import Gallery from "./components/Gallery";
+import WhyParticipate from "./components/WhyParticipate.jsx";   
+import FAQComponent from "./components/FAQComponent.jsx";   
 import FAQPage from "./pages/FAQPage";
 
 function HomePage() {
@@ -18,7 +20,8 @@ function HomePage() {
   </h1>
   <Gallery />
 </div>
-      <FAQPage/>
+        <WhyParticipate />
+      <FAQComponent/>
       <Footnote />
     </div>
   );

@@ -1,0 +1,193 @@
+import { useState, useEffect, useRef } from "react";
+
+const reasons = [
+  {
+    title: "Compete & Win",
+    description: "Battle for cash prizes, tech gadgets, and exclusive internship opportunities with leading companies."
+  },
+  {
+    title: "Network & Collaborate",
+    description: "Connect with developers, industry experts, and potential co-founders. Build lasting relationships in the tech community."
+  },
+  {
+    title: "Learn & Innovate",
+    description: "Access workshops, mentorship sessions, and cutting-edge technologies. Push your boundaries and explore new domains."
+  },
+  {
+    title: "Build Real Solutions",
+    description: "Transform your ideas into working prototypes. Create impactful projects that solve real-world problems in 24 hours."
+  },
+  {
+    title: "Boost Your Portfolio",
+    description: "Showcase your skills and creativity. Add impressive projects to your resume and stand out to employers."
+  },
+  {
+    title: "Experience the Thrill",
+    description: "Immerse yourself in a 24-hour coding marathon. Feel the rush of bringing ideas to life under pressure."
+  }
+];
+
+export default function WhyParticipate() {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = document.body.scrollHeight;
+
+    const particles = [];
+    const particleCount = 50;
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.size = Math.random() * 2 + 1;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+      }
+
+      draw() {
+        ctx.fillStyle = 'rgba(220, 38, 38, 0.6)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+
+      // Draw connections
+      particles.forEach((p1, i) => {
+        particles.slice(i + 1).forEach(p2 => {
+          const dx = p1.x - p2.x;
+          const dy = p1.y - p2.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 150) {
+            ctx.strokeStyle = `rgba(220, 38, 38, ${0.2 * (1 - distance / 150)})`;
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        });
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = document.body.scrollHeight;
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-black text-white font-mono relative">
+      {/* Particle Background */}
+      <canvas 
+        ref={canvasRef}
+        className="fixed top-0 left-0 w-full h-full pointer-events-none"
+        style={{ zIndex: 0 }}
+      />
+
+      <section className="relative py-20 px-6 pt-32" style={{ zIndex: 1 }}>
+        <div className="max-w-7xl mx-auto">
+          {/* Page Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              <span 
+                className="block"
+                style={{
+                  WebkitTextStroke: "1.5px white",
+                  WebkitTextFillColor: "transparent",
+                  letterSpacing: "0.04em",
+                }}
+              >
+                WHY PARTICIPATE
+              </span>
+            </h1>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Join India's premier 24-hour hackathon and unlock endless opportunities
+            </p>
+          </div>
+
+          {/* Hero Image */}
+          <div className="max-w-5xl mx-auto mb-20">
+            <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-red-600">
+              <img 
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=675&fit=crop"
+                alt="Hackathon collaboration"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+            </div>
+          </div>
+
+          {/* Reasons Grid */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {reasons.map((reason, index) => (
+                <div 
+                  key={index}
+                  className="group relative border-2 border-red-600 p-8 hover:bg-red-950/20 transition-all duration-300"
+                >
+                  <div className="absolute top-3 left-3 w-2 h-2 bg-red-600"></div>
+                  <div className="absolute top-3 right-3 w-2 h-2 bg-red-600"></div>
+                  <div className="absolute bottom-3 left-3 w-2 h-2 bg-red-600"></div>
+                  <div className="absolute bottom-3 right-3 w-2 h-2 bg-red-600"></div>
+                  
+                  <h3 className="text-xl font-bold mb-4 text-white">
+                    {reason.title}
+                  </h3>
+                  
+                  <p className="text-gray-400 leading-relaxed text-base">
+                    {reason.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-20">
+            <button className="px-8 py-4 bg-red-600 text-white font-bold text-lg hover:bg-red-700 transition-colors duration-200">
+              REGISTER NOW
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
