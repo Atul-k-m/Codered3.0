@@ -9,6 +9,7 @@ function HomePage() {
     <div className="min-h-screen bg-black text-white font-mono">
       <Hero />
       <About />
+      <FAQPage/>
       <Footnote />
     </div>
   );
