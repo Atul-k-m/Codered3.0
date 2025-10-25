@@ -312,7 +312,7 @@ export default function Hero() {
           
           {/* Center - Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#problem-statements" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
+            <a href="/problem-statements" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
               Problem Statements
             </a>
             <a href="#team" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
@@ -336,7 +336,7 @@ export default function Hero() {
         {/* Mobile Navigation */}
         <div className="md:hidden mt-4 flex justify-center">
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="#problem-statements" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
+            <a href="/problem-statements" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
               Problem Statements
             </a>
             <a href="#team" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">

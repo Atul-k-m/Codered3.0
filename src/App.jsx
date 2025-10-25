@@ -4,9 +4,10 @@ import About from "./components/About";
 import Timeline from "./components/Timeline";
 import Footnote from "./components/Footnote";
 import Gallery from "./components/Gallery";
-import WhyParticipate from "./components/WhyParticipate.jsx";   
-import FAQComponent from "./components/FAQComponent.jsx";   
+import WhyParticipate from "./components/WhyParticipate";   
+import FAQComponent from "./components/FAQComponent";   
 import FAQPage from "./pages/FAQPage";
+import PSpage from "./pages/PSpage";
 
 function HomePage() {
   return (
@@ -22,6 +23,7 @@ function HomePage() {
 </div>
         <WhyParticipate />
       <FAQComponent/>
+
       <Footnote />
     </div>
   );
@@ -32,7 +34,9 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+
         <Route path="/faq" element={<FAQPage />} />
+        <Route path="/problem-statements" element={<PSpage />} />
       </Routes>
     </Router>
   );
