@@ -16,11 +16,11 @@ function HomePage() {
       <Hero />
       <About />
         <Timeline />
-       <div className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
-  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-12 text-white text-center uppercase tracking-wider">
+       <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} className="px-4 sm:px-0">
+  <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem', color: '#fff', textTransform: 'uppercase', letterSpacing: '0.1em' }} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 md:mb-8">
     Gallery
   </h1>
-  <div className="w-full max-w-6xl h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
+  <div className="w-full h-full">
     <Gallery />
   </div>
 </div>

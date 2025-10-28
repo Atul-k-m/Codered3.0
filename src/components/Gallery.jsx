@@ -109,21 +109,21 @@ function computeItemBaseRotation(offsetX, offsetY, sizeX, sizeY, segments) {
 
 export default function DomeGallery({
   images = DEFAULT_IMAGES,
-  fit = 0.4,
+  fit = 0.5,
   fitBasis = 'auto',
-  minRadius = 300,
+  minRadius = 600,
   maxRadius = Infinity,
-  padFactor = 0.15,
+  padFactor = 0.25,
   overlayBlurColor = '#060010',
   maxVerticalRotationDeg = DEFAULTS.maxVerticalRotationDeg,
   dragSensitivity = DEFAULTS.dragSensitivity,
   enlargeTransitionMs = DEFAULTS.enlargeTransitionMs,
   segments = DEFAULTS.segments,
   dragDampening = 2,
-  openedImageWidth = '300px',
-  openedImageHeight = '300px',
-  imageBorderRadius = '20px',
-  openedImageBorderRadius = '20px',
+  openedImageWidth = '400px',
+  openedImageHeight = '400px',
+  imageBorderRadius = '30px',
+  openedImageBorderRadius = '30px',
   grayscale = true
 }) {
   const rootRef = useRef(null);
