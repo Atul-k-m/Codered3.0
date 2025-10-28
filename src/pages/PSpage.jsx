@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Menu, X } from "lucide-react";
+import { InteractiveHoverButton } from "../components/ui/interactive-hover-button";
 const problemStatements = [
   {
     track: "Software",
@@ -46,25 +47,43 @@ const problemStatements = [
 
 export default function ProblemStatementPage() {
   const [selectedTrack, setSelectedTrack] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMobileMenuOpen && !event.target.closest('.mobile-menu-container')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMobileMenuOpen]);
 
   return (
     <div className="min-h-screen bg-black text-white font-mono">
 
-     <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-2 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
+     <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-2 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* Left side - Logo */}
-          <div className="flex items-center">
-            <Link to="/">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link to="/" className="flex items-center gap-2 sm:gap-3">
               <img 
                 src="/crlogo.png" 
                 alt="CodeRed 3.0" 
-                className="h-20 w-20 object-contain"
+                className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain"
+              />
+              <img 
+                src="/bmslogo.png" 
+                alt="BMS Institute" 
+                className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain rounded-full"
               />
             </Link>
           </div>
           
-          {/* Center - Back Button */}
-          <div className="flex items-center">
+          {/* Center - Back Button (Desktop) */}
+          <div className="hidden lg:flex items-center">
             <Link 
               to="/" 
               className="flex items-center gap-2 text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase"
@@ -74,18 +93,126 @@ export default function ProblemStatementPage() {
             </Link>
           </div>
           
-          {/* Right side - Register Button */}
-          <button className="bg-red-600 hover:bg-red-700 transition-colors px-6 py-2 rounded-full flex items-center gap-2 text-sm tracking-wide">
-            Register Now
-          </button>
+          {/* Right side - Mobile Menu Button & Register Button */}
+          <div className="flex items-center gap-3">
+            {/* Mobile Hamburger Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-2 text-gray-300 hover:text-red-600 transition-colors"
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? (
+                <X size={24} />
+              ) : (
+                <Menu size={24} />
+              )}
+            </button>
+            
+            {/* Register Button */}
+            <InteractiveHoverButton 
+              className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm tracking-wide font-semibold"
+            >
+              <span className="hidden sm:inline">Register Now</span>
+              <span className="sm:hidden">Register</span>
+            </InteractiveHoverButton>
+          </div>
         </div>
       </nav>
+
+      {/* Mobile Sidebar */}
+      <div className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        {/* Backdrop */}
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)}></div>
+        
+        {/* Sidebar */}
+        <div className={`mobile-menu-container absolute right-0 top-0 h-full w-80 bg-black border-l border-red-900/30 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          {/* Sidebar Header */}
+          <div className="flex items-center justify-between p-6 border-b border-gray-800">
+            <div className="flex items-center gap-3">
+              <img 
+                src="/crlogo.png" 
+                alt="CodeRed 3.0" 
+                className="h-8 w-8 object-contain"
+              />
+              <img 
+                src="/bmslogo.png" 
+                alt="BMS Institute" 
+                className="h-8 w-8 object-contain rounded-full"
+              />
+            </div>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-2 text-gray-300 hover:text-red-600 transition-colors"
+              aria-label="Close mobile menu"
+            >
+              <X size={20} />
+            </button>
+          </div>
+          
+          {/* Navigation Links */}
+          <div className="p-6 space-y-6">
+            <Link 
+              to="/" 
+              className="flex items-center gap-2 text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <ArrowLeft size={20} />
+              Back to Home
+            </Link>
+            <a 
+              href="/prize-pool" 
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Prizes
+            </a>
+            <a 
+              href="/problem-statements" 
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Problem Statements
+            </a>
+            <a 
+              href="#team" 
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Team
+            </a>
+            <a 
+              href="/faq" 
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              FAQ
+            </a>
+            <a 
+              href="#sponsors" 
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Sponsors
+            </a>
+          </div>
+          
+          {/* Sidebar Footer */}
+          <div className="absolute bottom-6 left-6 right-6">
+            <InteractiveHoverButton 
+              className="w-full bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm tracking-wide font-semibold"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Register Now
+            </InteractiveHoverButton>
+          </div>
+        </div>
+      </div>
       {/* Problem Statements Content */}
-      <section className="relative py-20 px-6 pt-32 bg-black">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 pt-24 sm:pt-28 md:pt-32 bg-black">
         <div className="max-w-7xl mx-auto">
           {/* Page Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-4">
               <span 
                 className="block"
                 style={{
@@ -97,18 +224,18 @@ export default function ProblemStatementPage() {
                 PROBLEM STATEMENTS
               </span>
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
               Choose your track and build innovative solutions
             </p>
           </div>
 
           {/* Track Selector */}
-          <div className="flex justify-center gap-4 mb-12 flex-wrap">
+          <div className="flex justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 flex-wrap px-4">
             {problemStatements.map((track, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedTrack(index)}
-                className={`px-8 py-3 font-bold text-lg transition-all duration-300 border-2 ${
+                className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 font-bold text-sm sm:text-base md:text-lg transition-all duration-300 border-2 ${
                   selectedTrack === index
                     ? 'bg-red-600 text-white border-red-600'
                     : 'bg-transparent text-white border-red-600 hover:bg-red-600'
@@ -121,44 +248,42 @@ export default function ProblemStatementPage() {
 
           {/* Problem Statements Grid */}
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {problemStatements[selectedTrack].problems.map((problem, index) => (
                 <div
                   key={index}
-                  className="relative border-2 border-gray-800 bg-black hover:border-red-600 transition-all duration-300 p-6 flex flex-col group overflow-hidden"
+                  className="relative border-2 border-gray-800 bg-black hover:border-red-600 transition-all duration-300 p-4 sm:p-6 flex flex-col group overflow-hidden"
                 >
                   {/* Corner Accents */}
-                  <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-
+                  <div className="absolute top-0 left-0 w-3 h-3 sm:w-4 sm:h-4 border-t-2 border-l-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-0 right-0 w-3 h-3 sm:w-4 sm:h-4 border-t-2 border-r-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-0 left-0 w-3 h-3 sm:w-4 sm:h-4 border-b-2 border-l-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-0 right-0 w-3 h-3 sm:w-4 sm:h-4 border-b-2 border-r-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                   {/* Content */}
                   <div className="relative z-10">
                     {/* Problem ID */}
-                    <div className="mb-4 inline-block border-2 border-red-600 px-3 py-1">
-                      <span className="text-2xl font-bold text-red-600 font-mono">
+                    <div className="mb-3 sm:mb-4 inline-block border-2 border-red-600 px-2 sm:px-3 py-1">
+                      <span className="text-lg sm:text-xl md:text-2xl font-bold text-red-600 font-mono">
                         {problem.id}
                       </span>
                     </div>
 
                     {/* Problem Title */}
-                    <h3 className="text-xl font-bold text-white mb-4 leading-tight">
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4 leading-tight">
                       {problem.title}
                     </h3>
 
                     {/* Divider */}
-                    <div className="w-12 h-0.5 bg-red-600 mb-4 group-hover:w-full transition-all duration-300"></div>
+                    <div className="w-8 sm:w-12 h-0.5 bg-red-600 mb-3 sm:mb-4 group-hover:w-full transition-all duration-300"></div>
 
                     {/* Problem Description */}
-                    <p className="text-gray-400 text-sm leading-relaxed flex-grow group-hover:text-gray-300 transition-colors duration-300">
+                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed flex-grow group-hover:text-gray-300 transition-colors duration-300">
                       {problem.description}
                     </p>
 
                     {/* Separator Line */}
-                    <div className="mt-6 pt-4 border-t border-gray-800 group-hover:border-red-600/50 transition-colors duration-300">
+                    <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-gray-800 group-hover:border-red-600/50 transition-colors duration-300">
                       <span className="text-xs text-gray-500 uppercase tracking-wider group-hover:text-red-500 transition-colors duration-300">
                         {problemStatements[selectedTrack].track}
                       </span>
@@ -170,8 +295,8 @@ export default function ProblemStatementPage() {
           </div>
 
           {/* Additional Info */}
-          <div className="mt-16 text-center">
-            <p className="text-gray-400 text-base max-w-3xl mx-auto">
+          <div className="mt-12 sm:mt-16 text-center px-4">
+            <p className="text-gray-400 text-sm sm:text-base max-w-3xl mx-auto">
               Select a problem statement that aligns with your interests and expertise. 
               You'll have <span className="text-red-600 font-bold">24 hours</span> to develop your solution during CodeRed 3.0.
             </p>

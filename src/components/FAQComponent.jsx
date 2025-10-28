@@ -84,12 +84,12 @@ export default function FAQPage() {
     
       {/* FAQ Content */}
       <section 
-        className="relative py-20 px-6 pt-32 bg-black"
+        className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 pt-24 sm:pt-28 md:pt-32 bg-black"
       >
         <div className="max-w-6xl mx-auto">
           {/* Page Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-4">
               <span 
                 className="block"
                 style={{
@@ -101,7 +101,7 @@ export default function FAQPage() {
                 FAQ
               </span>
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
               Find answers to the most frequently asked questions about CodeRed 3.0
             </p>
           </div>
@@ -109,10 +109,10 @@ export default function FAQPage() {
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
             {/* FAQ Items */}
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               {faqData.map((category, categoryIndex) => (
-                <div key={category.category} className="space-y-6">
-                  <h3 className="text-3xl font-bold text-white text-center">
+                <div key={category.category} className="space-y-4 sm:space-y-6">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center">
                     {category.category}
                   </h3>
                   
@@ -125,14 +125,14 @@ export default function FAQPage() {
                         <div key={questionIndex} className="border-b border-gray-800 last:border-b-0">
                           <button
                             onClick={() => toggleItem(categoryIndex, questionIndex)}
-                            className="w-full py-6 text-center flex items-center justify-between group hover:bg-gray-900/30 transition-colors duration-200"
+                            className="w-full py-4 sm:py-6 text-center flex items-center justify-between group hover:bg-gray-900/30 transition-colors duration-200 px-2 sm:px-4"
                           >
-                            <span className="text-gray-300 text-lg font-medium pr-4 group-hover:text-white transition-colors flex-1 text-center">
+                            <span className="text-gray-300 text-sm sm:text-base md:text-lg font-medium pr-2 sm:pr-4 group-hover:text-white transition-colors flex-1 text-center">
                               {item.question}
                             </span>
                             <ChevronDown 
-                              size={24} 
-                              className={`text-gray-400 transition-transform duration-300 flex-shrink-0 ${
+                              size={20} 
+                              className={`text-gray-400 transition-transform duration-300 flex-shrink-0 sm:w-6 sm:h-6 ${
                                 isOpen ? 'rotate-180' : ''
                               }`}
                             />
@@ -143,8 +143,8 @@ export default function FAQPage() {
                               isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                             }`}
                           >
-                            <div className="pb-6">
-                              <p className="text-gray-400 text-base leading-relaxed text-center">
+                            <div className="pb-4 sm:pb-6 px-2 sm:px-4">
+                              <p className="text-gray-400 text-sm sm:text-base leading-relaxed text-center">
                                 {item.answer}
                               </p>
                             </div>

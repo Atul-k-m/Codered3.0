@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import DotGrid from "../background/Dotgrid.jsx";
 import { Particles } from "react-tsparticles";
 import { InteractiveHoverButton } from "./ui/interactive-hover-button";
@@ -84,31 +84,31 @@ function MorphingShapes() {
   const colors = ["#ef4444", "#f59e0b", "#eab308", "#fb923c", "#dc2626"];
 
   return (
-    <div className="relative w-[500px] h-[500px] flex items-center justify-center">
+    <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] flex items-center justify-center">
   <div className="absolute inset-0 opacity-50">
         <DotGrid
-          dotSize={6}
-          gap={18}
+          dotSize={4}
+          gap={12}
           baseColor="#9CA3AF"       
           activeColor="#9CA3AF"
-          proximity={120}
-          shockRadius={250}
-          shockStrength={5}
-          resistance={750}
+          proximity={80}
+          shockRadius={150}
+          shockStrength={3}
+          resistance={500}
           returnDuration={1.5}
         />
       </div>
-      <svg width="500" height="500" className="relative z-10">
+      <svg width="300" height="300" className="relative z-10 sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px]">
         {/* Connection lines between adjacent nodes */}
         {currentShape.cells.map((cell, i) => {
-          const x1 = cell.x * (cellSize + gap) + 80;
-          const y1 = cell.y * (cellSize + gap) + 100;
+          const x1 = cell.x * (cellSize + gap) + 50;
+          const y1 = cell.y * (cellSize + gap) + 60;
           
           return currentShape.cells.slice(i + 1).map((otherCell, j) => {
             const distance = Math.abs(cell.x - otherCell.x) + Math.abs(cell.y - otherCell.y);
             if (distance === 1) {
-              const x2 = otherCell.x * (cellSize + gap) + 80;
-              const y2 = otherCell.y * (cellSize + gap) + 100;
+              const x2 = otherCell.x * (cellSize + gap) + 50;
+              const y2 = otherCell.y * (cellSize + gap) + 60;
               
               return (
                 <line
@@ -156,8 +156,8 @@ function MorphingShapes() {
         {/* Nodes/blocks */}
         {currentShape.cells.map((cell, i) => {
           const nodeKey = `${cell.x}-${cell.y}`;
-          const x = cell.x * (cellSize + gap) + 80;
-          const y = cell.y * (cellSize + gap) + 100;
+          const x = cell.x * (cellSize + gap) + 50;
+          const y = cell.y * (cellSize + gap) + 60;
           const color = colors[i % colors.length];
           
           return (
@@ -270,6 +270,7 @@ function MorphingShapes() {
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Countdown timer logic
   useEffect(() => {
@@ -293,6 +294,18 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMobileMenuOpen && !event.target.closest('.mobile-menu-container')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMobileMenuOpen]);
+
 
 
   return (
@@ -300,19 +313,27 @@ export default function Hero() {
     
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-2 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
+      <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-2 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* Left side - Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <img 
+              src="/bmslogo.png" 
+              alt="BMS Institute" 
+              className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain rounded-full"
+            />
             <img 
               src="/crlogo.png" 
               alt="CodeRed 3.0" 
-              className="h-20 w-20 object-contain"
+              className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain"
             />
           </div>
           
-          {/* Center - Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Center - Navigation Links (Desktop) */}
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <a href="/prize-pool" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
+              Prizes
+            </a>
             <a href="/problem-statements" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase">
               Problem Statements
             </a>
@@ -327,43 +348,123 @@ export default function Hero() {
             </a>
           </div>
           
-          {/* Right side - Register Button */}
-          <InteractiveHoverButton 
-            className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-2 text-sm tracking-wide font-semibold"
-          >
-            Register Now
-          </InteractiveHoverButton>
-        </div>
-        
-        {/* Mobile Navigation */}
-        <div className="md:hidden mt-4 flex justify-center">
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="/problem-statements" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
-              Problem Statements
-            </a>
-            <a href="#team" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
-              Team
-            </a>
-            <a href="/faq" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
-              FAQ
-            </a>
-            <a href="#sponsors" className="text-gray-300 hover:text-red-600 transition-colors text-xs tracking-wide uppercase">
-              Sponsors
-            </a>
+          {/* Right side - Mobile Menu Button & Register Button */}
+          <div className="flex items-center gap-3">
+            {/* Mobile Hamburger Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-2 text-gray-300 hover:text-red-600 transition-colors"
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? (
+                <X size={24} />
+              ) : (
+                <Menu size={24} />
+              )}
+            </button>
+            
+            {/* Register Button */}
+            <InteractiveHoverButton 
+              className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm tracking-wide font-semibold"
+            >
+              <span className="hidden sm:inline">Register Now</span>
+              <span className="sm:hidden">Register</span>
+            </InteractiveHoverButton>
           </div>
         </div>
       </nav>
 
+      {/* Mobile Sidebar */}
+      <div className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        {/* Backdrop */}
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)}></div>
+        
+        {/* Sidebar */}
+        <div className={`mobile-menu-container absolute right-0 top-0 h-full w-80 bg-black border-l border-red-900/30 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          {/* Sidebar Header */}
+          <div className="flex items-center justify-between p-6 border-b border-gray-800">
+            <div className="flex items-center gap-3">
+              <img 
+                src="/crlogo.png" 
+                alt="CodeRed 3.0" 
+                className="h-8 w-8 object-contain"
+              />
+              <img 
+                src="/bmslogo.png" 
+                alt="BMS Institute" 
+                className="h-8 w-8 object-contain rounded-full"
+              />
+            </div>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-2 text-gray-300 hover:text-red-600 transition-colors"
+              aria-label="Close mobile menu"
+            >
+              <X size={20} />
+            </button>
+          </div>
+          
+          {/* Navigation Links */}
+          <div className="p-6 space-y-6">
+            <a 
+              href="/prize-pool" 
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Prizes
+            </a>
+            <a 
+              href="/problem-statements" 
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Problem Statements
+            </a>
+            <a 
+              href="#team" 
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Team
+            </a>
+            <a 
+              href="/faq" 
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              FAQ
+            </a>
+            <a 
+              href="#sponsors" 
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Sponsors
+            </a>
+          </div>
+          
+          {/* Sidebar Footer */}
+          <div className="absolute bottom-6 left-6 right-6">
+            <InteractiveHoverButton 
+              className="w-full bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm tracking-wide font-semibold"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Register Now
+            </InteractiveHoverButton>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Content */}
-     <div className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 lg:px-24">
+     <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 md:px-16 lg:px-24 pt-20 sm:pt-24">
   {/* Left Section */}
-  <div className="flex-1 z-10">
-    <p className="text-gray-300 text-base md:text-lg tracking-[0.25em] mb-4 uppercase">
+  <div className="flex-1 z-10 text-center lg:text-left">
+    <p className="text-gray-300 text-sm sm:text-base md:text-lg tracking-[0.25em] mb-3 sm:mb-4 uppercase">
       ECELL × BMSIT Presents
     </p>
 
     <h1
-      className="text-6xl md:text-8xl lg:text-9xl font-bold mb-4"
+      className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4"
       style={{
         WebkitTextStroke: "1.5px white",
         WebkitTextFillColor: "transparent",
@@ -373,34 +474,33 @@ export default function Hero() {
       CODERED 3.0
     </h1>
 
-    <p className="text-lg md:text-xl text-gray-400 tracking-wide mb-8 italic">
+    <p className="text-base sm:text-lg md:text-xl text-gray-400 tracking-wide mb-6 sm:mb-8 italic">
       code till you bleed
     </p>
 
     {/* New line above timer */}
-    <p className="text-gray-300 text-sm md:text-base uppercase tracking-widest mb-3">
+    <p className="text-gray-300 text-xs sm:text-sm md:text-base uppercase tracking-widest mb-3">
       National 24-Hour Hackathon
     </p>
 
     {/* Clean, minimal timer */}
-    <div className="flex gap-8 text-center text-base md:text-lg font-semibold">
+    <div className="flex gap-4 sm:gap-6 md:gap-8 text-center text-sm sm:text-base md:text-lg font-semibold justify-center lg:justify-start">
       {["Days", "Hours", "Mins", "Secs"].map((label, idx) => {
         const val = [timeLeft.days, timeLeft.hours, timeLeft.mins, timeLeft.secs][idx];
         return (
           <div key={label} className="flex flex-col items-center">
-            <span className="text-3xl md:text-4xl text-white font-bold tabular-nums">
+            <span className="text-2xl sm:text-3xl md:text-4xl text-white font-bold tabular-nums">
               {val.toString().padStart(2, "0")}
             </span>
-            <span className="text-xs md:text-sm text-gray-500 uppercase">{label}</span>
+            <span className="text-xs sm:text-sm text-gray-500 uppercase">{label}</span>
           </div>
         );
       })}
     </div>
   </div>
 
-
         {/* Right Section: Morphing geometric animation */}
-        <div className="flex-1 hidden md:flex justify-center items-center relative">
+        <div className="flex-1 hidden lg:flex justify-center items-center relative">
           <MorphingShapes />
         </div>
       </div>

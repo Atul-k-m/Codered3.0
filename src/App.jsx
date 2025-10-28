@@ -8,6 +8,7 @@ import WhyParticipate from "./components/WhyParticipate";
 import FAQComponent from "./components/FAQComponent";   
 import FAQPage from "./pages/FAQPage";
 import PSpage from "./pages/PSpage";
+import PrizePoolPage from "./pages/PrizePoolPage";
 
 function HomePage() {
   return (
@@ -15,11 +16,13 @@ function HomePage() {
       <Hero />
       <About />
         <Timeline />
-       <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-  <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem', color: '#fff', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+       <div className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-12 text-white text-center uppercase tracking-wider">
     Gallery
   </h1>
-  <Gallery />
+  <div className="w-full max-w-6xl h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
+    <Gallery />
+  </div>
 </div>
         <WhyParticipate />
       <FAQComponent/>
@@ -37,6 +40,7 @@ export default function App() {
 
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/problem-statements" element={<PSpage />} />
+        <Route path="/prize-pool" element={<PrizePoolPage />} />
       </Routes>
     </Router>
   );

@@ -122,11 +122,11 @@ export default function WhyParticipate() {
         style={{ zIndex: 0 }}
       />
 
-      <section className="relative py-20 px-6 pt-32" style={{ zIndex: 1 }}>
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 pt-24 sm:pt-28 md:pt-32" style={{ zIndex: 1 }}>
         <div className="max-w-7xl mx-auto">
           {/* Page Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-4">
               <span 
                 className="block"
                 style={{
@@ -138,13 +138,13 @@ export default function WhyParticipate() {
                 WHY PARTICIPATE
               </span>
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
               Join India's premier 24-hour hackathon and unlock endless opportunities
             </p>
           </div>
 
           {/* Hero Image */}
-          <div className="max-w-5xl mx-auto mb-20">
+          <div className="max-w-5xl mx-auto mb-12 sm:mb-16 md:mb-20">
             <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-red-600">
               <img 
                 src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=675&fit=crop"
@@ -157,22 +157,22 @@ export default function WhyParticipate() {
 
           {/* Reasons Grid */}
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {reasons.map((reason, index) => (
                 <div 
                   key={index}
-                  className="group relative border-2 border-red-600 p-8 hover:bg-red-950/20 transition-all duration-300"
+                  className="group relative border-2 border-red-600 p-4 sm:p-6 md:p-8 hover:bg-red-950/20 transition-all duration-300"
                 >
-                  <div className="absolute top-3 left-3 w-2 h-2 bg-red-600"></div>
-                  <div className="absolute top-3 right-3 w-2 h-2 bg-red-600"></div>
-                  <div className="absolute bottom-3 left-3 w-2 h-2 bg-red-600"></div>
-                  <div className="absolute bottom-3 right-3 w-2 h-2 bg-red-600"></div>
+                  <div className="absolute top-2 left-2 sm:top-3 sm:left-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-600"></div>
+                  <div className="absolute top-2 right-2 sm:top-3 sm:right-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-600"></div>
+                  <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-600"></div>
+                  <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-600"></div>
                   
-                  <h3 className="text-xl font-bold mb-4 text-white">
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">
                     {reason.title}
                   </h3>
                   
-                  <p className="text-gray-400 leading-relaxed text-base">
+                  <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                     {reason.description}
                   </p>
                 </div>
@@ -181,8 +181,8 @@ export default function WhyParticipate() {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-20">
-            <button className="px-8 py-4 bg-red-600 text-white font-bold text-lg hover:bg-red-700 transition-colors duration-200">
+          <div className="text-center mt-12 sm:mt-16 md:mt-20">
+            <button className="px-6 sm:px-8 py-3 sm:py-4 bg-red-600 text-white font-bold text-base sm:text-lg hover:bg-red-700 transition-colors duration-200">
               REGISTER NOW
             </button>
           </div>
