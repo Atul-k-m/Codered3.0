@@ -499,11 +499,9 @@ export default function Hero() {
                 const val = [timeLeft.days, timeLeft.hours, timeLeft.mins, timeLeft.secs][idx];
                 return (
                   <div key={label} className="flex flex-col items-center">
-                    <div className="bg-black/60 backdrop-blur-sm border-2 border-red-500/50 rounded-lg px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 mb-2">
-                      <span className="text-4xl sm:text-5xl md:text-6xl text-white font-black tabular-nums drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">
-                        {val.toString().padStart(2, "0")}
-                      </span>
-                    </div>
+                    <span className="text-4xl sm:text-5xl md:text-6xl text-white font-black tabular-nums drop-shadow-[0_0_10px_rgba(239,68,68,0.8)] mb-2">
+                      {val.toString().padStart(2, "0")}
+                    </span>
                     <span className="text-xs sm:text-sm md:text-base text-gray-200 uppercase tracking-wider font-semibold">{label}</span>
                   </div>
                 );
