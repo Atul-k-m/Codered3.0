@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Menu, X } from "lucide-react";
 import { InteractiveHoverButton } from "../components/ui/interactive-hover-button";
+
 const problemStatements = [
   {
     track: "Software",
@@ -218,8 +219,9 @@ export default function ProblemStatementPage() {
         </div>
       </div>
       {/* Problem Statements Content */}
+      {/* Problem Statements Content */}
       <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 pt-24 sm:pt-28 md:pt-32 bg-black">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Page Header */}
           <div className="text-center mb-12 sm:mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-4">
@@ -239,81 +241,23 @@ export default function ProblemStatementPage() {
             </p>
           </div>
 
-          {/* Track Selector */}
-          <div className="flex justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 flex-wrap px-4">
-            {problemStatements.map((track, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedTrack(index)}
-                className={`px-4 sm:px-6 md:px-8 py-2 sm:py-3 font-bold text-sm sm:text-base md:text-lg transition-all duration-300 border-2 ${
-                  selectedTrack === index
-                    ? "bg-red-600 text-white border-red-600"
-                    : "bg-transparent text-white border-red-600 hover:bg-red-600"
-                }`}
+          {/* Single Box Container */}
+          <div className="flex justify-center">
+            <div className="relative border-2 border-gray-800 bg-black hover:border-red-600 transition-all duration-300 flex items-center justify-center group overflow-hidden max-w-3xl w-full h-[400px]">
+              {/* Corner Accents */}
+              <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+              {/* Centered Text */}
+              <h3
+                className="text-5xl sm:text-6xl font-bold  text-white text-center tracking-wide"
+                style={{ fontFamily: "Robito" }}
               >
-                {track.track}
-              </button>
-            ))}
-          </div>
-
-          {/* Problem Statements Grid */}
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {problemStatements[selectedTrack].problems.map(
-                (problem, index) => (
-                  <div
-                    key={index}
-                    className="relative border-2 border-gray-800 bg-black hover:border-red-600 transition-all duration-300 p-4 sm:p-6 flex flex-col group overflow-hidden"
-                  >
-                    {/* Corner Accents */}
-                    <div className="absolute top-0 left-0 w-3 h-3 sm:w-4 sm:h-4 border-t-2 border-l-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute top-0 right-0 w-3 h-3 sm:w-4 sm:h-4 border-t-2 border-r-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute bottom-0 left-0 w-3 h-3 sm:w-4 sm:h-4 border-b-2 border-l-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute bottom-0 right-0 w-3 h-3 sm:w-4 sm:h-4 border-b-2 border-r-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                    {/* Content */}
-                    <div className="relative z-10">
-                      {/* Problem ID */}
-                      <div className="mb-3 sm:mb-4 inline-block border-2 border-red-600 px-2 sm:px-3 py-1">
-                        <span className="text-lg sm:text-xl md:text-2xl font-bold text-red-600 font-mono">
-                          {problem.id}
-                        </span>
-                      </div>
-
-                      {/* Problem Title */}
-                      <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4 leading-tight">
-                        {problem.title}
-                      </h3>
-
-                      {/* Divider */}
-                      <div className="w-8 sm:w-12 h-0.5 bg-red-600 mb-3 sm:mb-4 group-hover:w-full transition-all duration-300"></div>
-
-                      {/* Problem Description */}
-                      <p className="text-gray-400 text-xs sm:text-sm leading-relaxed flex-grow group-hover:text-gray-300 transition-colors duration-300">
-                        {problem.description}
-                      </p>
-
-                      {/* Separator Line */}
-                      <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-gray-800 group-hover:border-red-600/50 transition-colors duration-300">
-                        <span className="text-xs text-gray-500 uppercase tracking-wider group-hover:text-red-500 transition-colors duration-300">
-                          {problemStatements[selectedTrack].track}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                )
-              )}
+                Coming Soon!
+              </h3>
             </div>
-          </div>
-
-          {/* Additional Info */}
-          <div className="mt-12 sm:mt-16 text-center px-4">
-            <p className="text-gray-400 text-sm sm:text-base max-w-3xl mx-auto">
-              Select a problem statement that aligns with your interests and
-              expertise. You'll have{" "}
-              <span className="text-red-600 font-bold">24 hours</span> to
-              develop your solution during CodeRed 3.0.
-            </p>
           </div>
         </div>
       </section>

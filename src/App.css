@@ -4,6 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+@font-face {
+  font-family: "Robito";
+  src: url("./assets/fonts/Robit-Dark.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .logo {
   height: 6em;
