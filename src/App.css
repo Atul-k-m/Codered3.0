@@ -10,6 +10,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Offbit";
+  src: url("./assets/fonts/OffBit-Regular.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .logo {
   height: 6em;

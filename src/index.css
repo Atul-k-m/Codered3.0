@@ -11,7 +11,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Offbit";
+  src: url("./assets/fonts/OffBit-Regular.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background: var(--bg-black);
   color: var(--muted-white);

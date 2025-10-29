@@ -253,7 +253,7 @@ export default function ProblemStatementPage() {
               {/* Centered Text */}
               <h3
                 className="text-5xl sm:text-6xl font-bold  text-white text-center tracking-wide"
-                style={{ fontFamily: "Robito" }}
+                style={{ fontFamily: "OffBit" }}
               >
                 Coming Soon!
               </h3>
