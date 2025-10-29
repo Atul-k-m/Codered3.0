@@ -12,40 +12,41 @@ import PrizePoolPage from "./pages/PrizePoolPage";
 
 function HomePage() {
   return (
-    <div className="min-h-screen text-white font-mono bg-black overflow-x-hidden">
+    <div className="min-h-screen text-white font-mono bg-black">
       {/* Hero Section */}
-     <section className="relative min-h-screen flex flex-col justify-center items-center">
-  <Hero />
-</section>
+      <Hero />
 
       {/* About */}
-      <About />
+      <section className="relative z-10">
+        <About />
+      </section>
 
       {/* Timeline */}
-      <Timeline />
+      <section className="relative z-10">
+        <Timeline />
+      </section>
 
       {/* Gallery */}
-      <div
-        className="w-full flex flex-col items-center justify-center px-4 sm:px-0 py-16"
-        style={{
-          minHeight: "100vh",
-        }}
-      >
-        <h1
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wider mb-6 text-white"
-        >
-          Gallery
-        </h1>
-        <div className="w-full h-full">
-          <Gallery />
+      <section className="relative z-10 w-full min-h-screen py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wider mb-12 text-white text-center">
+            Gallery
+          </h1>
+          <div className="w-full h-[600px] sm:h-[700px] lg:h-[800px]">
+            <Gallery />
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Why Participate */}
-      <WhyParticipate />
+      <section className="relative z-10">
+        <WhyParticipate />
+      </section>
 
       {/* FAQ */}
-      <FAQComponent />
+      <section className="relative z-10">
+        <FAQComponent />
+      </section>
 
       {/* Footer */}
       <Footnote />
