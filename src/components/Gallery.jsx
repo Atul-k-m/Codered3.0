@@ -34,10 +34,10 @@ const DEFAULT_IMAGES = [
     src: "/gallery/8.jpg",
     alt: "Social media image",
   },
-  {
-    src: "/gallery/10.jpg",
-    alt: "Social media image",
-  },
+  // {
+  //   src: "/gallery/10.jpg",
+  //   alt: "Social media image",
+  // },
   {
     src: "/gallery/11.JPG",
     alt: "Social media image",
@@ -62,13 +62,21 @@ const DEFAULT_IMAGES = [
     src: "/gallery/16.JPG",
     alt: "Social media image",
   },
+  {
+    src: "/gallery/17.jpg",
+    alt: "Social media image",
+  },
+  {
+    src: "/gallery/18.jpg",
+    alt: "Social media image",
+  },
 ];
 
 const DEFAULTS = {
   maxVerticalRotationDeg: 5,
   dragSensitivity: 20,
   enlargeTransitionMs: 300,
-  segments: 24,
+  segments: 36,
 };
 
 const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
