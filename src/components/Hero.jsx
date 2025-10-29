@@ -375,7 +375,7 @@ export default function Hero() {
       </nav>
 
       {/* Mobile Sidebar */}
-      <div className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      <div className={`fixed inset-0 z-60 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         {/* Backdrop */}
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)}></div>
         
@@ -456,15 +456,15 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-     <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 md:px-16 lg:px-24 pt-20 sm:pt-24">
+     <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 sm:px-8 md:px-16 lg:px-24 pt-20 sm:pt-24">
   {/* Left Section */}
-  <div className="flex-1 z-10 text-center lg:text-left">
-    <p className="text-gray-300 text-sm sm:text-base md:text-lg tracking-[0.25em] mb-3 sm:mb-4 uppercase">
+  <div className="flex-1 z-10 text-center lg:text-left flex flex-col justify-center min-h-[calc(100vh-5rem)] lg:min-h-auto w-full max-w-4xl mx-auto lg:max-w-none lg:mx-0">
+    <p className="text-gray-300 text-base sm:text-lg md:text-xl tracking-[0.25em] mb-4 sm:mb-6 uppercase">
       ECELL × BMSIT Presents
     </p>
 
     <h1
-      className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4"
+      className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 sm:mb-6"
       style={{
         WebkitTextStroke: "1.5px white",
         WebkitTextFillColor: "transparent",
@@ -474,25 +474,25 @@ export default function Hero() {
       CODERED 3.0
     </h1>
 
-    <p className="text-base sm:text-lg md:text-xl text-gray-400 tracking-wide mb-6 sm:mb-8 italic">
+    <p className="text-lg sm:text-xl md:text-2xl text-gray-400 tracking-wide mb-8 sm:mb-10 italic">
       code till you bleed
     </p>
 
     {/* New line above timer */}
-    <p className="text-gray-300 text-xs sm:text-sm md:text-base uppercase tracking-widest mb-3">
+    <p className="text-gray-300 text-sm sm:text-base md:text-lg uppercase tracking-widest mb-4 sm:mb-6">
       National 24-Hour Hackathon
     </p>
 
     {/* Clean, minimal timer */}
-    <div className="flex gap-4 sm:gap-6 md:gap-8 text-center text-sm sm:text-base md:text-lg font-semibold justify-center lg:justify-start">
+    <div className="flex gap-6 sm:gap-8 md:gap-10 text-center text-base sm:text-lg md:text-xl font-semibold justify-center lg:justify-start">
       {["Days", "Hours", "Mins", "Secs"].map((label, idx) => {
         const val = [timeLeft.days, timeLeft.hours, timeLeft.mins, timeLeft.secs][idx];
         return (
           <div key={label} className="flex flex-col items-center">
-            <span className="text-2xl sm:text-3xl md:text-4xl text-white font-bold tabular-nums">
+            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tabular-nums">
               {val.toString().padStart(2, "0")}
             </span>
-            <span className="text-xs sm:text-sm text-gray-500 uppercase">{label}</span>
+            <span className="text-sm sm:text-base text-gray-500 uppercase">{label}</span>
           </div>
         );
       })}
