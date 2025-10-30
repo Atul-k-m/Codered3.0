@@ -6,7 +6,6 @@ import { Particles } from "react-tsparticles";
 import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 import HeroBGDesktop from "../assets/elements/desktop.svg";
 import HeroBGMobile from "../assets/elements/mobile.svg";
-import BrochurePDF from "../assets/files/brochure.pdf";
 
 
 
@@ -193,7 +192,7 @@ export default function Hero() {
             </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href={BrochurePDF} target="_blank" rel="noreferrer">
+            <a href="https://drive.google.com/file/d/1T9pf6PaTerzAxugZI3ZIIDRhZ0Z7omDV/view?usp=drive_link" target="_blank" rel="noreferrer">
               <InteractiveHoverButton className="bg-transparent border border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-6 py-3 text-sm sm:text-base">
                 Brochure
               </InteractiveHoverButton>
