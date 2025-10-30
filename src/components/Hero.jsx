@@ -6,6 +6,7 @@ import { Particles } from "react-tsparticles";
 import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 import HeroBGDesktop from "../assets/elements/desktop.svg";
 import HeroBGMobile from "../assets/elements/mobile.svg";
+import BrochurePDF from "../assets/files/brochure.pdf";
 
 
 
@@ -93,12 +94,12 @@ export default function Hero() {
             </button>
             
             <a href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge" target="_blank" rel="noreferrer">
-              <InteractiveHoverButton 
+            <InteractiveHoverButton 
                 className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm tracking-wide font-semibold shrink-0"
-              >
-                <span className="hidden sm:inline">Register Now</span>
-                <span className="sm:hidden">Register</span>
-              </InteractiveHoverButton>
+            >
+              <span className="hidden sm:inline">Register Now</span>
+              <span className="sm:hidden">Register</span>
+            </InteractiveHoverButton>
             </a>
           </div>
         </div>
@@ -142,12 +143,12 @@ export default function Hero() {
           
           <div className="absolute bottom-6 left-6 right-6">
             <a href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge" target="_blank" rel="noreferrer">
-              <InteractiveHoverButton 
-                className="w-full bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm tracking-wide font-semibold"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Register Now
-              </InteractiveHoverButton>
+            <InteractiveHoverButton 
+              className="w-full bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm tracking-wide font-semibold"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Register Now
+            </InteractiveHoverButton>
             </a>
           </div>
         </div>
@@ -192,7 +193,7 @@ export default function Hero() {
             </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/brochure.pdf" target="_blank" rel="noreferrer">
+            <a href={BrochurePDF} target="_blank" rel="noreferrer">
               <InteractiveHoverButton className="bg-transparent border border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-6 py-3 text-sm sm:text-base">
                 Brochure
               </InteractiveHoverButton>
