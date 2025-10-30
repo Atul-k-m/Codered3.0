@@ -30,7 +30,7 @@ function HomePage() {
       {/* Gallery */}
       <section className="relative z-10 w-full min-h-screen py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wider mb-12 text-white text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wider mb-12 text-white text-center " style={{ fontFamily: 'Robit, sans-serif' }}>
             Gallery
           </h1>
           <div className="w-full h-[600px] sm:h-[700px] lg:h-[800px]">

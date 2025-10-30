@@ -93,8 +93,7 @@ export default function FAQPage() {
               <span 
                 className="block"
                 style={{
-                  WebkitTextStroke: "1.5px white",
-                  WebkitTextFillColor: "transparent",
+                  fontFamily: 'Robit, sans-serif',
                   letterSpacing: "0.04em",
                 }}
               >
