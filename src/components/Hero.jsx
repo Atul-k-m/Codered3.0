@@ -48,8 +48,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-black text-white font-mono overflow-hidden">
       {/* Background images for hero */}
-      <img src={HeroBGDesktop} alt="" className="hidden sm:block absolute inset-0 w-full h-full object-cover opacity-20" />
-      <img src={HeroBGMobile} alt="" className="sm:hidden absolute inset-0 w-full h-full object-cover opacity-25 rotate-90" />
+      <img src={HeroBGDesktop} alt="" className="hidden sm:block absolute inset-0 w-full h-full object-cover opacity-40" />
+      <img src={HeroBGMobile} alt="" className="sm:hidden absolute inset-0 w-full h-full object-cover opacity-60 rotate-90 -translate-x-6 transform" />
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-2 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <div className="flex items-center gap-2 sm:gap-3">

@@ -6,39 +6,39 @@ export default function Timeline() {
 
   const timelineEvents = [
     {
-      time: "Day 1 - 10:00 AM",
-      title: "Registration & Check-in",
-      description: "Get your badge, meet the team, and settle in."
+      time: "30th October 2025",
+      title: "Launch",
+      description: ""
     },
     {
-      time: "11:00 AM",
-      title: "Opening Ceremony",
-      description: "Welcome address and track introductions."
+      time: "11:59 PM, 31st October 2025",
+      title: "Release of Problem Statements",
+      description: ""
     },
     {
-      time: "12:00 PM",
-      title: "Hacking Begins",
-      description: "Teams assemble. Ideas come to life."
+      time: "10:00 AM, 1st November 2025",
+      title: "Registrations Open",
+      description: ""
     },
     {
-      time: "2:00 PM",
-      title: "Lunch Break",
-      description: "Fuel up with food and refreshments."
+      time: "11:59 PM, 17th November 2025",
+      title: "Round 1 Ends",
+      description: ""
     },
     {
-      time: "6:00 PM",
-      title: "Workshop: AI & Agents",
-      description: "Learn AI integration from industry experts."
+      time: "12:00 AM, 1st December 2025",
+      title: "Top 50 Teams Announced",
+      description: ""
     },
     {
-      time: "8:00 PM",
-      title: "Dinner & Networking",
-      description: "Connect with fellow hackers and mentors."
+      time: "7:00 PM, 5th December 2025",
+      title: "Round 2 Registration Deadline",
+      description: ""
     },
     {
-      time: "10:00 PM",
-      title: "Late Night Coding",
-      description: "The energy peaks as projects take shape."
+      time: "12th & 13th December 2025",
+      title: "Grand Finale",
+      description: ""
     }
   ];
 

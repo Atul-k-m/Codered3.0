@@ -9,19 +9,19 @@ const faqData = [
     questions: [
       {
         question: "What is CODERED 3.0?",
-        answer: "CODERED 3.0 is a national 24-hour hackathon organized by ECELL × BMSIT, bringing together developers, designers, and innovators to build cutting-edge solutions."
+        answer: "CODERED 3.0 is a National Level 24-hour Hackathon organized by ECELL × BMSIT, bringing together developers, designers, and innovators to build cutting-edge solutions."
       },
       {
         question: "Who can participate in CODERED 3.0?",
-        answer: "CODERED 3.0 is open to students, professionals, and tech enthusiasts from all backgrounds. Whether you're a beginner or an expert, there's a place for you in our hackathon."
+        answer: "CODERED 3.0 is open to students and tech enthusiasts from all backgrounds. Whether you're a beginner or an expert, there's a place for you in our hackathon."
       },
       {
         question: "Do I need to have prior hackathon experience?",
-        answer: "No prior hackathon experience is required! CODERED 3.0 welcomes participants of all skill levels. We provide mentorship and resources to help you succeed."
+        answer: "No prior hackathon experience is required! CODERED 3.0 welcomes participants of all skill levels."
       },
       {
         question: "What are the tracks available?",
-        answer: "We have multiple tracks including AI & Machine Learning, Web Development, Mobile Apps, Blockchain, and IoT. You can choose any track that interests you."
+        answer: "We have two tracks, Hardware and Software, You can choose any track that interests you."
       }
     ]
   },
@@ -30,19 +30,19 @@ const faqData = [
     questions: [
       {
         question: "How do I register for CODERED 3.0?",
-        answer: "You can register by clicking the 'Register Now' button on our website. Fill out the registration form with your details and team information."
+        answer: "You can register by clicking the 'Register Now' button on our Website which will redirect you to Unstop. Fill out the registration form with your details and team information."
       },
       {
         question: "What is the team size limit?",
-        answer: "Teams can consist of 1-4 members. You can participate individually or form a team with friends or colleagues."
+        answer: "Teams can consist of 3-4 members. You can have inter college teams or intra college teams."
       },
       {
         question: "Can I change my team after registration?",
-        answer: "Yes, you can modify your team composition until the registration deadline. Contact our support team for any team changes."
+        answer: "No, you can't modify your team composition."
       },
       {
         question: "Is there a registration fee?",
-        answer: "CODERED 3.0 is completely free to participate! We believe in making technology accessible to everyone."
+        answer: "CODERED 3.0 Round 1 is completely free to participate!, upon selection for round 2, the team is required to pay a registration fee of ₹1200."
       }
     ]
   },
@@ -50,8 +50,8 @@ const faqData = [
     category: "Event Details",
     questions: [
       {
-        question: "When and where will CODERED 3.0 be held?",
-        answer: "CODERED 3.0 will be held on December 20, 2025, for 24 hours. The venue details will be announced closer to the event date."
+        question: "When and where will CODERED 3.0 Round 2 be held?",
+        answer: "CODERED 3.0 Round 2 will be held on December 12-13 2025, for 24 hours at BMS Institute of Technology and Management, Bangalore."
       },
       {
         question: "What should I bring to the event?",
