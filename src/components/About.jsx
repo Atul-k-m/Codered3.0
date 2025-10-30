@@ -13,11 +13,11 @@ export default function About() {
       {/* What is CODERED 3.0 Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         <div className="max-w-6xl w-full">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 inline-block bg-blue-600 px-6 py-2" style={{ fontFamily: 'Robit, sans-serif' }}>
             What is CODERED 3.0?
           </h2>
 
-          <p className="text-gray-400 mb-12 sm:mb-16 max-w-2xl text-base sm:text-lg leading-relaxed">
+          <p className="text-gray-400 mb-12 sm:mb-16 max-w-2xl text-base sm:text-lg leading-relaxed" style={{ fontFamily: 'Grotesk, sans-serif' }}>
             CODERED 3.0 is a National Level 24-hour Hackathon where builders, designers, and makers come together to prototype bold ideas.
           </p>
 
@@ -34,13 +34,10 @@ export default function About() {
               }}
             >
               <div className="absolute top-4 right-4 text-red-600 text-lg">+</div>
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">Tracks</h3>
-              <div className="space-y-2 text-white text-sm">
-                <p>AI + Machine Learning</p>
-                <p>Web & Cloud</p>
-                <p>Mobile Apps</p>
-                <p>Blockchain</p>
-                <p>IoT</p>
+              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4" style={{ fontFamily: 'Grotesk, sans-serif' }}>Tracks</h3>
+              <div className="space-y-2 text-white text-sm" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+               <p>Software</p>
+               <p>Hardware</p>
               </div>
             </div>
 
@@ -56,8 +53,8 @@ export default function About() {
               }}
             >
               <div className="absolute top-4 right-4 text-red-600 text-lg">+</div>
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">Prizes</h3>
-              <div className="space-y-2 text-white text-sm">
+              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4" style={{ fontFamily: 'Grotesk, sans-serif' }}>Prizes</h3>
+              <div className="space-y-2 text-white text-sm" style={{ fontFamily: 'Grotesk, sans-serif' }}>
                 <p>Overall Winner: ₹50,000</p>
                 <p>Runner-up: ₹30,000</p>
                 <p>Category Winners</p>
@@ -77,12 +74,12 @@ export default function About() {
               }}
             >
               <div className="absolute top-4 right-4 text-red-600 text-lg">+</div>
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">Details</h3>
-              <div className="space-y-2 text-white text-sm">
+              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4" style={{ fontFamily: 'Grotesk, sans-serif' }}>Details</h3>
+              <div className="space-y-2 text-white text-sm" style={{ fontFamily: 'Grotesk, sans-serif' }}>
                 <p>Duration: 24 hours</p>
                 <p>Team size: 1-4</p>
                 <p>Venue: BMSIT</p>
-                <p>Date: Dec 20, 2025</p>
+                <p>Date: Dec 12, 2025</p>
               </div>
             </div>
           </div>

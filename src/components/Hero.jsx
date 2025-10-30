@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import DotGrid from "../background/Dotgrid.jsx";
-import Plasma from "./Plasma";
+
 import { Particles } from "react-tsparticles";
 import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 import HeroBGDesktop from "../assets/elements/desktop.svg";
