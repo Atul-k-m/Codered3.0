@@ -88,16 +88,23 @@ export default function ProblemStatementPage() {
             </Link>
           </div>
 
-          {/* Center - Back Button (Desktop) */}
-          <div className="hidden lg:flex items-center">
-            <Link
-              to="/"
-              className="flex items-center gap-2 text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
-              style={{ fontFamily: 'Grotesk, sans-serif' }}
-            >
-              <ArrowLeft size={16} />
-              Back to Home
-            </Link>
+          {/* Center - Links (match home navbar) */}
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <a href="/prize-pool" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+              Prizes
+            </a>
+            <a href="/problem-statements" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+              Problem Statements
+            </a>
+            <a href="#team" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+              Team
+            </a>
+            <a href="/faq" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+              FAQ
+            </a>
+            <a href="#sponsors" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+              Sponsors
+            </a>
           </div>
 
           {/* Right side - Mobile Menu Button & Register Button */}
