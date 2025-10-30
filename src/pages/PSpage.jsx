@@ -77,7 +77,7 @@ export default function ProblemStatementPage() {
             <Link to="/" className="flex items-center gap-2 sm:gap-3">
               <img
                 src="/crlogo.png"
-                alt="CodeRed 3.0"
+                alt="CODERED 3.0"
                 className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain"
               />
               <img
@@ -143,7 +143,7 @@ export default function ProblemStatementPage() {
             <div className="flex items-center gap-3">
               <img
                 src="/crlogo.png"
-                alt="CodeRed 3.0"
+                alt="CODERED 3.0"
                 className="h-8 w-8 object-contain"
               />
               <img

@@ -10,15 +10,15 @@ export default function About() {
         backgroundSize: "30px 30px",
       }}
     >
-      {/* What is CodeRed 3.0 Section */}
+      {/* What is CODERED 3.0 Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         <div className="max-w-6xl w-full">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-            What is CodeRed 3.0?
+            What is CODERED 3.0?
           </h2>
 
           <p className="text-gray-400 mb-12 sm:mb-16 max-w-2xl text-base sm:text-lg leading-relaxed">
-            CodeRed 3.0 is a national 24-hour hackathon where builders, designers, and makers come together to prototype bold ideas.
+            CODERED 3.0 is a National Level 24-hour Hackathon where builders, designers, and makers come together to prototype bold ideas.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">

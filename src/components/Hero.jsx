@@ -340,7 +340,7 @@ export default function Hero() {
             />
             <img 
               src="/crlogo.png" 
-              alt="CodeRed 3.0" 
+              alt="CODERED 3.0" 
               className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain"
             />
           </div>
@@ -388,7 +388,7 @@ export default function Hero() {
         <div className={`mobile-menu-container absolute right-0 top-0 h-full w-80 bg-black border-l border-red-900/30 transform transition-transform duration-300 ease-in-out z-60 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex items-center justify-between p-6 border-b border-gray-800">
             <div className="flex items-center gap-3">
-              <img src="/crlogo.png" alt="CodeRed 3.0" className="h-8 w-8 object-contain" />
+              <img src="/crlogo.png" alt="CODERED 3.0" className="h-8 w-8 object-contain" />
               <img src="/bmslogo.png" alt="BMS Institute" className="h-8 w-8 object-contain rounded-full" />
             </div>
             <button

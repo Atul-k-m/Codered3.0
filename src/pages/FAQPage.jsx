@@ -8,16 +8,16 @@ const faqData = [
     category: "General",
     questions: [
       {
-        question: "What is CodeRed 3.0?",
-        answer: "CodeRed 3.0 is a national 24-hour hackathon organized by ECELL × BMSIT, bringing together developers, designers, and innovators to build cutting-edge solutions."
+        question: "What is CODERED 3.0?",
+        answer: "CODERED 3.0 is a national 24-hour hackathon organized by ECELL × BMSIT, bringing together developers, designers, and innovators to build cutting-edge solutions."
       },
       {
-        question: "Who can participate in CodeRed 3.0?",
-        answer: "CodeRed 3.0 is open to students, professionals, and tech enthusiasts from all backgrounds. Whether you're a beginner or an expert, there's a place for you in our hackathon."
+        question: "Who can participate in CODERED 3.0?",
+        answer: "CODERED 3.0 is open to students, professionals, and tech enthusiasts from all backgrounds. Whether you're a beginner or an expert, there's a place for you in our hackathon."
       },
       {
         question: "Do I need to have prior hackathon experience?",
-        answer: "No prior hackathon experience is required! CodeRed 3.0 welcomes participants of all skill levels. We provide mentorship and resources to help you succeed."
+        answer: "No prior hackathon experience is required! CODERED 3.0 welcomes participants of all skill levels. We provide mentorship and resources to help you succeed."
       },
       {
         question: "What are the tracks available?",
@@ -29,7 +29,7 @@ const faqData = [
     category: "Registration & Teams",
     questions: [
       {
-        question: "How do I register for CodeRed 3.0?",
+        question: "How do I register for CODERED 3.0?",
         answer: "You can register by clicking the 'Register Now' button on our website. Fill out the registration form with your details and team information."
       },
       {
@@ -42,7 +42,7 @@ const faqData = [
       },
       {
         question: "Is there a registration fee?",
-        answer: "CodeRed 3.0 is completely free to participate! We believe in making technology accessible to everyone."
+        answer: "CODERED 3.0 is completely free to participate! We believe in making technology accessible to everyone."
       }
     ]
   },
@@ -50,8 +50,8 @@ const faqData = [
     category: "Event Details",
     questions: [
       {
-        question: "When and where will CodeRed 3.0 be held?",
-        answer: "CodeRed 3.0 will be held on December 20, 2025, for 24 hours. The venue details will be announced closer to the event date."
+        question: "When and where will CODERED 3.0 be held?",
+        answer: "CODERED 3.0 will be held on December 20, 2025, for 24 hours. The venue details will be announced closer to the event date."
       },
       {
         question: "What should I bring to the event?",
@@ -103,7 +103,7 @@ export default function FAQPage() {
             <Link to="/" className="flex items-center gap-2 sm:gap-3">
               <img 
                 src="/crlogo.png" 
-                alt="CodeRed 3.0" 
+                alt="CODERED 3.0" 
                 className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain"
               />
               <img 
@@ -164,7 +164,7 @@ export default function FAQPage() {
             <div className="flex items-center gap-3">
               <img 
                 src="/crlogo.png" 
-                alt="CodeRed 3.0" 
+                alt="CODERED 3.0" 
                 className="h-8 w-8 object-contain"
               />
               <img 
@@ -267,7 +267,7 @@ export default function FAQPage() {
               </span>
             </h1>
             <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
-              Find answers to the most frequently asked questions about CodeRed 3.0
+              Find answers to the most frequently asked questions about CODERED 3.0
             </p>
           </div>
 
