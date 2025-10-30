@@ -209,7 +209,7 @@ export default function PrizePoolPage() {
             <div className="inline-block border border-red-600 bg-black/30 backdrop-blur-sm px-8 sm:px-12 md:px-16 py-6 sm:py-8 md:py-10">
               <p className="text-gray-400 text-xs sm:text-sm uppercase tracking-[0.3em] mb-3 font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>Total Prize Pool</p>
               <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tabular-nums" style={{ fontFamily: 'Robit, sans-serif' }}>
-                <span className="text-red-600">₹1.5</span> <span className="text-white">Lakh</span>
+                <span className="text-red-600">₹1,50,000</span>
               </p>
             </div>
           </div>
