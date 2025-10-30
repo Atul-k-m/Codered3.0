@@ -125,7 +125,7 @@ class Media {
     this.font = font;
     this.createShader();
     this.createMesh();
-    this.createTitle();
+    // Title labels disabled as requested
     this.onResize();
   }
   createShader() {
@@ -201,14 +201,7 @@ class Media {
     this.plane.setParent(this.scene);
   }
   createTitle() {
-    this.title = new Title({
-      gl: this.gl,
-      plane: this.plane,
-      renderer: this.renderer,
-      text: this.text,
-      textColor: this.textColor,
-      fontFamily: this.font
-    });
+    // no-op (labels removed)
   }
   update(scroll, direction) {
     this.plane.position.x = this.x - scroll.current - this.extra;
