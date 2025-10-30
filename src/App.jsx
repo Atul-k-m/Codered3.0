@@ -3,7 +3,8 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Timeline from "./components/Timeline";
 import Footnote from "./components/Footnote";
-import Gallery from "./components/Gallery";
+import Gallery from "./components/GalleryNew";
+import Marquee from "./components/Marquee";
 import WhyParticipate from "./components/WhyParticipate";
 import FAQComponent from "./components/FAQComponent";
 import FAQPage from "./pages/FAQPage";
@@ -15,6 +16,11 @@ function HomePage() {
     <div className="min-h-screen text-white font-mono bg-black">
       {/* Hero Section */}
       <Hero />
+
+      {/* Marquee */}
+      <section className="relative z-10">
+        <Marquee text="CODERED 3.0" speed={50} />
+      </section>
 
       {/* About */}
       <section className="relative z-10">

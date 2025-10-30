@@ -17,6 +17,27 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Grotesk";
+  src: url("./assets/fonts/grotesk.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Robit";
+  src: url("./assets/fonts/robit.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Riccione";
+  src: url("./assets/fonts/riccione.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   background: var(--bg-black);
   color: var(--muted-white);

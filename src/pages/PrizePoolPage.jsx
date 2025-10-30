@@ -43,7 +43,8 @@ export default function PrizePoolPage() {
           <div className="hidden lg:flex items-center">
             <Link 
               to="/" 
-              className="flex items-center gap-2 text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase"
+              className="flex items-center gap-2 text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
             >
               <ArrowLeft size={16} />
               Back to Home
@@ -110,7 +111,8 @@ export default function PrizePoolPage() {
           <div className="p-6 space-y-6">
             <Link 
               to="/" 
-              className="flex items-center gap-2 text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              className="flex items-center gap-2 text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <ArrowLeft size={20} />
@@ -118,35 +120,40 @@ export default function PrizePoolPage() {
             </Link>
             <a 
               href="/prize-pool" 
-              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Prizes
             </a>
             <a 
               href="/problem-statements" 
-              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Problem Statements
             </a>
             <a 
               href="#team" 
-              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Team
             </a>
             <a 
               href="/faq" 
-              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
             </a>
             <a 
               href="#sponsors" 
-              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-medium uppercase tracking-wide py-2"
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Sponsors
