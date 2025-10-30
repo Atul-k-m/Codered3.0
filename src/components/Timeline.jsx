@@ -79,12 +79,12 @@ export default function Timeline() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black" style={{ fontFamily: 'Grotesk, sans-serif' }}>
       {/* Header */}
       <section className="px-4 sm:px-6 pt-12 sm:pt-16 md:pt-24 pb-8 sm:pb-12 md:pb-20">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-2 sm:mb-3 text-white">
-            Event Timeline
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-2 sm:mb-3 text-white" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+            <span className="bg-blue-600 text-white px-4 py-1 rounded-md inline-block" style={{ fontFamily: 'Grotesk, sans-serif' }}>Event Timeline</span>
           </h1>
           <p className="text-gray-500 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
             24 hours of hacking, learning, and building.

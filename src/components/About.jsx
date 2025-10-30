@@ -84,9 +84,11 @@ export default function About() {
             </div>
           </div>
 
-          <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-8 py-3 font-medium text-sm">
-            Register Now
-          </InteractiveHoverButton>
+          <a href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge" target="_blank" rel="noreferrer">
+            <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-8 py-3 font-medium text-sm">
+              Register Now
+            </InteractiveHoverButton>
+          </a>
         </div>
       </section>
 

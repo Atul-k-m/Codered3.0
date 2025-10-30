@@ -142,12 +142,14 @@ export default function FAQPage() {
             </button>
             
             {/* Register Button */}
-            <InteractiveHoverButton 
-              className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm tracking-wide font-semibold"
-            >
-              <span className="hidden sm:inline">Register Now</span>
-              <span className="sm:hidden">Register</span>
-            </InteractiveHoverButton>
+            <a href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge" target="_blank" rel="noreferrer">
+              <InteractiveHoverButton 
+                className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm tracking-wide font-semibold"
+              >
+                <span className="hidden sm:inline">Register Now</span>
+                <span className="sm:hidden">Register</span>
+              </InteractiveHoverButton>
+            </a>
           </div>
         </div>
       </nav>
@@ -237,12 +239,14 @@ export default function FAQPage() {
           
           {/* Sidebar Footer */}
           <div className="absolute bottom-6 left-6 right-6">
-            <InteractiveHoverButton 
-              className="w-full bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm tracking-wide font-semibold"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Register Now
-            </InteractiveHoverButton>
+            <a href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge" target="_blank" rel="noreferrer">
+              <InteractiveHoverButton 
+                className="w-full bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm tracking-wide font-semibold"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Register Now
+              </InteractiveHoverButton>
+            </a>
           </div>
         </div>
       </div>
