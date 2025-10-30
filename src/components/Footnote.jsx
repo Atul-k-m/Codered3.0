@@ -35,9 +35,9 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-6 tracking-wide">POLICY LINKS</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">Terms & Conditions</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">Code of Conduct</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">Privacy Policy</a></li>
+              <li><a href="https://drive.google.com/file/d/1B5pQh7U3TpuwB9Q1ByjhQAYM1gAjXuff/view?usp=drive_link" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-red-600 transition-colors text-base">Terms & Conditions</a></li>
+              <li><a href="https://drive.google.com/file/d/1ZBu6VbVfNk1ElZ0NCMpgw72btgaKYc6_/view?usp=drive_link" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-red-600 transition-colors text-base">Code of Conduct</a></li>
+              <li><a href="https://drive.google.com/file/d/1ZZhMR7LYaPtohQ5fm9db972NyIA8-RU5/view?usp=drive_link" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-red-600 transition-colors text-base">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
