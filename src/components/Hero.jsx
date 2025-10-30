@@ -302,7 +302,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="https://drive.google.com/file/d/1T9pf6PaTerzAxugZI3ZIIDRhZ0Z7omDV/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1HKlTa7cSD_2QMF2RyrqLQwsPLvoDE8fH/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >
