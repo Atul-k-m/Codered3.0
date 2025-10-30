@@ -1,88 +1,55 @@
-import { Linkedin, Instagram, Mail } from "lucide-react";
-import { useState } from "react";
+import { Instagram, Linkedin } from 'lucide-react';
 
-export default function Footnote() {
-  const [ecellLogoError, setEcellLogoError] = useState(false);
-
+export default function Footer() {
   return (
-    <footer className="border-t border-gray-800 px-4 sm:px-6 md:px-12 lg:px-20 py-8 sm:py-12 bg-black text-white">
-      <div className="max-w-7xl mx-auto">
-        {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
-          {/* Left Section - Logos */}
-          <div className="flex items-center gap-4 sm:gap-6">
-            {/* ECELL Logo Placeholder */}
-            <div className="flex items-center gap-3">
-              {!ecellLogoError ? (
-                <img 
-                  src="/ecelllogo.png" 
-                  alt="ECELL" 
-                  className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain"
-                  onError={() => setEcellLogoError(true)}
-                />
-              ) : (
-                <div className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 bg-red-600/20 border border-red-600/50 rounded-lg flex items-center justify-center">
-                  <span className="text-red-600 text-xs font-bold">ECELL</span>
-                </div>
-              )}
-            </div>
-            
-            {/* CodeRed Logo and Website */}
-            <div className="flex items-center gap-3">
-              <img 
-                src="/crlogo.png" 
-                alt="CodeRed 3.0" 
-                className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain"
-              />
-              <a 
-                href="https://codered3.dev" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-red-600 transition-colors text-sm sm:text-base font-medium"
-              >
-                codered3.dev
+    <footer className="bg-black">
+      {/* Top dark red bar */}
+      <div className="h-1 bg-red-900"></div>
+      
+      <div className="max-w-7xl mx-auto px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-white text-lg font-bold mb-6 tracking-wide">QUICK LINKS</h3>
+            <ul className="space-y-3">
+              <li><a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">About Us</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">Events</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">Team</a></li>
+            </ul>
+          </div>
+          
+          {/* Socials */}
+          <div>
+            <h3 className="text-white text-lg font-bold mb-6 tracking-wide">ECELL SOCIALS</h3>
+            <div className="flex gap-6">
+              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
+                <Instagram size={28} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
+                <Linkedin size={28} />
               </a>
             </div>
           </div>
-
-          {/* Right Section - Social Icons */}
-          <div className="flex items-center gap-4 sm:gap-6">
-            {/* LinkedIn */}
-            <a
-              href="https://www.linkedin.com/company/codered3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-red-600 transition-colors p-2 hover:bg-gray-900 rounded-lg"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={24} />
-            </a>
-            
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/codered3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-red-600 transition-colors p-2 hover:bg-gray-900 rounded-lg"
-              aria-label="Instagram"
-            >
-              <Instagram size={24} />
-            </a>
-            
-            {/* Mail */}
-            <a
-              href="mailto:contact@codered3.dev"
-              className="text-gray-400 hover:text-red-600 transition-colors p-2 hover:bg-gray-900 rounded-lg"
-              aria-label="Email"
-            >
-              <Mail size={24} />
-            </a>
+          
+          {/* Policy Links */}
+          <div>
+            <h3 className="text-white text-lg font-bold mb-6 tracking-wide">POLICY LINKS</h3>
+            <ul className="space-y-3">
+              <li><a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">Terms & Conditions</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">Code of Conduct</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">Privacy Policy</a></li>
+            </ul>
           </div>
         </div>
-
-        {/* Copyright */}
-        <div className="mt-6 sm:mt-8 text-center">
-          <p className="text-gray-500 text-xs sm:text-sm">© 2025 CodeRed 3.0. All rights reserved.</p>
+        
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-8 border-t border-gray-800 flex justify-between items-center">
+          <div className="text-gray-500 text-sm">
+            2025 E-Cell
+          </div>
+          <div className="text-gray-500 text-sm">
+            MADE BY E-CELL BMSIT&M
+          </div>
         </div>
       </div>
     </footer>
