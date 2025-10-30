@@ -48,7 +48,7 @@ export default function Footer() {
       <ul className="space-y-3">
         <li>
           <a
-            href="https://drive.google.com/drive/folders/1YExC_F-dCmKTtmUoJz1rX3-Ww_yxTkYL?usp=sharing"
+            href="https://drive.google.com/file/d/1B5pQh7U3TpuwB9Q1ByjhQAYM1gAjXuff/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-red-600 transition-colors text-base"
@@ -58,7 +58,7 @@ export default function Footer() {
         </li>
         <li>
           <a
-            href="https://drive.google.com/drive/folders/1YExC_F-dCmKTtmUoJz1rX3-Ww_yxTkYL?usp=sharing"
+            href="https://drive.google.com/file/d/1ZBu6VbVfNk1ElZ0NCMpgw72btgaKYc6_/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-red-600 transition-colors text-base"
@@ -68,7 +68,7 @@ export default function Footer() {
         </li>
         <li>
           <a
-            href="https://drive.google.com/drive/folders/1YExC_F-dCmKTtmUoJz1rX3-Ww_yxTkYL?usp=sharing"
+            href="https://drive.google.com/file/d/1ZZhMR7LYaPtohQ5fm9db972NyIA8-RU5/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-red-600 transition-colors text-base"
