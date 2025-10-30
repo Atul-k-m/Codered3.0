@@ -4,17 +4,16 @@ const reasons = [
   {
     title: "Compete & Win",
     description:
-      "Battle for cash prizes, tech gadgets, and exclusive internship opportunities with leading companies.",
+      "Battle for cash prizes, and exclusive internship opportunities with leading companies.",
   },
   {
     title: "Network & Collaborate",
     description:
-      "Connect with developers, industry experts, and potential co-founders. Build lasting relationships in the tech community.",
+      "Connect with industry experts, tech-founders and potential co-founders. Build lasting relationships in the tech community.",
   },
   {
     title: "Learn & Innovate",
-    description:
-      "Access workshops, mentorship sessions, and cutting-edge technologies. Push your boundaries and explore new domains.",
+    description: "Push your boundaries and explore new domains.",
   },
   {
     title: "Build Real Solutions",
