@@ -20,26 +20,64 @@ export default function Footer() {
           
           {/* Socials */}
           <div>
-            <h3 className="text-white text-lg font-bold mb-6 tracking-wide">ECELL SOCIALS</h3>
-            <div className="flex gap-6">
-              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                <Instagram size={28} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                <Linkedin size={28} />
-              </a>
-            </div>
-          </div>
+  <h3 className="text-white text-lg font-bold mb-6 tracking-wide">ECELL SOCIALS</h3>
+  <div className="flex gap-6">
+    <a
+      href="https://www.instagram.com/ecell.bmsit?igsh=dW56aGtuY3pnNTBl"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-red-600 transition-colors"
+    >
+      <Instagram size={28} />
+    </a>
+    <a
+      href="https://www.linkedin.com/company/ecellbmsit/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-red-600 transition-colors"
+    >
+      <Linkedin size={28} />
+    </a>
+  </div>
+</div>
+
           
           {/* Policy Links */}
           <div>
-            <h3 className="text-white text-lg font-bold mb-6 tracking-wide">POLICY LINKS</h3>
-            <ul className="space-y-3">
-              <li><a href="https://drive.google.com/file/d/1B5pQh7U3TpuwB9Q1ByjhQAYM1gAjXuff/view?usp=drive_link" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-red-600 transition-colors text-base">Terms & Conditions</a></li>
-              <li><a href="https://drive.google.com/file/d/1ZBu6VbVfNk1ElZ0NCMpgw72btgaKYc6_/view?usp=drive_link" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-red-600 transition-colors text-base">Code of Conduct</a></li>
-              <li><a href="https://drive.google.com/file/d/1ZZhMR7LYaPtohQ5fm9db972NyIA8-RU5/view?usp=drive_link" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-red-600 transition-colors text-base">Privacy Policy</a></li>
-            </ul>
-          </div>
+      <h3 className="text-white text-lg font-bold mb-6 tracking-wide">POLICY LINKS</h3>
+      <ul className="space-y-3">
+        <li>
+          <a
+            href="https://drive.google.com/drive/folders/1YExC_F-dCmKTtmUoJz1rX3-Ww_yxTkYL?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-red-600 transition-colors text-base"
+          >
+            Terms & Conditions
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://drive.google.com/drive/folders/1YExC_F-dCmKTtmUoJz1rX3-Ww_yxTkYL?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-red-600 transition-colors text-base"
+          >
+            Code of Conduct
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://drive.google.com/drive/folders/1YExC_F-dCmKTtmUoJz1rX3-Ww_yxTkYL?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-red-600 transition-colors text-base"
+          >
+            Privacy Policy
+          </a>
+        </li>
+      </ul>
+    </div>
         </div>
         
         {/* Bottom Bar */}
