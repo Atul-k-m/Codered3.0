@@ -37,34 +37,66 @@ export default function PrizePoolPage() {
           {/* Left side - Logo */}
           <div className="flex items-center gap-2 sm:gap-3">
             <Link to="/" className="flex items-center gap-2 sm:gap-3">
-              <img 
-                src="/crlogo.png" 
-                alt="CODERED 3.0" 
-                className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain"
-              />
-              <img 
-                src="/bmslogo.png" 
-                alt="BMS Institute" 
-                className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain rounded-full"
-              />
+              <div className="flex items-center gap-2 sm:gap-3">
+                 <a href="https://bmsit.ac.in" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/bmslogo.png"
+          alt="BMS Institute"
+          className="h-10 w-auto sm:h-12 md:h-16 object-contain"
+        />
+      </a>
+                  <img
+                    src="/crlogo.png"
+                    alt="CODERED 3.0"
+                    className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain"
+                  />
+                </div>
+             
             </Link>
           </div>
           
           {/* Center - Links (match home navbar) */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <a href="/prize-pool" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+            <a
+              href="/"
+              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+            >
+              Home
+            </a>
+            <a
+              href="/prize-pool"
+              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+            >
               Prizes
             </a>
-            <a href="/problem-statements" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+            <a
+              href="/problem-statements"
+              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+            >
               Problem Statements
             </a>
-            <a href="#team" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+            <a
+              href="#team"
+              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+            >
               Team
             </a>
-            <a href="/faq" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+            <a
+              href="/faq"
+              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+            >
               FAQ
             </a>
-            <a href="#sponsors" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
+            <a
+              href="#sponsors"
+              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+            >
               Sponsors
             </a>
           </div>
@@ -77,16 +109,16 @@ export default function PrizePoolPage() {
               className="lg:hidden p-2 text-gray-300 hover:text-red-600 transition-colors"
               aria-label="Toggle mobile menu"
             >
-              {isMobileMenuOpen ? (
-                <X size={24} />
-              ) : (
-                <Menu size={24} />
-              )}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-            
+      
             {/* Register Button */}
-            <a href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge" target="_blank" rel="noreferrer">
-              <InteractiveHoverButton 
+            <a
+              href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <InteractiveHoverButton
                 className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm tracking-wide font-semibold"
               >
                 <span className="hidden sm:inline">Register Now</span>
@@ -96,7 +128,6 @@ export default function PrizePoolPage() {
           </div>
         </div>
       </nav>
-
       {/* Mobile Sidebar */}
       <div className={`fixed inset-0 z-60 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         {/* Backdrop */}

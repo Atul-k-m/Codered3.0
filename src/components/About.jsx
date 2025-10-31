@@ -16,7 +16,7 @@ export default function About() {
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         <div className="max-w-6xl w-full">
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 inline-block bg-blue-600 px-6 py-2"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 inline-block bg-red-600 px-6 py-2"
             style={{ fontFamily: "Robit, sans-serif" }}
           >
             What is CODERED 3.0?
