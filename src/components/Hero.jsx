@@ -242,7 +242,7 @@ export default function Hero() {
             className="text-gray-300 text-xs sm:text-sm md:text-base tracking-[0.3em] mb-4 sm:mb-6 uppercase font-semibold"
             style={{ fontFamily: "Grotesk, sans-serif" }}
           >
-            ECELL × BMSIT Presents
+            E-CELL × BMSIT&M Presents
           </p>
 
           <div className="relative">

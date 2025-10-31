@@ -1,22 +1,22 @@
 import CircularGallery from './CircularGallery';
 
 const LOCAL_ITEMS = [
-  { image: '/gallery/1.jpg', text: '' },
-  { image: '/gallery/2.jpg', text: '' },
-  { image: '/gallery/3.jpg', text: '' },
-  { image: '/gallery/4.JPG', text: '' },
-  { image: '/gallery/5.JPG', text: '' },
-  { image: '/gallery/6.JPG', text: '' },
-  { image: '/gallery/7.jpg', text: '' },
-  { image: '/gallery/8.jpg', text: '' },
-  { image: '/gallery/11.JPG', text: '' },
-  { image: '/gallery/12.JPG', text: '' },
-  { image: '/gallery/13.JPG', text: '' },
-  { image: '/gallery/14.JPG', text: '' },
-  { image: '/gallery/15.JPG', text: '' },
-  { image: '/gallery/16.JPG', text: '' },
-  { image: '/gallery/17.jpg', text: '' },
-  { image: '/gallery/18.jpg', text: '' },
+  { image: '/gallery/1.webp', text: '' },
+  { image: '/gallery/2.webp', text: '' },
+  { image: '/gallery/3.webp', text: '' },
+  { image: '/gallery/4.webp', text: '' },
+  { image: '/gallery/5.webp', text: '' },
+  { image: '/gallery/6.webp', text: '' },
+  { image: '/gallery/7.webp', text: '' },
+  { image: '/gallery/8.webp', text: '' },
+  { image: '/gallery/11.webp', text: '' },
+  { image: '/gallery/12.webp', text: '' },
+  { image: '/gallery/13.webp', text: '' },
+  { image: '/gallery/14.webp', text: '' },
+  { image: '/gallery/15.webp', text: '' },
+  { image: '/gallery/16.webp', text: '' },
+  { image: '/gallery/17.webp', text: '' },
+  { image: '/gallery/18.webp', text: '' },
 ];
 
 export default function GalleryNew() {

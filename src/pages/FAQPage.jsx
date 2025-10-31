@@ -365,11 +365,10 @@ export default function FAQPage() {
                 FREQUENTLY ASKED
               </span>
               <span
-                className="block mt-2"
+                className="block bg-gradient-to-r from-red-600 via-red-500 to-red-600 bg-clip-text text-transparent"
                 style={{
-                  WebkitTextStroke: "2px white",
-                  WebkitTextFillColor: "transparent",
-                  letterSpacing: "0.05em",
+                  WebkitTextFillColor: "white",
+                  letterSpacing: "0.08em",
                 }}
               >
                 QUESTIONS

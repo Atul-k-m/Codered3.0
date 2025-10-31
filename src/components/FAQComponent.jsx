@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 
 const faqData = [
   {
@@ -72,14 +73,13 @@ export default function FAQComponent() {
               FREQUENTLY ASKED
             </span>
             <span
-              className="block mt-2"
-              style={{
-                WebkitTextStroke: "2px white",
-                WebkitTextFillColor: "transparent",
-                fontFamily: "Riccione, sans-serif",
-                letterSpacing: "0.05em",
-              }}
-            >
+              className="block bg-gradient-to-r from-red-600 via-red-500 to-red-600 bg-clip-text text-transparent"
+                style={{
+                  fontFamily: "Riccione, sans-serif",
+                  WebkitTextFillColor: "white",
+                  letterSpacing: "0.08em",
+                }}
+                >
               QUESTIONS
             </span>
           </h2>
@@ -131,25 +131,30 @@ export default function FAQComponent() {
             );
           })}
         </div>
-
-        <div className="text-center">
+        
+      <div className="flex flex-wrap gap-4 justify-center">
+  
           <Link
             to="/faq"
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <button className="group relative px-8 py-3 bg-black text-white font-semibold text-sm sm:text-base tracking-wide uppercase rounded-lg overflow-hidden transition-all duration-300 hover:bg-neutral-900 border-2 border-red-900/80 focus:outline-none focus:ring-2 focus:ring-red-700/50 group-hover:shadow-lg group-hover:shadow-red-900/30">
-              <span className="relative z-10">View All FAQs</span>
-
-              {/* Subtle dark-red gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-900/10 to-red-900/20 opacity-0 group-hover:opacity-60 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
-
-              {/* Thin decorative dark red inner border to emphasize the edges */}
-              <div className="absolute inset-0 rounded-lg border border-red-900/30 pointer-events-none"></div>
-            </button>
+            <InteractiveHoverButton className="bg-transparent border border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-6 py-3 text-sm sm:text-base">
+                View All FAQ's
+            </InteractiveHoverButton>
           </Link>
-        </div>
+          <a
+              href="https://discord.gg/FTSdVUku6Y"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm sm:text-base">
+                Discord
+              </InteractiveHoverButton>
+            </a>
+          </div>
+        
       </div>
 
       <style>{`

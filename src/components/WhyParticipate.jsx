@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 
 const reasons = [
   {
@@ -156,7 +157,7 @@ export default function WhyParticipate() {
           <div className="max-w-5xl mx-auto mb-12 sm:mb-16 md:mb-20">
             <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-red-600">
               <img
-                src="/gallery/19.jpeg"
+                src="/gallery/19.webp"
                 alt="Hackathon collaboration"
                 className="w-full h-full object-cover"
               />
@@ -191,15 +192,17 @@ export default function WhyParticipate() {
 
           {/* Call to Action */}
           <div className="text-center mt-12 sm:mt-16 md:mt-20">
+            <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge"
               target="_blank"
               rel="noreferrer"
             >
-              <button className="px-6 sm:px-8 py-3 sm:py-4 bg-red-600 text-white font-bold text-base sm:text-lg hover:bg-red-700 transition-colors duration-200">
-                REGISTER NOW
-              </button>
+              <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm sm:text-base">
+                    Register
+              </InteractiveHoverButton>
             </a>
+          </div>
           </div>
         </div>
       </section>
