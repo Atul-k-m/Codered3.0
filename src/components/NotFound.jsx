@@ -47,10 +47,12 @@ export default function NotFound() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+
         {/* Header badge */}
-        <div className="mb-8 sm:mb-12 animate-fade-in">
-          <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-xs sm:text-sm font-semibold tracking-wider uppercase border border-white/20">
-            Lost?</span>
+        <div className="mb-6 sm:mb-8 animate-slide-up">
+          <button className= "inline-flex items-center justify-center h-9 px-6 bg-white/20 rounded-full  font-semibold tracking-wider uppercase">
+           <span className="relative top-[2.5px] relative left-[3px]">Lost?</span>
+          </button>
         </div>
 
         {/* Main 404 number */}
@@ -71,10 +73,10 @@ export default function NotFound() {
 <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="https://codered.vercel.app"
-              target="_blank"
+              target=""
               rel="noreferrer"
             >
-              <InteractiveHoverButton className="bg-black border border-red-600 text-black-500 hover:bg-Black-600 hover:text-white px-6 py-3 text-sm sm:text-base" style={{ fontFamily: "'Riccione', sans-serif" }}>
+              <InteractiveHoverButton className="bg-black border border-red-600 text-black-500 hover:bg-Black-600 hover:text-white px-6 py-3 text-sm sm:text-base">
                 Home
               </InteractiveHoverButton>
             </a>
