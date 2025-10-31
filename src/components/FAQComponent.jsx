@@ -103,8 +103,8 @@ export default function FAQComponent() {
                   className="w-full py-4 sm:py-5 px-4 sm:px-6 flex items-center justify-between group transition-all duration-200"
                 >
                   <span
-                    className="text-left text-white text-sm sm:text-base md:text-lg font-semibold pr-4 group-hover:text-red-500 transition-colors tracking-wide"
-                    style={{ fontFamily: "Riccione, sans-serif" }}
+                    className="text-left text-white text-xl sm:text-xl md:text-xl font-semibold pr-4 group-hover:text-red-500 transition-colors tracking-wide"
+                    style={{ fontFamily: "Robit, sans-serif" }}
                   >
                     {item.question}
                   </span>
