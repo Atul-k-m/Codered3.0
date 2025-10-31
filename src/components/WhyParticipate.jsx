@@ -149,7 +149,7 @@ export default function WhyParticipate() {
               </span>
             </h1>
             <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
-              Join India's premier 24-hour hackathon and unlock endless
+              Join Bengaluru's Premier 24-hour Hackathon and unlock endless
               opportunities
             </p>
           </div>
@@ -158,7 +158,7 @@ export default function WhyParticipate() {
           <div className="max-w-5xl mx-auto mb-12 sm:mb-16 md:mb-20">
             <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-red-600">
               <img
-                src="/gallery/8.jpg"
+                src="/gallery/19.jpeg"
                 alt="Hackathon collaboration"
                 className="w-full h-full object-cover"
               />
