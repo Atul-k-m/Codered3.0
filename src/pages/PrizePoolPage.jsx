@@ -335,7 +335,7 @@ export default function PrizePoolPage() {
           {/* Additional Info */}
           <div className="mt-12 sm:mt-16 md:mt-20 text-center max-w-3xl mx-auto px-4">
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed" style={{ fontFamily: 'Grotesk, sans-serif' }}>
-              All prize amounts are cumulative. Winners in category prizes (Software/Hardware) are also eligible for overall prizes.
+             All participating teams are eligible for Overall consideration; however, each team will receive only the highest prize they qualify for.
             </p>
             <p className="text-gray-500 text-xs sm:text-sm mt-3 sm:mt-4 italic" style={{ fontFamily: 'Grotesk, sans-serif' }}>
               *Prize distribution subject to participation and quality of submissions
