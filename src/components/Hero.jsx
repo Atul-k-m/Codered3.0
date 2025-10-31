@@ -249,7 +249,7 @@ export default function Hero() {
             <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-4 sm:mb-6 relative z-10">
               <span
                 className="italic font-light"
-                style={{ fontFamily: "Riccione, cursive" }}
+                style={{  fontFamily: "Riccione , 'Times New Roman', serif" }}
               >
                 CODE RED{" "}
               </span>
