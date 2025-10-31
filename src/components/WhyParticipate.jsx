@@ -140,9 +140,7 @@ export default function WhyParticipate() {
               <span
                 className="block"
                 style={{
-                  WebkitTextStroke: "1.5px white",
-                  WebkitTextFillColor: "transparent",
-                  letterSpacing: "0.04em",
+                  fontFamily: "Robit, sans-serif",
                 }}
               >
                 WHY PARTICIPATE
