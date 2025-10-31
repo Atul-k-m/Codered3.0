@@ -4,12 +4,12 @@ const reasons = [
   {
     title: "Compete & Win",
     description:
-      "Battle for cash prizes, and exclusive internship opportunities with leading companies.",
+      "Battle for cash prizes, and exclusive internship opportunities.",
   },
   {
     title: "Network & Collaborate",
     description:
-      "Connect with industry experts, tech-founders and potential co-founders. Build lasting relationships in the tech community.",
+      "Connect with industry experts, tech-enthusiasts and potential co-founders. Build lasting relationships in the tech community.",
   },
   {
     title: "Learn & Innovate",
@@ -193,9 +193,15 @@ export default function WhyParticipate() {
 
           {/* Call to Action */}
           <div className="text-center mt-12 sm:mt-16 md:mt-20">
-            <button className="px-6 sm:px-8 py-3 sm:py-4 bg-red-600 text-white font-bold text-base sm:text-lg hover:bg-red-700 transition-colors duration-200">
-              REGISTER NOW
-            </button>
+            <a
+              href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="px-6 sm:px-8 py-3 sm:py-4 bg-red-600 text-white font-bold text-base sm:text-lg hover:bg-red-700 transition-colors duration-200">
+                REGISTER NOW
+              </button>
+            </a>
           </div>
         </div>
       </section>
