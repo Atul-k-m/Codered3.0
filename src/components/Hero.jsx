@@ -64,11 +64,13 @@ export default function Hero() {
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-2 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <div className="flex items-center gap-2 sm:gap-3">
-            <img
-              src="/bmslogo.png"
-              alt="BMS Institute"
-              className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain rounded-full"
-            />
+           <a href="https://bmsit.ac.in" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/bmslogo.png"
+    alt="BMS Institute"
+    className="h-10 w-auto sm:h-12 md:h-16 object-contain"
+  />
+</a>
             <img
               src="/crlogo.png"
               alt="CODERED 3.0"

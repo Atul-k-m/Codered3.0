@@ -128,9 +128,9 @@ export default function About() {
                 style={{ fontFamily: "Grotesk, sans-serif" }}
               >
                 <p>Duration: 24 hours</p>
-                <p>Team size: 1-4</p>
-                <p>Venue: BMSIT</p>
-                <p>Date: Dec 12, 2025</p>
+                <p>Team size: 3-4</p>
+                <p>Venue: BMS Institute Of Technology & Management</p>
+                <p>Date: Dec 12-13, 2025</p>
               </div>
             </div>
           </div>
