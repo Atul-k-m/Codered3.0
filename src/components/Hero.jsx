@@ -272,7 +272,7 @@ export default function Hero() {
             className="text-red-500 text-sm sm:text-base md:text-lg uppercase tracking-[0.25em] mb-8"
             style={{ fontFamily: "Grotesk, sans-serif" }}
           >
-            National 24-Hour Hackathon
+            National Level 24-Hour Hackathon
           </p>
 
           <div className="flex gap-6 sm:gap-10 md:gap-12 justify-center items-end mb-10">
