@@ -59,11 +59,11 @@ const faqData = [
       },
       {
         question: "Will there be mentors available?",
-        answer: "Yes! We have industry experts and mentors available throughout the hackathon to help you with technical challenges and provide guidance."
+        answer: "Yes! We have industry experts and mentors available durin the hackathon to help you with technical challenges and provide guidance."
       },
       {
         question: "What are the prizes?",
-        answer: "We have exciting prizes for the top teams, including cash prizes, tech gadgets, and internship opportunities with our partner companies."
+        answer: "We have  an  exciting prize pool of 1,50,000 INR along with networking opportunities with best mindes across the country"
       }
     ]
   }
@@ -94,7 +94,37 @@ export default function FAQPage() {
   }, [isMobileMenuOpen]);
 
   return (
-    <div className="min-h-screen bg-black text-white font-mono">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Animated Grid Background */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(220, 38, 38, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(220, 38, 38, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px',
+          animation: 'gridMove 20s linear infinite'
+        }}></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+      </div>
+
+      <style>{`
+        @keyframes gridMove {
+          0% {
+            transform: translate(0, 0);
+          }
+          100% {
+            transform: translate(50px, 50px);
+          }
+        }
+        
+        @import url('https://fonts.cdnfonts.com/css/riccione');
+        
+        .riccione {
+          font-family: 'Riccione', sans-serif;
+        }
+      `}</style>
+
       {/* Navigation Header */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-2 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
@@ -260,21 +290,29 @@ export default function FAQPage() {
 
       {/* FAQ Content */}
       <section 
-        className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 pt-24 sm:pt-28 md:pt-32 bg-black"
+        className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 pt-24 sm:pt-28 md:pt-32 z-10"
       >
         <div className="max-w-6xl mx-auto">
           {/* Page Header */}
           <div className="text-center mb-12 sm:mb-16">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-4">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 riccione">
               <span 
-                className="block"
+                className="block bg-gradient-to-r from-red-600 via-red-500 to-red-600 bg-clip-text text-transparent"
                 style={{
-                  WebkitTextStroke: "1.5px white",
-                  WebkitTextFillColor: "transparent",
-                  letterSpacing: "0.04em",
+                  letterSpacing: "0.05em",
                 }}
               >
-                FAQ
+                FREQUENTLY ASKED
+              </span>
+              <span 
+                className="block mt-2"
+                style={{
+                  WebkitTextStroke: "2px white",
+                  WebkitTextFillColor: "transparent",
+                  letterSpacing: "0.05em",
+                }}
+              >
+                QUESTIONS
               </span>
             </h1>
             <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
@@ -283,32 +321,35 @@ export default function FAQPage() {
           </div>
 
           {/* FAQ Content */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             {/* FAQ Items */}
-            <div className="space-y-8 sm:space-y-12">
+            <div className="space-y-8 sm:space-y-10">
               {faqData.map((category, categoryIndex) => (
                 <div key={category.category} className="space-y-4 sm:space-y-6">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 text-center riccione tracking-wide">
                     {category.category}
                   </h3>
                   
-                  <div className="space-y-0">
+                  <div className="space-y-4">
                     {category.questions.map((item, questionIndex) => {
                       const key = `${categoryIndex}-${questionIndex}`;
                       const isOpen = openItems[key];
                       
                       return (
-                        <div key={questionIndex} className="border-b border-gray-800 last:border-b-0">
+                        <div 
+                          key={questionIndex} 
+                          className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-red-900/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-red-600/50 hover:shadow-lg hover:shadow-red-600/10"
+                        >
                           <button
                             onClick={() => toggleItem(categoryIndex, questionIndex)}
-                            className="w-full py-4 sm:py-6 text-center flex items-center justify-between group hover:bg-gray-900/30 transition-colors duration-200 px-2 sm:px-4"
+                            className="w-full py-4 sm:py-5 px-4 sm:px-6 flex items-center justify-between group transition-all duration-200"
                           >
-                            <span className="text-gray-300 text-sm sm:text-base md:text-lg font-medium pr-2 sm:pr-4 group-hover:text-white transition-colors flex-1 text-center">
+                            <span className="text-left text-white text-sm sm:text-base md:text-lg font-semibold pr-4 group-hover:text-red-500 transition-colors riccione tracking-wide">
                               {item.question}
                             </span>
                             <ChevronDown 
-                              size={20} 
-                              className={`text-gray-400 transition-transform duration-300 flex-shrink-0 sm:w-6 sm:h-6 ${
+                              size={24} 
+                              className={`text-red-600 transition-all duration-300 flex-shrink-0 group-hover:text-red-500 ${
                                 isOpen ? 'rotate-180' : ''
                               }`}
                             />
@@ -319,8 +360,8 @@ export default function FAQPage() {
                               isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                             }`}
                           >
-                            <div className="pb-4 sm:pb-6 px-2 sm:px-4">
-                              <p className="text-gray-400 text-sm sm:text-base leading-relaxed text-center">
+                            <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-0 border-t border-red-900/20">
+                              <p className="text-gray-300 text-sm sm:text-base leading-relaxed mt-3">
                                 {item.answer}
                               </p>
                             </div>
@@ -331,6 +372,23 @@ export default function FAQPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* CTA Section */}
+            <div className="mt-16 text-center bg-gradient-to-br from-red-900/20 to-black/50 backdrop-blur-sm border border-red-900/30 rounded-lg p-8 sm:p-10">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 riccione">
+                Still Have Questions?
+              </h3>
+              <p className="text-gray-400 mb-6 text-sm sm:text-base">
+                Feel free to reach out to our team for any additional queries
+              </p>
+              <a href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge" target="_blank" rel="noreferrer">
+                <InteractiveHoverButton 
+                  className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-8 py-3 text-base tracking-wide font-semibold"
+                >
+                  Contact Us
+                </InteractiveHoverButton>
+              </a>
             </div>
           </div>
         </div>
