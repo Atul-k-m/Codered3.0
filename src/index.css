@@ -41,8 +41,8 @@
 body {
   background: var(--bg-black);
   color: var(--muted-white);
-  font-family: "Valorant", "Bebas Neue", "Orbitron", system-ui, -apple-system,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Robit", "Bebas Neue", "Orbitron", system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Times New Roman";
 }
 
 /* small utility for glow */

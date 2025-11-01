@@ -9,6 +9,7 @@ import FAQComponent from "./components/FAQComponent";
 import FAQPage from "./pages/FAQPage";
 import PSpage from "./pages/PSpage";
 import PrizePoolPage from "./pages/PrizePoolPage";
+import NotFound from './components/NotFound';
 
 function HomePage() {
   return (
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/problem-statements" element={<PSpage />} />
         <Route path="/prize-pool" element={<PrizePoolPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
