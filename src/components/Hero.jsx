@@ -16,7 +16,7 @@ export default function Hero() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const targetDate = new Date("2025-11-14T00:00:00");
+    const targetDate = new Date("2025-12-12T10:00:00");
 
     const updateTimer = () => {
       const now = new Date();
