@@ -46,7 +46,7 @@ const problemStatements = [
     track: "Hardware",
     problems: [
       {
-        id: "CRH1",
+        id: "CR(H)1",
         title: "Non-Intrusive Load Monitoring (NILM) System for Individual Device Energy Tracking",
         description: `Most homes and small businesses have little to no visibility into which appliances consume the most energy. Smart plugs and multi-sensor setups are expensive and complex to deploy at scale, leaving users with only a single, aggregated electricity bill and no actionable insights. This results in energy wastage, higher costs, and poor awareness of appliance efficiency or faults.
         
@@ -56,7 +56,7 @@ Build a Non-Intrusive Load Monitoring (NILM) system that uses just one sensor to
         domain: "Smart Infrastructure",
       },
       {
-        id: "CRH2",
+        id: "CR(H)2",
         title: "Non-GPS Trackers for Swappable Battery",
         description: `Problem Statement 
 As EV battery swapping networks expand, tracking thousands of expensive battery packs across depots and service stations has become a logistical and security nightmare. GPS-based tracking drains power, struggles indoors, and adds unnecessary cost, leaving businesses vulnerable to theft, misplaced assets, and inefficient operations.
@@ -67,7 +67,7 @@ Opportunity:
         domain: "CleanTech",
       },
       {
-        id: "CRH3",
+        id: "CR(H)3",
         title: "Multi-Sensor Wildlife Corridor Monitoring System for Anti-Poaching Using ESP32 and Raspberry Pi",
         description: `Wildlife reserves and forest corridors face an ongoing threat from poaching, illegal logging, and unauthorized intrusions, yet vast terrains make round-the-clock human surveillance nearly impossible. Existing camera traps and patrols are reactive, expensive, and often detect threats too late resulting in loss of wildlife and ecological damage.
 
@@ -77,7 +77,7 @@ Opportunity:
         domain: "Envirotech",
       },
       {
-        id: "CRH4",
+        id: "CR(H)4",
         title: "MicroSLAM: Real-Time Mapping & Localization on Tiny Hardware",
         description: `Most small robots and drones lack the computing power for heavy mapping algorithms or GPS access- making autonomous navigation in unknown environments a major challenge. SLAM (Simultaneous Localization and Mapping) enables real-time environment mapping and self-localization, but traditional systems are too resource-intensive for low-cost hardware.
 
@@ -87,7 +87,7 @@ Build a lightweight, real-time MicroSLAM module that can map and localize autono
         domain: "Robotics",
       },
       {
-        id: "CRH5",
+        id: "CR(H)5",
         title: "IoT-Powered Dynamic Queue and Wait Time Management System",
         description: `Restaurant customers face significant frustration from long, unpredictable queues and a lack of accurate wait time information for both ordering and food preparation. This uncertainty leads to a poor customer experience, high rates of reneging (customers leaving the line), and inefficient staff allocation.
 
@@ -101,7 +101,7 @@ Opportunity: Develop an IoT-powered system that accurately predicts and communic
     track: "Software",
     problems: [
       {
-        id: "CRS1",
+        id: "CR(S)1",
         title: "Virtual Try-On Experience Platform",
         description: `Problem Statement: Online shopping still lacks the real-world experience of seeing, feeling, or trying products before purchase. This gap leads to customer hesitation, lower conversions, and higher return rates, especially for appearance-based products like eyewear, clothing, jewelry, or cosmetics.
 
@@ -111,7 +111,7 @@ Opportunity:
         domain: "E-Commerce",
       },
       {
-        id: "CRS2",
+        id: "CR(S)2",
         title: "AI-Based Transport & Road Space Management System",
         description: `The Indian Army manages massive daily vehicle movements for troops, equipment, and supplies, yet current planning often results in inefficient fleet use, route conflicts, and convoy delays due to overlapping military and civil traffic.
 
@@ -122,7 +122,7 @@ Such a system will enhance fleet efficiency, reduce delays, and improve operatio
         domain: "DefenceTech",
       },
       {
-        id: "CRS3",
+        id: "CR(S)3",
         title: "Privacy-Preserving Federated Learning Framework for Healthcare with Differential Privacy",
         description: `Problem Statement: Healthcare institutions cannot share patient data due to HIPAA/GDPR regulations, limiting AI model training to small local datasets that don't generalize well.
 
@@ -131,7 +131,7 @@ Opportunity: Develop a federated learning framework that trains medical diagnosi
         domain: "HealthTech",
       },
       {
-        id: "CRS4",
+        id: "CR(S)4",
         title: "Lightweight, Real-Time LLM Safety Gateway",
         description: `Problem Statement  The widespread adoption of Large Language Models (LLMs) across consumer and enterprise applications is fundamentally vulnerable to Prompt Injection Attacks. Malicious users exploit these vulnerabilities to bypass an LLM's safety guardrails, steal proprietary context, execute unauthorized actions, or generate harmful content, severely compromising system security, privacy, and integrity.
 
@@ -140,7 +140,7 @@ Opportunity: Design and prototype a Lightweight, Real-Time LLM Safety Gateway. T
         domain: "CyberSecurity",
       },
       {
-        id: "CRS5",
+        id: "CR(S)5",
         title: "Intelligent Autonomous Agent in a Virtual 3D World",
         description: `As real-world training for autonomous systems is costly, risky, and complex, there's a growing need for virtual environments where AI agents can safely learn and adapt. Reinforcement learning provides the foundation for creating agents that can perceive, decide, and act autonomously within simulated 3D spaces.
 
