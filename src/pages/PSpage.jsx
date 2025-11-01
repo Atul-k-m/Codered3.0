@@ -371,8 +371,7 @@ export default function ProblemStatementPage() {
               <span
                 className="block"
                 style={{
-                  WebkitTextStroke: "1.5px white",
-                  WebkitTextFillColor: "transparent",
+                  fontFamily: "Robit, 'Times New Roman', serif",
                   letterSpacing: "0.04em",
                 }}
               >
@@ -396,78 +395,94 @@ export default function ProblemStatementPage() {
                     : "bg-transparent text-white border-red-600 hover:bg-red-600"
                 }`}
               >
-                {track.domain}
+                {track.track}
               </button>
             ))}
           </div>
 
-          {/* Accordion */}
-          <div className="max-w-5xl mx-auto space-y-4 sm:space-y-6">
-            {problemStatements[selectedTrack].problems.map((problem, index) => (
-              <div
-                key={index}
-                className="border-2 border-gray-800 bg-black/70 rounded-lg overflow-hidden transition-all duration-300 hover:border-red-600"
-              >
-                <button
-                  onClick={() =>
-                    setOpenIndex(openIndex === index ? null : index)
-                  }
-                  className="w-full flex justify-between items-center px-4 sm:px-6 py-4 sm:py-5 text-left focus:outline-none"
-                >
-                  <div className="flex items-center gap-4">
-                    <span className="border-2 border-red-600 px-2 py-1 text-red-600 font-bold text-lg sm:text-xl font-mono">
-                      {problem.id}
-                    </span>
-                    <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold">
-                      {problem.title}
-                    </h3>
-                  </div>
-                  <svg
-                    className={`w-5 h-5 sm:w-6 sm:h-6 text-red-600 transform transition-transform duration-300 ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                {openIndex === index && (
-                  <div className="px-6 pb-6 text-gray-300 border-t border-red-900/30 animate-fadeIn">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                      {/* SDG Logos */}
-                     <div className="flex flex-wrap items-center gap-2 mb-3">
-  {problem.sdgs.map((sdg, index) => (
-    <img
+     
+         {/* Accordion */}
+<div className="max-w-5xl mx-auto space-y-4 sm:space-y-6">
+  {problemStatements[selectedTrack].problems.map((problem, index) => (
+    <div
       key={index}
-      src={sdgImages[sdg]}
-      alt={sdg}
-      className="w-10 h-10  border border-gray-700 hover:scale-110 transition-transform"
-    />
+      className="border-2 border-gray-800 bg-black/70 rounded-lg overflow-hidden transition-all duration-300 hover:border-red-600"
+    >
+      {/* Accordion Header */}
+      <button
+        onClick={() =>
+          setOpenIndex(openIndex === index ? null : index)
+        }
+        className="w-full flex justify-between items-center px-4 sm:px-6 py-4 sm:py-5 text-left focus:outline-none"
+      >
+        <div className="flex items-center gap-4">
+          <span className="border-2 border-red-600 px-2 py-1 text-red-600 font-bold text-lg sm:text-xl font-mono">
+            {problem.id}
+          </span>
+          <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold">
+            {problem.title}
+          </h3>
+        </div>
+        <svg
+          className={`w-5 h-5 sm:w-6 sm:h-6 text-red-600 transform transition-transform duration-300 ${
+            openIndex === index ? "rotate-180" : ""
+          }`}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {/* Accordion Content */}
+      {openIndex === index && (
+        <div className="px-6 pb-6 text-gray-300 border-t border-red-900/30 animate-fadeIn">
+          {/* SDG + Domain */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              {problem.sdgs.map((sdg, i) => (
+                <img
+                  key={i}
+                  src={sdgImages[sdg]}
+                  alt={sdg}
+                  className="w-10 h-10 border border-gray-700 hover:scale-110 transition-transform"
+                />
+              ))}
+            </div>
+            <div className="text-sm text-red-500 mb-2">
+              <strong>Domain:</strong> {problem.domain}
+            </div>
+          </div>
+
+          {/* Problem + Opportunity */}
+          <div className="space-y-4">
+            <div>
+              <h4 className="text-red-500 font-semibold mb-2">
+                Problem Statement
+              </h4>
+              <p className="text-sm sm:text-base leading-relaxed">
+                {problem.description.split("Opportunity:")[0].trim()}
+              </p>
+            </div>
+
+            {problem.description.includes("Opportunity:") && (
+              <div>
+                <h4 className="text-red-500 font-semibold mb-2">
+                  Opportunity
+                </h4>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  {problem.description.split("Opportunity:")[1].trim()}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
   ))}
 </div>
-                      <span className="text-xs sm:text-sm text-gray-500">
-                      
-                      <div className="text-sm text-red-500 mb-2">
-  <strong>Domain:</strong> {problem.domain}
-</div>
-                      </span>
-                    </div>
-                    <p className="text-sm sm:text-base leading-relaxed">
-                      {problem.description}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
 
           {/* Info */}
           <div className="mt-12 sm:mt-16 text-center px-4">
