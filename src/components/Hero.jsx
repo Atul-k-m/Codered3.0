@@ -53,7 +53,7 @@ export default function Hero() {
       <img
         src={HeroBGDesktop}
         alt=""
-        className="hidden sm:block absolute inset-0 w-full h-full object-cover opacity-40"
+        className="hidden sm:block absolute inset-0 w-full h-full object-cover opacity-100 bottom-50px"
       />
       <img
         src={HeroBGMobile}
@@ -321,9 +321,84 @@ export default function Hero() {
                 Register
               </InteractiveHoverButton>
             </a>
-          </div>
-        </div>
+  </div>
       </div>
+        
+  <div className="marquee-container">
+  <div className="marquee-text">
+    <div className="marquee-text-track">
+      <p>BMSIT&M</p>
+      <p></p>
+      <p>24 HOURS</p>
+      <p>✷</p>
+      <p>CODE RED 3.0</p>
+      <p>✷</p>
+      <p>BMSIT&M</p>
+      <p>✷</p>
+      <p>CODE RED 3.0</p>
+      <p>✷</p>
+      <p>CODE RED 3.0</p>
+      <p>✷</p>
+      <p aria-hidden="true">BMSIT&M</p>
+      <p aria-hidden="true">✷</p>
+      <p aria-hidden="true">24 HOURS</p>
+      <p aria-hidden="true">✷</p>
+      <p aria-hidden="true">CODE RED 3.0</p>
+      <p>✷</p>
+    </div>
+  </div>
+
+  <style jsx>{`
+    .marquee-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      overflow: hidden;
+      z-index: 50;
+      margin: 0px;
+      padding: 0px;
+      background: #d90a16;
+
+    }
+
+    .marquee-text {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      font-family:Robit;
+    }
+
+    .marquee-text-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-move-text 15s linear infinite;
+    }
+
+    .marquee-text-track p {
+      padding: 1rem 2.5rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.15em;
+      white-space: nowrap;
+    }
+
+    @keyframes marquee-move-text {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  `}</style>
+</div>
+</div>
+      
     </section>
   );
+  
 }
