@@ -43,7 +43,7 @@ const sdgImages = {
 
 const problemStatements = [
   {
-    track: "Hardware",
+    track: "HARDWARE",
     problems: [
       {
         id: "CR(H)1",
@@ -98,7 +98,7 @@ Opportunity: Develop an IoT-powered system that accurately predicts and communic
     ],
   },
   {
-    track: "Software",
+    track: "SOFTWARE",
     problems: [
       {
         id: "CR(S)1",
@@ -389,11 +389,12 @@ export default function ProblemStatementPage() {
               <button
                 key={index}
                 onClick={() => setSelectedTrack(index)}
-                className={`px-5 sm:px-7 md:px-9 py-2 sm:py-3 font-bold text-sm sm:text-base md:text-lg transition-all duration-300 border-2 ${
+                className={`px-5 sm:px-7 md:px-9 py-2 sm:py-3 text-sm sm:text-base md:text-lg transition-all duration-300 border-2 tracking-widest ${
                   selectedTrack === index
                     ? "bg-red-600 text-white border-red-600"
-                    : "bg-transparent text-white border-red-600 hover:bg-red-600"
-                }`}
+                    : "bg-transparent text-white border-red-600 hover:bg-red-600"} `}
+                  style={{ fontFamily: "'Robit', sans-serif"} }
+        
               >
                 {track.track}
               </button>
@@ -406,7 +407,7 @@ export default function ProblemStatementPage() {
   {problemStatements[selectedTrack].problems.map((problem, index) => (
     <div
       key={index}
-      className="border-2 border-gray-800 bg-black/70 rounded-lg overflow-hidden transition-all duration-300 hover:border-red-600"
+      className="border-2 border-gray-800 bg-black/70 rounded-lg overflow-hidden transition-all duration-300 hover:border-red-600 font-light"
     >
       {/* Accordion Header */}
       <button
@@ -414,12 +415,13 @@ export default function ProblemStatementPage() {
           setOpenIndex(openIndex === index ? null : index)
         }
         className="w-full flex justify-between items-center px-4 sm:px-6 py-4 sm:py-5 text-left focus:outline-none"
+      style={{ fontFamily: "'Robit', sans-serif"} }
       >
         <div className="flex items-center gap-4">
           <span className="border-2 border-red-600 px-2 py-1 text-red-600 font-bold text-lg sm:text-xl font-mono">
-            {problem.id}
+            {problem.id}  
           </span>
-          <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold">
+          <h3 className="text-white text-base sm:text-lg md:text-xl">
             {problem.title}
           </h3>
         </div>
@@ -451,7 +453,8 @@ export default function ProblemStatementPage() {
                 />
               ))}
             </div>
-            <div className="text-sm text-red-500 mb-2">
+            <div className="text-sm text-red-600 mb-2"
+              style={{ fontFamily: "'Robit', sans-serif"} }>
               <strong>Domain:</strong> {problem.domain}
             </div>
           </div>
@@ -490,7 +493,7 @@ export default function ProblemStatementPage() {
               Select a problem statement that aligns with your interests and
               expertise. You'll have{" "}
               <span className="text-red-600 font-bold">24 hours</span> to
-              develop your solution during CodeRed 3.0.
+              develop your solution during CodeRed 3.0 Finale.
             </p>
           </div>
         </div>

@@ -265,18 +265,19 @@ export default function Hero() {
             className="text-lg sm:text-xl md:text-2xl text-gray-300 tracking-wide mb-6 italic"
             style={{ fontFamily: "Grotesk, sans-serif" }}
           >
-            code till you{" "}
-            <span className="not-italic text-red-500 font-semibold">drop</span>
+            Code Till You{" "}
+            <span className="italic text-red-600 font-semibold tracking-wide mb-6">Drop</span>
           </p>
 
           <p
-            className="text-red-500 text-sm sm:text-base md:text-lg uppercase tracking-[0.25em] mb-8"
+            className="text-red-600 text-sm sm:text-base md:text-lg uppercase tracking-[0.25em] mb-8"
             style={{ fontFamily: "Grotesk, sans-serif" }}
           >
             National Level 24-Hour Hackathon
           </p>
 
-          <div className="flex gap-6 sm:gap-10 md:gap-12 justify-center items-end mb-10">
+          <div className={"flex gap-6 sm:gap-10 md:gap-12 justify-center items-end mb-10"}
+            style={{ fontFamily: "'Robit', sans-serif"} }>
             {["Days", "Hours", "Mins", "Secs"].map((label, idx) => {
               const val = [
                 timeLeft.days,
@@ -288,7 +289,7 @@ export default function Hero() {
                 <div key={label} className="flex flex-col items-center">
                   <span
                     className={`text-5xl sm:text-6xl md:text-7xl font-semibold tabular-nums mb-1 ${
-                      label === "Secs" ? "text-red-500" : "text-white"
+                      label === "Secs" ? "text-red-600" : "text-white"
                     }`}
                   >
                     {val.toString().padStart(2, "0")}
@@ -303,11 +304,11 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="https://drive.google.com/file/d/1HKlTa7cSD_2QMF2RyrqLQwsPLvoDE8fH/view?usp=sharing"
+              href="public\CR3_Brochure_F1.4.pdf"
               target="_blank"
               rel="noreferrer"
             >
-              <InteractiveHoverButton className="bg-transparent border border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-6 py-3 text-sm sm:text-base">
+              <InteractiveHoverButton className="bg-transparent border border-red-600 text-white-600 hover:bg-red-600 hover:text-white px-8 py-4 text-sm sm:text-base">
                 Brochure
               </InteractiveHoverButton>
             </a>
@@ -316,7 +317,7 @@ export default function Hero() {
               target="_blank"
               rel="noreferrer"
             >
-              <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm sm:text-base">
+              <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-8 py-4 text-sm sm:text-base">
                 Register
               </InteractiveHoverButton>
             </a>
