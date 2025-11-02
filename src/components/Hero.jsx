@@ -304,7 +304,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="public\CR3_Brochure_F1.4.pdf"
+              href="\CR3_Brochure_F1.4.pdf"
               target="_blank"
               rel="noreferrer"
             >
