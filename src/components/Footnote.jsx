@@ -90,7 +90,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://discord.gg/your-discord-link"
+                href="https://discord.gg/FTSdVUku6Y"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Discord"
@@ -118,7 +118,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="mailto:ecell@bmsit.in"
                 aria-label="Email"
                 className="text-white hover:text-red-600 transition-colors"
               >
