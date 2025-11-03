@@ -95,6 +95,17 @@ Opportunity: Develop an IoT-powered system that accurately predicts and communic
         sdgs: ["SDG8", "SDG9"],
         domain: "RetailTech",
       },
+      {
+        id: "CR(H)6",
+        title: "Real-Time Audio-Visual Zooming System with Adaptive Beamforming",
+        description: `Problem Statement:
+When recording videos with optical zoom, cameras capture omnidirectional audio regardless of the zoom level. This creates a jarring mismatch where the visuals are highly magnified on a distant subject, but the audio is dominated by nearby, off-screen noise.
+
+Opportunity:
+Develop a Raspberry Pi-based audio-visual zooming system that dynamically synchronizes audio capture with the camera's visual zoom. Using a custom microphone array (4+ MEMS microphones), the system will perform real-time adaptive beamforming (e.g., MVDR algorithms) to create a "sonic zoom." As the user zooms in visually, the audio beam will proportionally narrow and focus in the same direction, spatially filtering out ambient noise and capturing clear sound from the distant subject. This creates an immersive recording experience for wildlife, sports, or journalism where capturing distant subjects in noisy environments is crucial.`,
+        sdgs: ["SDG9", "SDG15"],
+        domain: "MediaTech",
+      },
     ],
   },
   {
@@ -148,9 +159,136 @@ Opportunity: Build an RL-powered autonomous agent that learns to complete a defi
         sdgs: ["SDG4", "SDG11"],
         domain: "AgenticAI",
       },
+      {
+        id: "CR(S)6",
+        title: "Personal Finance Intelligence Platform",
+        description: `
+
+A large segment of India's workforce, including gig workers, small business owners, and individuals without formal credit histories, faces irregular income and cash flow. They often overspend during high-income months and struggle during lean periods due to a lack of structured credit access, savings discipline, and financial guidance. Yet, their SMS and digital transaction data contain valuable insights into income and expense trends that remain largely untapped.
+
+Opportunity
+
+Develop a personal finance intelligence platform that empowers users to make smarter spending and saving decisions, helping them achieve financial stability and confidence. The solution should analyze SMS-based transaction data (income, expenses, and cash flow) to offer meaningful insights and actions.
+
+The platform can, but not necessarily must, include:
+
+● Detection of spending patterns and highlighting of impulsive or wasteful expenses.
+
+● Personalised insights or nudges (e.g., "If you had invested in gold instead of buying new shoes, you'd have ₹1,000 more today.").
+
+● Goal-setting and tracking for savings or spending.
+
+● A gamified Financial Health Score representing the user's overall financial behaviour.
+
+You may build upon the following open source starter code repository, other open source or use your own implementation:
+
+🔗 [PennywiseAI Tracker (Open Source Starter Code)](https://github.com/Shivansh-10/PennywiseAI-Tracker)
+
+The starter code already includes: SMS extraction, Income and expense categorisation and Basic analytics
+
+While the use of AI is optional, the focus should be on solving real financial pain points through impactful, innovative, and user-friendly design that promotes long-term financial well-being.`,
+        sdgs: ["SDG8", "SDG9"],
+        domain: "FinTech",
+      },
     ],
   },
 ];
+
+// Helper function to render text with line breaks and clickable links
+function renderFormattedText(text) {
+  if (!text) return null;
+  
+  // Split by newlines to preserve line breaks
+  const lines = text.split('\n');
+  
+  return lines.map((line, lineIndex) => {
+    // Handle empty lines
+    if (line.trim() === '') {
+      return <div key={lineIndex} className="h-2" />;
+    }
+    
+    // Convert markdown-style links [text](url) to HTML links
+    const parts = [];
+    let lastIndex = 0;
+    
+    // Find markdown links [text](url)
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    let match;
+    let hasMarkdownLinks = false;
+    
+    while ((match = linkRegex.exec(line)) !== null) {
+      hasMarkdownLinks = true;
+      // Add text before the link
+      if (match.index > lastIndex) {
+        parts.push(line.substring(lastIndex, match.index));
+      }
+      
+      // Add the link
+      parts.push(
+        <a
+          key={`link-${lineIndex}-${match.index}`}
+          href={match[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-500 hover:text-red-400 underline"
+        >
+          {match[1]}
+        </a>
+      );
+      
+      lastIndex = match.index + match[0].length;
+    }
+    
+    // Process remaining text (either after markdown links or the entire line if no markdown links)
+    const textToProcess = hasMarkdownLinks ? line.substring(lastIndex) : line;
+    
+    if (textToProcess) {
+      // Check for plain URLs in text
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      let urlMatch;
+      let urlLastIndex = 0;
+      let hasUrls = false;
+      
+      while ((urlMatch = urlRegex.exec(textToProcess)) !== null) {
+        hasUrls = true;
+        // Add text before the URL
+        if (urlMatch.index > urlLastIndex) {
+          parts.push(textToProcess.substring(urlLastIndex, urlMatch.index));
+        }
+        
+        // Add the URL link
+        parts.push(
+          <a
+            key={`url-${lineIndex}-${urlMatch.index}`}
+            href={urlMatch[0]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-red-500 hover:text-red-400 underline"
+          >
+            {urlMatch[0]}
+          </a>
+        );
+        
+        urlLastIndex = urlMatch.index + urlMatch[0].length;
+      }
+      
+      // Add final remaining text
+      if (urlLastIndex < textToProcess.length) {
+        parts.push(textToProcess.substring(urlLastIndex));
+      } else if (!hasUrls && !hasMarkdownLinks) {
+        // No links found, just add the entire line
+        parts.push(textToProcess);
+      }
+    }
+    
+    return (
+      <div key={lineIndex} className="mb-2">
+        {parts.length > 0 ? parts : line}
+      </div>
+    );
+  });
+}
+
 export default function ProblemStatementPage() {
   const [selectedTrack, setSelectedTrack] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -169,11 +307,11 @@ export default function ProblemStatementPage() {
 
   return (
     <div className="min-h-screen bg-black text-white font-mono">
-     <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-2 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
-             <div className="flex justify-between items-center max-w-7xl mx-auto">
-               {/* Left side - Logo */}
-               <div className="flex items-center gap-2 sm:gap-3">
-                 <Link to="/" className="flex items-center gap-2 sm:gap-3">
+      <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-2 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
+          {/* Left side - Logo */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link to="/" className="flex items-center gap-2 sm:gap-3">
                    <div className="flex items-center gap-2 sm:gap-3">
                       <a href="https://bmsit.ac.in" target="_blank" rel="noopener noreferrer">
              <img
@@ -182,16 +320,16 @@ export default function ProblemStatementPage() {
                className="h-10 w-auto sm:h-12 md:h-16 object-contain"
              />
            </a>
-                       <img
-                         src="/crlogo.png"
-                         alt="CODERED 3.0"
-                         className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain"
-                       />
+              <img
+                src="/crlogo.png"
+                alt="CODERED 3.0"
+                className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain"
+              />
                      </div>
                   
-                 </Link>
-               </div>
-               
+            </Link>
+          </div>
+
                {/* Center - Links (match home navbar) */}
                <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
                  <a
@@ -232,24 +370,24 @@ export default function ProblemStatementPage() {
                  <a
                    href="#sponsors"
                    className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
-                   style={{ fontFamily: 'Grotesk, sans-serif' }}
-                 >
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+            >
                    Sponsors
                  </a>
-               </div>
-               
-               {/* Right side - Mobile Menu Button & Register Button */}
-               <div className="flex items-center gap-3">
-                 {/* Mobile Hamburger Menu Button */}
-                 <button
-                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                   className="lg:hidden p-2 text-gray-300 hover:text-red-600 transition-colors"
-                   aria-label="Toggle mobile menu"
-                 >
-                   {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                 </button>
-           
-                 {/* Register Button */}
+          </div>
+
+          {/* Right side - Mobile Menu Button & Register Button */}
+          <div className="flex items-center gap-3">
+            {/* Mobile Hamburger Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-2 text-gray-300 hover:text-red-600 transition-colors"
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {/* Register Button */}
                  <a
                    href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge"
                    target="_blank"
@@ -258,109 +396,109 @@ export default function ProblemStatementPage() {
                    <InteractiveHoverButton
                      className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm tracking-wide font-semibold"
                    >
-                     <span className="hidden sm:inline">Register Now</span>
-                     <span className="sm:hidden">Register</span>
-                   </InteractiveHoverButton>
+              <span className="hidden sm:inline">Register Now</span>
+              <span className="sm:hidden">Register</span>
+            </InteractiveHoverButton>
                  </a>
-               </div>
-             </div>
-           </nav>
-           {/* Mobile Sidebar */}
+          </div>
+        </div>
+      </nav>
+      {/* Mobile Sidebar */}
            <div className={`fixed inset-0 z-60 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-             {/* Backdrop */}
+        {/* Backdrop */}
              <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)}></div>
-             
-             {/* Sidebar */}
+
+        {/* Sidebar */}
              <div className={`mobile-menu-container absolute right-0 top-0 h-full w-80 bg-black border-l border-red-900/30 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-               {/* Sidebar Header */}
-               <div className="flex items-center justify-between p-6 border-b border-gray-800">
-                 <div className="flex items-center gap-3">
-                   <img 
-                     src="/crlogo.png" 
-                     alt="CODERED 3.0" 
-                     className="h-8 w-8 object-contain"
-                   />
-                   <img 
-                     src="/bmslogo.png" 
-                     alt="BMS Institute" 
-                     className="h-8 w-8 object-contain rounded-full"
-                   />
-                 </div>
-                 <button
-                   onClick={() => setIsMobileMenuOpen(false)}
-                   className="p-2 text-gray-300 hover:text-red-600 transition-colors"
-                   aria-label="Close mobile menu"
-                 >
-                   <X size={20} />
-                 </button>
-               </div>
-               
-               {/* Navigation Links */}
-               <div className="p-6 space-y-6">
-                 <Link 
-                   to="/" 
-                   className="flex items-center gap-2 text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
-                   style={{ fontFamily: 'Grotesk, sans-serif' }}
-                   onClick={() => setIsMobileMenuOpen(false)}
-                 >
-                   <ArrowLeft size={20} />
-                   Back to Home
-                 </Link>
-                 <a 
-                   href="/prize-pool" 
-                   className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
-                   style={{ fontFamily: 'Grotesk, sans-serif' }}
-                   onClick={() => setIsMobileMenuOpen(false)}
-                 >
-                   Prizes
-                 </a>
-                 <a 
-                   href="/problem-statements" 
-                   className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
-                   style={{ fontFamily: 'Grotesk, sans-serif' }}
-                   onClick={() => setIsMobileMenuOpen(false)}
-                 >
-                   Problem Statements
-                 </a>
-                 <a 
-                   href="#team" 
-                   className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
-                   style={{ fontFamily: 'Grotesk, sans-serif' }}
-                   onClick={() => setIsMobileMenuOpen(false)}
-                 >
-                   Team
-                 </a>
-                 <a 
-                   href="/faq" 
-                   className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
-                   style={{ fontFamily: 'Grotesk, sans-serif' }}
-                   onClick={() => setIsMobileMenuOpen(false)}
-                 >
-                   FAQ
-                 </a>
-                 <a 
-                   href="#sponsors" 
-                   className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
-                   style={{ fontFamily: 'Grotesk, sans-serif' }}
-                   onClick={() => setIsMobileMenuOpen(false)}
-                 >
-                   Sponsors
-                 </a>
-               </div>
-               
-               {/* Sidebar Footer */}
-               <div className="absolute bottom-6 left-6 right-6">
+          {/* Sidebar Header */}
+          <div className="flex items-center justify-between p-6 border-b border-gray-800">
+            <div className="flex items-center gap-3">
+              <img
+                src="/crlogo.png"
+                alt="CODERED 3.0"
+                className="h-8 w-8 object-contain"
+              />
+              <img
+                src="/bmslogo.png"
+                alt="BMS Institute"
+                className="h-8 w-8 object-contain rounded-full"
+              />
+            </div>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-2 text-gray-300 hover:text-red-600 transition-colors"
+              aria-label="Close mobile menu"
+            >
+              <X size={20} />
+            </button>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="p-6 space-y-6">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <ArrowLeft size={20} />
+              Back to Home
+            </Link>
+            <a
+              href="/prize-pool"
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Prizes
+            </a>
+            <a
+              href="/problem-statements"
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Problem Statements
+            </a>
+            <a
+              href="#team"
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Team
+            </a>
+            <a
+              href="/faq"
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              FAQ
+            </a>
+            <a
+              href="#sponsors"
+              className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
+              style={{ fontFamily: 'Grotesk, sans-serif' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Sponsors
+            </a>
+          </div>
+
+          {/* Sidebar Footer */}
+          <div className="absolute bottom-6 left-6 right-6">
                  <a href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge" target="_blank" rel="noreferrer">
-                   <InteractiveHoverButton 
-                     className="w-full bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm tracking-wide font-semibold"
-                     onClick={() => setIsMobileMenuOpen(false)}
-                   >
-                     Register Now
-                   </InteractiveHoverButton>
+            <InteractiveHoverButton
+              className="w-full bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm tracking-wide font-semibold"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Register Now
+            </InteractiveHoverButton>
                  </a>
-               </div>
-             </div>
-           </div>
+          </div>
+        </div>
+      </div>
 
       {/* Problem Statements Content */}
       <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 pt-24 sm:pt-28 md:pt-32 bg-black">
@@ -423,8 +561,8 @@ export default function ProblemStatementPage() {
           </span>
           <h3 className="text-white text-base sm:text-lg md:text-xl">
             {problem.title}
-          </h3>
-        </div>
+              </h3>
+            </div>
         <svg
           className={`w-5 h-5 sm:w-6 sm:h-6 text-red-600 transform transition-transform duration-300 ${
             openIndex === index ? "rotate-180" : ""
@@ -465,9 +603,9 @@ export default function ProblemStatementPage() {
               <h4 className="text-red-500 font-semibold mb-2">
                 Problem Statement
               </h4>
-              <p className="text-sm sm:text-base leading-relaxed">
-                {problem.description.split("Opportunity:")[0].trim()}
-              </p>
+              <div className="text-sm sm:text-base leading-relaxed">
+                {renderFormattedText(problem.description.split("Opportunity:")[0].trim())}
+              </div>
             </div>
 
             {problem.description.includes("Opportunity:") && (
@@ -475,9 +613,9 @@ export default function ProblemStatementPage() {
                 <h4 className="text-red-500 font-semibold mb-2">
                   Opportunity
                 </h4>
-                <p className="text-sm sm:text-base leading-relaxed">
-                  {problem.description.split("Opportunity:")[1].trim()}
-                </p>
+                <div className="text-sm sm:text-base leading-relaxed">
+                  {renderFormattedText(problem.description.split("Opportunity:")[1].trim())}
+                </div>
               </div>
             )}
           </div>
