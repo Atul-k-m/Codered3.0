@@ -63,7 +63,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/faq" element={<FAQPage />} />
-        <Route path="/problem-statements" element={<TechnicalIssuesPage />} />
+        <Route path="/problem-statements" element={<PSpage />} />
         <Route path="/prize-pool" element={<PrizePoolPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
