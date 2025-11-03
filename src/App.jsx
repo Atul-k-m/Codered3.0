@@ -8,6 +8,7 @@ import WhyParticipate from "./components/WhyParticipate";
 import FAQComponent from "./components/FAQComponent";
 import FAQPage from "./pages/FAQPage";
 import PSpage from "./pages/PSpage";
+import TechnicalIssuesPage from "./pages/TechnicalIssuesPage";
 import PrizePoolPage from "./pages/PrizePoolPage";
 import NotFound from './components/NotFound';
 
@@ -62,7 +63,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/faq" element={<FAQPage />} />
-        <Route path="/problem-statements" element={<PSpage />} />
+        <Route path="/problem-statements" element={<TechnicalIssuesPage />} />
         <Route path="/prize-pool" element={<PrizePoolPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
