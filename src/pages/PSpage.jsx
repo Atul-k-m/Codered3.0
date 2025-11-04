@@ -113,13 +113,14 @@ Develop a Raspberry Pi-based audio-visual zooming system that dynamically synchr
     problems: [
       {
         id: "CR(S)1",
-        title: "Virtual Try-On Experience Platform",
-        description: `Problem Statement: Online shopping still lacks the real-world experience of seeing, feeling, or trying products before purchase. This gap leads to customer hesitation, lower conversions, and higher return rates, especially for appearance-based products like eyewear, clothing, jewelry, or cosmetics.
+        title: "No-Code Platform for Interactive Avatar-Driven UX",
+        description: `Problem Statement: Digital creatives and UX designers can mock up sophisticated, avatar-driven user experiences (like virtual assistants, interactive onboarding guides, or personalized web journeys), but they cannot build or test them without deep engineering resources. This gap between design (e.g., in Figma) and implementation is a major bottleneck, causing long development cycles, high costs, and a loss of creative fidelity.
 
-Opportunity:
- Design a virtual try-on platform powered by AI and AR that lets users see how products look and fit in real time, whether it's eyeglasses, contact lenses, outfits, or makeup. By merging computer vision, 3D modeling, and personalization, your solution should make online shopping immersive, confident, and closer to the in-store experience.`,
-        sdgs: ["SDG12", "SDG8"],
-        domain: "E-Commerce",
+Opportunity: 
+
+Design a no-code platform that empowers UX designers and digital creatives to build, test, and deploy interactive, avatar-driven user experiences. The solution must bridge the gap between design tools and live production, allowing non-technical users to define avatar appearance, personality, and conversational/behavioral logic using a visual, drag-and-drop interface. This enables rapid prototyping and A/B testing of rich UX elements like virtual sales assistants, dynamic help agents, or personalized onboarding guides, transforming static designs into functional applications without coding dependencies.`,
+        sdgs: ["SDG9", "SDG8"],
+        domain: "Design Tech",
       },
       {
         id: "CR(S)2",
