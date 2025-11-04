@@ -1,51 +1,15 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useRef, useState, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import { events } from "../data/Eventdata";
 
-export default function Timeline() {
-  const [visibleItems, setVisibleItems] = useState(new Set());
-  const [currentDateIndex, setCurrentDateIndex] = useState(0);
-  const observerRef = useRef(null);
-  const timelineLineRef = useRef(null);
-  const containerRef = useRef(null);
-  const lastDateIndexRef = useRef(-1);
 
-  const timelineEvents = [
-    {
-      time: "30th October 2025",
-      title: "Launch",
-      description: ""
-    },
-    {
-      time: "11:59 PM, 31st October 2025",
-      title: "Release of Problem Statements",
-      description: ""
-    },
-    {
-      time: "10:00 AM, 1st November 2025",
-      title: "Registrations Open",
-      description: ""
-    },
-    {
-      time: "11:59 PM, 17th November 2025",
-      title: "Round 1 Ends",
-      description: ""
-    },
-    {
-      time: "12:00 AM, 1st December 2025",
-      title: "Top 50 Teams Announced",
-      description: ""
-    },
-    {
-      time: "7:00 PM, 5th December 2025",
-      title: "Round 2 Registration Deadline",
-      description: ""
-    },
-    {
-      time: "12th & 13th December 2025",
-      title: "Grand Finale",
-      description: ""
-    }
-  ];
+const Timeline = () => {
+  const headingRef = useRef(null);
+  const scrollRef = useRef(null);
+  const hasAnimated = useRef(false);
+  const isInView = useInView(headingRef, { margin: "-100px" });
 
+<<<<<<< HEAD
   // Helper function to extract and normalize date from time string
   // Returns an object with both normalized key (for grouping) and display string
   const extractDate = (timeString) => {
@@ -116,332 +80,111 @@ export default function Timeline() {
     "M12 2L20 20L4 20L12 2Z",  // Placeholder 6
     "M12 2L16 8L12 14L8 8L12 2Z"  // Placeholder 7
   ];
+=======
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+>>>>>>> c067f1e99505279fd4fa1c91464b4257a808b31b
 
   useEffect(() => {
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisibleItems((prev) => new Set([...prev, entry.target.dataset.index]));
-          } else {
-            setVisibleItems((prev) => {
-              const newSet = new Set(prev);
-              newSet.delete(entry.target.dataset.index);
-              return newSet;
-            });
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
+    if (isInView && !hasAnimated.current) {
+      const el = scrollRef.current;
+      if (el && el.scrollHeight > el.clientHeight) {
+        el.scrollTo({ top: 300, behavior: "smooth" });
+        setTimeout(() => {
+          el.scrollTo({ top: 0, behavior: "smooth" });
+        }, 1000);
       }
-    };
-  }, []);
-
-  useEffect(() => {
-    const elements = document.querySelectorAll('[data-timeline-item]');
-    elements.forEach((el) => {
-      if (observerRef.current) {
-        observerRef.current.observe(el);
-      }
-    });
-
-    return () => {
-      elements.forEach((el) => {
-        if (observerRef.current) {
-          observerRef.current.unobserve(el);
-        }
-      });
-    };
-  }, []);
-
-  // Track current date checkpoint based on scroll position
-  useEffect(() => {
-    let rafId = null;
-    
-    const updateCurrentDate = () => {
-      rafId = null;
-      const container = containerRef.current;
-      if (!container) return;
-
-      const dateCheckpoints = container.querySelectorAll('[data-date-checkpoint]');
-      if (!dateCheckpoints || dateCheckpoints.length === 0) return;
-
-      const viewportCenter = window.innerHeight * 0.5;
-      const viewportTop = 0;
-      const viewportBottom = window.innerHeight;
-      
-      // Find which date checkpoint is most prominently in view
-      let activeIndex = lastDateIndexRef.current >= 0 ? lastDateIndexRef.current : 0;
-      let bestScore = -1;
-
-      dateCheckpoints.forEach((checkpoint, index) => {
-        const rect = checkpoint.getBoundingClientRect();
-        const checkpointTop = rect.top;
-        const checkpointBottom = rect.bottom;
-        const checkpointCenter = rect.top + (rect.height / 2);
-        
-        // Skip if checkpoint is too far below viewport
-        if (checkpointTop > viewportBottom + 100) return;
-        
-        // Calculate visibility: how much of the checkpoint is in viewport
-        const visibleTop = Math.max(checkpointTop, viewportTop);
-        const visibleBottom = Math.min(checkpointBottom, viewportBottom);
-        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-        
-        // Calculate distance from viewport center (prefer items near center)
-        const distanceFromCenter = Math.abs(checkpointCenter - viewportCenter);
-        const normalizedDistance = Math.min(distanceFromCenter / window.innerHeight, 1);
-        
-        // Score: higher visibility and closer to center = better
-        // Bias towards checkpoints that have passed the viewport center when scrolling down
-        const visibilityScore = visibleHeight / Math.max(rect.height, 1);
-        const proximityScore = 1 - normalizedDistance;
-        const score = visibilityScore * 0.7 + proximityScore * 0.3;
-        
-        if (score > bestScore) {
-          bestScore = score;
-          activeIndex = index;
-        }
-      });
-
-      // Only update if the index actually changed to prevent glitching
-      if (activeIndex !== lastDateIndexRef.current) {
-        lastDateIndexRef.current = activeIndex;
-        setCurrentDateIndex(activeIndex);
-      }
-    };
-
-    const scheduleUpdate = () => {
-      if (rafId === null) rafId = window.requestAnimationFrame(updateCurrentDate);
-    };
-
-    window.addEventListener('scroll', scheduleUpdate, { passive: true });
-    window.addEventListener('resize', scheduleUpdate);
-    scheduleUpdate();
-
-    return () => {
-      window.removeEventListener('scroll', scheduleUpdate);
-      window.removeEventListener('resize', scheduleUpdate);
-      if (rafId !== null) cancelAnimationFrame(rafId);
-    };
-  }, []);
-
-  // Scroll-driven line growth between dots
-  useEffect(() => {
-    let rafId = null;
-    const updateLine = () => {
-      rafId = null;
-      const container = containerRef.current;
-      const lineEl = timelineLineRef.current;
-      if (!container || !lineEl) return;
-
-      const dots = container.querySelectorAll('.timeline-dot');
-      if (!dots || dots.length === 0) return;
-
-      const containerRect = container.getBoundingClientRect();
-      const firstDotRect = dots[0].getBoundingClientRect();
-      const lastDotRect = dots[dots.length - 1].getBoundingClientRect();
-
-      const firstCenterY = firstDotRect.top - containerRect.top + (firstDotRect.height / 2);
-      const lastCenterY = lastDotRect.top - containerRect.top + (lastDotRect.height / 2);
-      const lineLeft = firstDotRect.left - containerRect.left + (firstDotRect.width / 2);
-
-      // Progress position is some band inside viewport; 60% from top feels natural
-      const progressViewportY = window.innerHeight * 0.6;
-      const progressInContainer = progressViewportY - containerRect.top;
-
-      const clampedEndY = Math.min(Math.max(progressInContainer, firstCenterY), lastCenterY);
-      const height = Math.max(0, clampedEndY - firstCenterY);
-
-      lineEl.style.left = `${lineLeft}px`;
-      lineEl.style.top = `${firstCenterY}px`;
-      lineEl.style.transform = 'translateX(-50%)';
-      lineEl.style.setProperty('--line-height', `${height}px`);
-    };
-
-    const scheduleUpdate = () => {
-      if (rafId === null) rafId = window.requestAnimationFrame(updateLine);
-    };
-
-    window.addEventListener('scroll', scheduleUpdate, { passive: true });
-    window.addEventListener('resize', scheduleUpdate);
-    scheduleUpdate();
-
-    return () => {
-      window.removeEventListener('scroll', scheduleUpdate);
-      window.removeEventListener('resize', scheduleUpdate);
-      if (rafId !== null) cancelAnimationFrame(rafId);
-    };
-  }, []);
-
-  // Get current date group info
-  const currentDateGroup = dateGroups[currentDateIndex] || dateGroups[0];
-  const currentSvgIndex = currentDateIndex % svgPathData.length;
-  const [svgKey, setSvgKey] = useState(0);
-
-  // Update SVG key when date changes to trigger animation
-  useEffect(() => {
-    setSvgKey(prev => prev + 1);
-  }, [currentDateIndex]);
+      hasAnimated.current = true;
+    }
+  }, [isInView]);
 
   return (
-    <div className="min-h-screen bg-black" style={{ fontFamily: 'Grotesk, sans-serif' }}>
-      {/* Header */}
-      <section className="px-4 sm:px-6 pt-12 sm:pt-16 md:pt-24 pb-8 sm:pb-12 md:pb-20">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-2 sm:mb-3 text-white" style={{ fontFamily: 'Robit, sans-serif' }}>
-            <span className="bg-red-600 text-white px-4 py-1 inline-block" style={{ fontFamily: 'Robit, sans-serif' }}>Event Timeline</span>
-          </h1>
-          <p className="text-gray-500 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-            24 hours of hacking, learning, and building.
-          </p>
+    <div className="flex flex-col md:flex-row w-full min-h-screen bg-black text-white font-bold">
+      {/* Image Section */}
+      <div
+        className="w-full md:w-2/5 flex items-center justify-center p-6 md:p-0 relative overflow-visible bg-no-repeat bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/timelinebg.svg')" }}
+      >
+        <div className="w-[80%] h-[400px] md:h-[65%] border-4 rounded-2xl flex items-center justify-center bg-black/40 shadow-[-12px_12px_24px_rgba(0,0,0,0.6)] z-10"
+             style={{ borderColor: '#e11d48' }}>
+          <img
+            src={`images/eventvisual${(hoveredIndex !== null ? hoveredIndex : selectedIndex) + 1}.svg`}
+            alt="Event Visual"
+            className="w-full h-full object-cover rounded-xl transition-all duration-300 ease-in-out"
+          />
         </div>
-      </section>
+      </div>
 
-      {/* Timeline */}
-      <section className="px-4 sm:px-6 pb-16 sm:pb-24 md:pb-32">
-        <div ref={containerRef} className="max-w-5xl mx-auto relative">
-          <div className="space-y-8 sm:space-y-12 md:space-y-20 lg:space-y-28">
-            {/* Dynamic Timeline Line */}
-            <div
-              ref={timelineLineRef}
-              className="absolute w-[2px] bg-red-600 transition-[height,top,left] duration-150 ease-out z-10"
-              style={{ height: `var(--line-height, 0px)` }}
-              id="timeline-line"
-            ></div>
-            
-            {/* Render events grouped by date */}
-            {dateGroups.map((dateGroup, dateGroupIndex) => (
-              <div key={dateGroup.date} className="relative">
-                {/* Events for this date */}
-                {dateGroup.events.map((event, eventIndex) => {
-                  const globalIndex = timelineEvents.indexOf(event);
-                  const isFirstEvent = eventIndex === 0;
-                  return (
-                    <div 
-                      key={`${dateGroup.date}-${eventIndex}`}
-                      {...(isFirstEvent ? { 'data-date-checkpoint': dateGroupIndex } : {})}
-                      data-timeline-item
-                      data-index={globalIndex}
-                      className={`flex flex-col sm:flex-row gap-3 sm:gap-6 md:gap-12 lg:gap-16 group transition-all duration-700 ease-out relative ${
-                        visibleItems.has(String(globalIndex))
-                          ? 'opacity-100 translate-y-0'
-                          : 'opacity-0 translate-y-8'
-                      }`}
-                    >
-                      {/* Animated SVG Display - Positioned next to first event of active date */}
-                      {isFirstEvent && currentDateIndex === dateGroupIndex && (
-                        <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center z-30 -mr-8 xl:-mr-12">
-                          <div className="relative w-32 h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48">
-                            {/* SVG Container with smooth transitions */}
-                            <div className="absolute inset-0 flex items-center justify-center">
-                              <svg
-                                key={svgKey}
-                                className="w-full h-full text-red-600 animate-svgFadeIn"
-                                viewBox="0 0 24 24"
-                                style={{
-                                  filter: 'drop-shadow(0 0 20px rgba(220, 38, 38, 0.5))'
-                                }}
-                              >
-                                <path 
-                                  d={svgPathData[currentSvgIndex]} 
-                                  stroke="currentColor" 
-                                  strokeWidth="2" 
-                                  fill="none"
-                                  className="animate-svgDraw"
-                                />
-                              </svg>
-                            </div>
-                            {/* Glow effect */}
-                            <div className="absolute inset-0 bg-red-600/20 blur-2xl rounded-full -z-10 animate-pulse"></div>
-                          </div>
-                        </div>
-                      )}
-                      {/* Time */}
-                      <div className="w-full sm:w-24 md:w-40 lg:w-48 flex-shrink-0 pt-1">
-                        <span className="text-red-500 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-medium block transition-all duration-300 group-hover:text-red-400">
-                          {event.time}
-                        </span>
-                      </div>
+      {/* Timeline Section */}
+      <div className="w-full md:w-3/5 flex flex-col px-6 md:px-10 py-8 border-l-4" style={{ borderColor: '#111827' }}>
+        <motion.div
+          ref={headingRef}
+          initial={{ x: 100, opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex-shrink-0"
+        >
+          <h2
+            className="text-3xl md:text-7xl mb-6 md:mb-10 py-4"
+            style={{ fontFamily: 'Riccione, serif', letterSpacing: 1 }}
+          >
+            <span style={{ color: "#ff2d2d" }}>Here’s</span> What’s Coming!
+          </h2>
+        </motion.div>
 
-                      {/* Content */}
-                      <div className="flex-1 pb-8 sm:pb-12 md:pb-20 lg:pb-28 pl-4 sm:pl-6 md:pl-12 lg:pl-16 relative transition-all duration-300">
-                        {/* Dot */}
-                        <div className={`timeline-dot absolute -left-[4px] sm:-left-[5px] md:-left-[6px] top-2 w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 bg-red-600 rounded-full transition-all duration-300 group-hover:scale-150 group-hover:bg-red-500 group-hover:shadow-lg group-hover:shadow-red-500/50 ${
-                          currentDateIndex === dateGroupIndex ? 'ring-2 ring-red-500/50' : ''
-                        }`} />
-                        
-                        <h3 className="text-white font-semibold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-1 sm:mb-2 md:mb-3 transition-colors duration-300 group-hover:text-gray-100">
-                          {event.title}
-                        </h3>
-                        <p className="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed transition-colors duration-300 group-hover:text-gray-300">
-                          {event.description}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
+        {/* Scrollable Events List */}
+        <div
+          ref={scrollRef}
+          className="flex-1 space-y-6 md:space-y-8 pl-4 md:pl-8 pr-2 max-h-[50vh] md:max-h-[70vh] overflow-y-auto"
+          style={{
+            scrollbarWidth: "normal",
+            scrollbarColor: "#ff6b6b transparent",
+          }}
+        >
+          {events.map((event, index) => {
+            const isSelected = index === selectedIndex;
+
+            return (
+              <div
+                key={index}
+                onClick={() => setSelectedIndex(index)}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className="border-b px-4 pl-0 pb-6 hover:scale-[1.01] transition-transform duration-300 cursor-pointer"
+                style={{ borderColor: '#2b2b2b' }}
+              >
+                <div className="flex items-start justify-between gap-4 flex-nowrap w-full">
+                  <h3
+                    className={`text-xl md:text-4xl ${isSelected ? 'text-white' : 'text-[#ffb3b3] hover:text-[#ffc6c6]'}`}
+                    style={{ flex: "1 1 auto", fontFamily: 'Roboto, sans-serif' }}
+                  >
+                    {event.title}
+                  </h3>
+                  <span
+                    className={`border text-sm md:text-xl px-4 py-2 md:py-3 rounded-full whitespace-nowrap`}
+                    style={{
+                      flexShrink: 0,
+                      borderColor: isSelected ? '#ff2d2d' : 'rgba(255,255,255,0.2)',
+                      background: isSelected ? 'rgba(255,45,45,0.12)' : 'rgba(255,255,255,0.03)'
+                    }}
+                  >
+                    {event.date}
+                  </span>
+                </div>
+
+                <p
+                  className={`text-sm md:text-xl mt-2`}
+                  style={{ fontFamily: '"Space Grotesk", sans-serif', color: isSelected ? '#ffffff' : '#ffbdbd' }}
+                >
+                  {event.subtitle}
+                </p>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      </section>
-
-      <style jsx>{`
-        * {
-          scroll-behavior: smooth;
-        }
-        
-        @keyframes svgFadeIn {
-          0% {
-            opacity: 0;
-            transform: scale(0.8) rotate(-5deg);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1) rotate(0deg);
-          }
-        }
-        
-        @keyframes svgDraw {
-          0% {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            opacity: 0;
-          }
-          50% {
-            opacity: 1;
-          }
-          100% {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 0;
-          }
-        }
-        
-        @keyframes svgPulse {
-          0%, 100% {
-            filter: drop-shadow(0 0 20px rgba(220, 38, 38, 0.5));
-          }
-          50% {
-            filter: drop-shadow(0 0 30px rgba(220, 38, 38, 0.8));
-          }
-        }
-        
-        .animate-svgFadeIn {
-          animation: svgFadeIn 0.6s ease-out, svgPulse 3s ease-in-out 0.6s infinite;
-        }
-        
-        .animate-svgDraw {
-          animation: svgDraw 0.8s ease-out;
-          stroke-dasharray: 1000;
-          stroke-dashoffset: 0;
-        }
-      `}</style>
+      </div>
     </div>
   );
-}
+};
+
+export default Timeline;
