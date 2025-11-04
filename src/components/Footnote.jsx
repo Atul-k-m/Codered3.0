@@ -183,16 +183,15 @@ export default function Footer() {
                   Privacy Policy
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://drive.google.com/file/d/1ZapVG3eKR56DF4k8X5u7l8Kv89z-f0Mj/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-red-600 transition-colors text-lg"
-                >
-                  Terms & Conditions
-                </a>
-              </li>
+                <li>
+                  <a
+                    href="./assets/t&c.pdf"
+                    download="Terms_and_Conditions.pdf"
+                    className="text-white hover:text-red-600 transition-colors text-lg"
+                  >
+                    Terms & Conditions
+                  </a>
+                  </li>
             </ul>
           </div>
         </div>
