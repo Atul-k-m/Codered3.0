@@ -99,7 +99,7 @@ export default function Timeline() {
     eventCount: group.events.length
   }));
 
-  // Sort by average position
+  // Sort by average positionn[]
   dateGroups.sort((a, b) => a.avgPosition - b.avgPosition);
 
   // Placeholder SVG paths - Replace these with your custom SVG path data

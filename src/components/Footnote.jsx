@@ -185,8 +185,9 @@ export default function Footer() {
               </li>
                 <li>
                   <a
-                    href="./assets/t&c.pdf"
-                    download="Terms_and_Conditions.pdf"
+                    href="https://drive.google.com/file/d/1cxpD6F_3SBUumWCkzfwERu_aHec0FZNX/view?usp=drivesdk"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white hover:text-red-600 transition-colors text-lg"
                   >
                     Terms & Conditions
