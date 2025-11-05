@@ -183,7 +183,7 @@ The platform can, but not necessarily must, include:
 
 You may build upon the following open source starter code repository, other open source or use your own implementation:
 
-🔗 [PennywiseAI Tracker (Open Source Starter Code)](https://github.com/Shivansh-10/PennywiseAI-Tracker)
+🔗 [PennywiseAI Tracker (Open Source Starter Code)](https://github.com/sarim2000/pennywiseai-tracker?tab=readme-ov-file)
 
 The starter code already includes: SMS extraction, Income and expense categorisation and Basic analytics
 
