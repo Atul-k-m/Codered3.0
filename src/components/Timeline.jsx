@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
-import {events} from "../data/Eventdata.jsx";
+import { events } from "../data/Eventdata.jsx";
 const Timeline = () => {
   const headingRef = useRef(null);
   const scrollRef = useRef(null);
@@ -15,7 +15,7 @@ const Timeline = () => {
   useEffect(() => {
     const now = new Date();
     let activeIndex = 0;
-    
+
     for (let i = events.length - 1; i >= 0; i--) {
       const eventDate = new Date(events[i].dateISO);
       if (now >= eventDate) {
@@ -23,7 +23,7 @@ const Timeline = () => {
         break;
       }
     }
-    
+
     setCurrentEventIndex(activeIndex);
     setSelectedIndex(activeIndex);
   }, []);
@@ -48,10 +48,14 @@ const Timeline = () => {
         className="w-full md:w-2/5 flex items-center justify-center p-6 md:p-0 relative bg-no-repeat bg-cover bg-center"
         style={{ backgroundImage: "url('/images/timelinebg.svg')" }}
       >
-        <div className="w-[80%] h-[400px] md:h-[65%] border-4 rounded-2xl flex items-center justify-center bg-black/40 shadow-[-12px_12px_24px_rgba(0,0,0,0.6)] z-10"
-             style={{ borderColor: '#e11d48' }}>
+        <div
+          className="w-[80%] h-[400px] md:h-[65%] border-4 rounded-2xl flex items-center justify-center bg-black/40 shadow-[-12px_12px_24px_rgba(0,0,0,0.6)] z-10"
+          style={{ borderColor: "#e11d48" }}
+        >
           <img
-            src={`images/eventvisual${(hoveredIndex !== null ? hoveredIndex : selectedIndex) + 1}.svg`}
+            src={`gallery/${
+              (hoveredIndex !== null ? hoveredIndex : selectedIndex) + 1
+            }.webp`}
             alt="Event Visual"
             className="w-full h-full object-cover rounded-xl transition-all duration-300 ease-in-out"
           />
@@ -59,15 +63,18 @@ const Timeline = () => {
       </div>
 
       {/* Timeline Section */}
-      <div className="w-full md:w-3/5 flex flex-col px-6 md:px-10 py-8 border-l-4 overflow-hidden" style={{ borderColor: '#111827' }}>
+      <div
+        className="w-full md:w-3/5 flex flex-col px-6 md:px-10 py-8 border-l-4 overflow-hidden"
+        style={{ borderColor: "#111827" }}
+      >
         <h2
           ref={headingRef}
           className="italic text-3xl md:text-7xl mb-6 md:mb-10 py-4"
-          style={{ fontFamily: 'Riccione, italic', letterSpacing: 1 }}
+          style={{ fontFamily: "Riccione, italic", letterSpacing: 1 }}
         >
           <span style={{ color: "#ff2d2d" }}>Here's</span> What's Coming!
         </h2>
-     
+
         {/* Scrollable Events List */}
         <div
           ref={scrollRef}
@@ -88,18 +95,22 @@ const Timeline = () => {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className="border-b pb-6 hover:scale-[1.01] transition-all duration-300 cursor-pointer"
-                style={{ 
-                  borderColor: '#2b2b2b'
+                style={{
+                  borderColor: "#2b2b2b",
                 }}
               >
                 <div className="flex items-start justify-between gap-3 md:gap-4 w-full">
                   <h3
                     className={`text-xl md:text-4xl transition-colors duration-300 break-words`}
-                    style={{ 
+                    style={{
                       flex: "1 1 0",
                       minWidth: 0,
-                      fontFamily: 'Robit, sans-serif',
-                      color: isCurrentEvent ? '#ff2d2d' : isPastEvent ? '#888888' : '#b3b3b3'
+                      fontFamily: "Robit, sans-serif",
+                      color: isCurrentEvent
+                        ? "#ff2d2d"
+                        : isPastEvent
+                        ? "#888888"
+                        : "#b3b3b3",
                     }}
                   >
                     {event.title}
@@ -108,10 +119,14 @@ const Timeline = () => {
                     className={`border text-xs md:text-base px-3 md:px-4 py-2 md:py-3 rounded-full transition-all duration-300`}
                     style={{
                       flexShrink: 0,
-                      borderColor: isCurrentEvent ? '#ff2d2d' : 'rgba(255,255,255,0.2)',
-                      background: isCurrentEvent ? 'rgba(255,45,45,0.12)' : 'rgba(255,255,255,0.03)',
-                      color: isCurrentEvent ? '#ff2d2d' : '#888888',
-                      whiteSpace: 'nowrap'
+                      borderColor: isCurrentEvent
+                        ? "#ff2d2d"
+                        : "rgba(255,255,255,0.2)",
+                      background: isCurrentEvent
+                        ? "rgba(255,45,45,0.12)"
+                        : "rgba(255,255,255,0.03)",
+                      color: isCurrentEvent ? "#ff2d2d" : "#888888",
+                      whiteSpace: "nowrap",
                     }}
                   >
                     {event.date}
@@ -120,9 +135,13 @@ const Timeline = () => {
 
                 <p
                   className={`text-sm md:text-xl mt-2 transition-colors duration-300`}
-                  style={{ 
-                    fontFamily: '"Grotesk", sans-serif', 
-                    color: isCurrentEvent ? '#ffcccc' : isPastEvent ? '#555555' : '#6b6b6b'
+                  style={{
+                    fontFamily: '"Grotesk", sans-serif',
+                    color: isCurrentEvent
+                      ? "#ffcccc"
+                      : isPastEvent
+                      ? "#555555"
+                      : "#6b6b6b",
                   }}
                 >
                   {event.subtitle}
