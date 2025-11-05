@@ -14,15 +14,20 @@ const events =[
     "subtitle": "Teams can start registering for the event.",
     "date": "9:00 AM, 1st November 2025"
   },
+   {
+    "title": "Registrations Ends",
+    "subtitle": "Registration window closes on Unstop",
+    "date": "11:59 PM, 19th November 2025"
+  },
   {
     "title": "Round 1 Ends",
     "subtitle": "Submission window for Round 1 closes.",
-    "date": "11:59 PM, 17th November 2025"
+    "date": "11:59 PM, 21st November 2025"
   },
   {
     "title": "Top 50 Teams Announced",
     "subtitle": "The top 50 teams advancing to Round 2 are revealed.",
-    "date": "12:00 AM, 1st December 2025"
+    "date": "12:01 AM, 1st December 2025"
   },
   {
     "title": "Round 2 Registration Deadline",
