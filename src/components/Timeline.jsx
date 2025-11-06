@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
 import { events } from "../data/Eventdata.jsx";
+
 const Timeline = () => {
   const headingRef = useRef(null);
   const scrollRef = useRef(null);
@@ -10,6 +11,9 @@ const Timeline = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [currentEventIndex, setCurrentEventIndex] = useState(0);
+  const [autoImageIndex, setAutoImageIndex] = useState(0);
+
+  const totalImages = 3; // 👈 you currently have 3 images (timeline/1.png, timeline/2.png, timeline/3.png)
 
   // Determine current event based on date
   useEffect(() => {
@@ -28,6 +32,7 @@ const Timeline = () => {
     setSelectedIndex(activeIndex);
   }, []);
 
+  // Scroll animation once in view
   useEffect(() => {
     if (isInView && !hasAnimated.current) {
       const el = scrollRef.current;
@@ -41,6 +46,18 @@ const Timeline = () => {
     }
   }, [isInView]);
 
+  // 🔁 Auto image change every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAutoImageIndex((prev) => (prev + 1) % totalImages);
+    }, 4000); // change every 4s
+    return () => clearInterval(interval);
+  }, []);
+
+  // Determine which image to show
+  const displayedImageIndex =
+    (hoveredIndex !== null ? hoveredIndex : selectedIndex) % totalImages;
+
   return (
     <div className="flex flex-col md:flex-row w-full min-h-screen bg-black text-white font-bold overflow-hidden">
       {/* Image Section */}
@@ -49,15 +66,14 @@ const Timeline = () => {
         style={{ backgroundImage: "url('/images/timelinebg.svg')" }}
       >
         <div
-          className="w-[80%] h-[400px] md:h-[65%] border-4 rounded-2xl flex items-center justify-center bg-black/40 shadow-[-12px_12px_24px_rgba(0,0,0,0.6)] z-10"
+          className="w-[80%] h-[400px] md:h-[65%] border-4 rounded-2xl flex items-center justify-center bg-black/40 shadow-[-12px_12px_24px_rgba(0,0,0,0.6)] z-10 overflow-hidden"
           style={{ borderColor: "#e11d48" }}
         >
           <img
-            src={`gallery/${
-              (hoveredIndex !== null ? hoveredIndex : selectedIndex) + 1
-            }.webp`}
+            src={`timeline/${displayedImageIndex + 1}.png`}
             alt="Event Visual"
-            className="w-full h-full object-cover rounded-xl transition-all duration-300 ease-in-out"
+            className="w-full h-full object-cover rounded-xl transition-all duration-700 ease-in-out"
+            key={autoImageIndex} // forces fade effect when auto changes
           />
         </div>
       </div>
