@@ -11,7 +11,7 @@ import PSpage from "./pages/PSpage";
 import TechnicalIssuesPage from "./pages/TechnicalIssuesPage";
 import PrizePoolPage from "./pages/PrizePoolPage";
 import NotFound from './components/NotFound';
-
+import TeamPage from "./pages/Team";
 function HomePage() {
   return (
     <div className="min-h-screen text-white font-mono bg-black">
@@ -65,6 +65,7 @@ export default function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/problem-statements" element={<PSpage />} />
         <Route path="/prize-pool" element={<PrizePoolPage />} />
+        <Route path="/team" element={<TeamPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

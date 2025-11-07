@@ -57,7 +57,7 @@ Build a Non-Intrusive Load Monitoring (NILM) system that uses just one sensor to
       },
       {
         id: "CR(H)2",
-        title: "Non-GPS Trackers for Swappable Battery",
+        title: "Non-GPS Trackers for Swappable Battery**",
         description: `Problem Statement 
 As EV battery swapping networks expand, tracking thousands of expensive battery packs across depots and service stations has become a logistical and security nightmare. GPS-based tracking drains power, struggles indoors, and adds unnecessary cost, leaving businesses vulnerable to theft, misplaced assets, and inefficient operations.
 
@@ -78,7 +78,7 @@ Opportunity:
       },
       {
         id: "CR(H)4",
-        title: "MicroSLAM: Real-Time Mapping & Localization on Tiny Hardware",
+        title: "MicroSLAM: Real-Time Mapping & Localization on Tiny Hardware**",
         description: `Most small robots and drones lack the computing power for heavy mapping algorithms or GPS access- making autonomous navigation in unknown environments a major challenge. SLAM (Simultaneous Localization and Mapping) enables real-time environment mapping and self-localization, but traditional systems are too resource-intensive for low-cost hardware.
 
 Opportunity:
@@ -113,7 +113,7 @@ Develop a Raspberry Pi-based audio-visual zooming system that dynamically synchr
     problems: [
       {
         id: "CR(S)1",
-        title: "No-Code Platform for Interactive Avatar-Driven UX",
+        title: "No-Code Platform for Interactive Avatar-Driven UX**",
         description: `Problem Statement: Digital creatives and UX designers can mock up sophisticated, avatar-driven user experiences (like virtual assistants, interactive onboarding guides, or personalized web journeys), but they cannot build or test them without deep engineering resources. This gap between design (e.g., in Figma) and implementation is a major bottleneck, causing long development cycles, high costs, and a loss of creative fidelity.
 
 Opportunity: 
@@ -628,6 +628,11 @@ export default function ProblemStatementPage() {
 
           {/* Info */}
           <div className="mt-12 sm:mt-16 text-center px-4">
+           <p className="text-gray-400 text-sm sm:text-base max-w-3xl mx-auto">
+              {" "}
+              <span className="text-red-600 font-bold">**</span> - These problem statements are sponsored by external organizations , refer to terms and conditions on the main website
+            </p>
+            
             <p className="text-gray-400 text-sm sm:text-base max-w-3xl mx-auto">
               Select a problem statement that aligns with your interests and
               expertise. You'll have{" "}

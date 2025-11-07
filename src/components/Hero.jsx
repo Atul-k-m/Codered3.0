@@ -93,7 +93,7 @@ export default function Hero() {
               Problem Statements
             </a>
             <a
-              href="#team"
+              href="/team"
               className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
               style={{ fontFamily: "Grotesk, sans-serif" }}
             >

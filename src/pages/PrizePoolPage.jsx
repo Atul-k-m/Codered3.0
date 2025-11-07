@@ -261,7 +261,7 @@ export default function PrizePoolPage() {
               <div className="relative border border-red-600 bg-black/20 backdrop-blur-sm p-8 sm:p-10 md:p-12 text-center group hover:border-red-500 transition-colors">
                 <Trophy className="w-16 h-16 sm:w-20 sm:h-20 text-yellow-500 mx-auto mb-6" strokeWidth={1.5} />
                 <h3 className="text-sm sm:text-base text-gray-400 mb-2 uppercase tracking-[0.2em] font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>Overall Winner</h3>
-                <p className="text-5xl sm:text-6xl md:text-7xl font-light text-red-600 mb-3 tabular-nums" style={{ fontFamily: 'Robit, sans-serif' }}>₹50K</p>
+                <p className="text-5xl sm:text-6xl md:text-7xl font-light text-red-600 mb-3 tabular-nums" style={{ fontFamily: 'Robit, sans-serif' }}>₹60K</p>
                 <p className="text-xs text-gray-500 uppercase tracking-wider">1st Place</p>
               </div>
 
@@ -301,7 +301,7 @@ export default function PrizePoolPage() {
                   {/* Second Place */}
                   <div className="text-center">
                     <Award className="w-8 h-8 sm:w-10 sm:h-10 text-gray-500 mx-auto mb-3" strokeWidth={1.5} />
-                    <p className="text-2xl sm:text-3xl font-light text-gray-400 tabular-nums mb-1" style={{ fontFamily: 'Robit, sans-serif' }}>₹15K</p>
+                    <p className="text-2xl sm:text-3xl font-light text-gray-400 tabular-nums mb-1" style={{ fontFamily: 'Robit, sans-serif' }}>₹10K</p>
                     <p className="text-xs text-gray-600 uppercase tracking-wider">2nd</p>
                   </div>
                 </div>
@@ -324,7 +324,7 @@ export default function PrizePoolPage() {
                   {/* Second Place */}
                   <div className="text-center">
                     <Award className="w-8 h-8 sm:w-10 sm:h-10 text-gray-500 mx-auto mb-3" strokeWidth={1.5} />
-                    <p className="text-2xl sm:text-3xl font-light text-gray-400 tabular-nums mb-1" style={{ fontFamily: 'Robit, sans-serif' }}>₹15K</p>
+                    <p className="text-2xl sm:text-3xl font-light text-gray-400 tabular-nums mb-1" style={{ fontFamily: 'Robit, sans-serif' }}>₹10K</p>
                     <p className="text-xs text-gray-600 uppercase tracking-wider">2nd</p>
                   </div>
                 </div>
