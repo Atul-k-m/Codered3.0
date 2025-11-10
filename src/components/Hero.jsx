@@ -78,7 +78,7 @@ export default function Hero() {
           </div>
 
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <a
+            <a                                                                                                  s 
               href="/prize-pool"
               className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
               style={{ fontFamily: "Grotesk, sans-serif" }}

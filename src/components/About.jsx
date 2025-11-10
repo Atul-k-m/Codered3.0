@@ -92,10 +92,10 @@ export default function About() {
                 className="space-y-2 text-white text-sm"
                 style={{ fontFamily: "Grotesk, sans-serif" }}
               >
-                <p>Overall Winner: ₹50,000</p>
+                <p>Overall Winner: ₹60,000</p>
                 <p>Runner-up: ₹30,000</p>
                 <p>Category Winners</p>
-                <p>Internship Opportunities</p>
+                <p>Networking Opportunities</p>
               </div>
             </div>
 
