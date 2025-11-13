@@ -162,7 +162,7 @@ Opportunity: Build an RL-powered autonomous agent that learns to complete a defi
       },
       {
         id: "CR(S)6",
-        title: "Personal Finance Intelligence Platform",
+        title: "Personal Finance Intelligence Platform**",
         description: `
 
 A large segment of India's workforce, including gig workers, small business owners, and individuals without formal credit histories, faces irregular income and cash flow. They often overspend during high-income months and struggle during lean periods due to a lack of structured credit access, savings discipline, and financial guidance. Yet, their SMS and digital transaction data contain valuable insights into income and expense trends that remain largely untapped.
