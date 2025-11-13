@@ -30,110 +30,116 @@ export default function About() {
             designers, and makers come together to prototype bold ideas.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
-            <div
-              className="border border-gray-800 rounded-xl p-6 sm:p-8 relative cursor-pointer hover:border-red-600 transition"
-              style={{
-                background: "rgba(15, 15, 15, 0.5)",
-                backgroundImage: `
-                  linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)
-                `,
-                backgroundSize: "20px 20px",
-              }}
-              onClick={() => {
-                navigate("/problem-statements");
-                window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-              }}
-            >
-              <div className="absolute top-4 right-4 text-red-600 text-lg">
-                +
-              </div>
-              <h3
-                className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4"
-                style={{ fontFamily: "Grotesk, sans-serif" }}
-              >
-                Tracks
-              </h3>
-              <div
-                className="space-y-2 text-white text-sm"
-                style={{ fontFamily: "Grotesk, sans-serif" }}
-              >
-                <p>Software</p>
-                <p>Hardware</p>
-              </div>
-            </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+  {/* Tracks Card */}
+  <div
+    className="border-2 border-white-700  p-8 sm:p-10 relative cursor-pointer hover:border-red-600 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 group"
+    style={{
+      background: "rgba(20, 20, 20, 0.9)",
+      backgroundImage: `
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+      `,
+      backgroundSize: "20px 20px",
+      boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4)",
+    }}
+    onClick={() => {
+      navigate("/problem-statements");
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }}
+  >
+    <div className="absolute top-6 right-6 text-red-600 text-2xl font-bold group-hover:scale-110 transition-transform">
+      +
+    </div>
+    <h2
+      className="text-4xl font-bold text-red-600 uppercase tracking-wider mb-9"
+      style={{ fontFamily: "Robit, sans-serif" }}
+    >
+      Tracks
+    </h2>
+    <div
+      className="space-y-3 text-white text-2xl font-medium"
+      style={{ fontFamily: "Grotesk, sans-serif" }}
+    >
+      <p>Software</p>
+      <p>Hardware</p>
+    </div>
+  </div>
 
-            <div
-              className="border border-gray-800 rounded-xl p-6 sm:p-8 relative cursor-pointer hover:border-red-600 transition"
-              style={{
-                background: "rgba(15, 15, 15, 0.5)",
-                backgroundImage: `
-                  linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)
-                `,
-                backgroundSize: "20px 20px",
-              }}
-              onClick={() => {
-                navigate("/prize-pool");
-                window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-              }}
-            >
-              <div className="absolute top-4 right-4 text-red-600 text-lg">
-                +
-              </div>
-              <h3
-                className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4"
-                style={{ fontFamily: "Grotesk, sans-serif" }}
-              >
-                Prizes
-              </h3>
-              <div
-                className="space-y-2 text-white text-sm"
-                style={{ fontFamily: "Grotesk, sans-serif" }}
-              >
-                <p>Overall Winner: ₹60,000</p>
-                <p>Runner-up: ₹30,000</p>
-                <p>Category Winners</p>
-                <p>Networking Opportunities</p>
-              </div>
-            </div>
+  {/* Prizes Card */}
+  <div
+    className="border-2 border-white-700  p-8 sm:p-10 relative cursor-pointer hover:border-red-600 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 group"
+    style={{
+      background: "rgba(20, 20, 20, 0.9)",
+      backgroundImage: `
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+      `,
+      backgroundSize: "20px 20px",
+      boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4)",
+    }}
+    onClick={() => {
+      navigate("/prize-pool");
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }}
+  >
+    <div className="absolute top-6 right-6 text-red-600 text-2xl font-bold group-hover:scale-110 transition-transform">
+      +
+    </div>
+    <h3
+      className="text-4xl font-bold text-red-600 uppercase tracking-wider mb-6"
+      style={{ fontFamily: "Robit, sans-serif" }}
+    >
+      Prizes
+    </h3>
+    <div
+      className="space-y-3 text-white text-2xl font-medium"
+      style={{ fontFamily: "Grotesk, sans-serif" }}
+    >
+      <p>Overall Winner: ₹60,000</p>
+      <p>Runner-up: ₹30,000</p>
+      <p>Category Winners</p>
+     
+    </div>
+  </div>
 
-            <div
-              className="border border-gray-800 rounded-xl p-6 sm:p-8 relative sm:col-span-2 lg:col-span-1 cursor-pointer hover:border-red-600 transition"
-              style={{
-                background: "rgba(15, 15, 15, 0.5)",
-                backgroundImage: `
-                  linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)
-                `,
-                backgroundSize: "20px 20px",
-              }}
-              onClick={() => {
-                navigate("/faq");
-                window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-              }}
-            >
-              <div className="absolute top-4 right-4 text-red-600 text-lg">
-                +
-              </div>
-              <h3
-                className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4"
-                style={{ fontFamily: "Grotesk, sans-serif" }}
-              >
-                Details
-              </h3>
-              <div
-                className="space-y-2 text-white text-sm"
-                style={{ fontFamily: "Grotesk, sans-serif" }}
-              >
-                <p>Duration: 24 hours</p>
-                <p>Team size: 3-4</p>
-                <p>Venue: BMS Institute Of Technology & Management</p>
-                <p>Date: Dec 12-13, 2025</p>
-              </div>
-            </div>
-          </div>
+  {/* Details Card */}
+  <div
+    className="border-2 border-white-700  p-8 sm:p-10 relative sm:col-span-2 lg:col-span-1 cursor-pointer hover:border-red-600 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 group"
+    style={{
+      background: "rgba(20, 20, 20, 0.9)",
+      backgroundImage: `
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
+      `,
+      backgroundSize: "20px 20px",
+      boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4)",
+    }}
+    onClick={() => {
+      navigate("/faq");
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }}
+  >
+    <div className="absolute top-6 right-6 text-red-600 text-2xl font-bold group-hover:scale-110 transition-transform">
+      +
+    </div>
+    <h3
+      className="text-4xl font-bold text-red-600 uppercase tracking-wider mb-6"
+      style={{ fontFamily: "Robit, sans-serif" }}
+    >
+      Details
+    </h3>
+    <div
+      className="space-y-3 text-white text-1xl font-medium"
+      style={{ fontFamily: "Grotesk, sans-serif" }}
+    >
+      <p>Duration: 24 hours</p>
+      <p>Team size: 3-4</p>
+      <p>Venue: BMS Institute Of Technology & Management</p>
+      <p>Date: Dec 12-13, 2025</p>
+    </div>
+  </div>
+</div>
 
           <a
             href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge"
