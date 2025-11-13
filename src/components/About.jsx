@@ -1,132 +1,153 @@
+import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 
 export default function About() {
   const navigate = useNavigate();
-  
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-20">
-        <div className="max-w-7xl w-full mx-auto">
-          {/* Main Heading */}
-          <div className="mb-16 sm:mb-24">
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold leading-none tracking-tight mb-8">
-              <span className="text-white">What is</span>
-              <br />
-              <span className="text-red-600">CODERED</span>
-              <br />
-              <span className="text-red-600">3.0?</span>
-            </h1>
-            
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-400 max-w-3xl leading-relaxed">
-              A National Level 24-hour Hackathon where builders, designers, and makers come together to prototype bold ideas.
-            </p>
-          </div>
+    <div
+      className="relative"
+      style={{
+        background: "#0a0a0a",
+        backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.35) 1px, transparent 1px)`,
+        backgroundSize: "30px 30px",
+      }}
+    >
+      {/* What is CODERED 3.0 Section */}
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+        <div className="max-w-6xl w-full">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 inline-block bg-red-600 px-6 py-2"
+            style={{ fontFamily: "Robit, sans-serif" }}
+          >
+            What is CODERED 3.0?
+          </h2>
 
-          {/* Info Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-24 mb-16">
-            {/* Tracks */}
-            <div 
-              className="group cursor-pointer"
+          <p
+            className="text-gray-400 mb-12 sm:mb-16 max-w-2xl text-base sm:text-lg leading-relaxed"
+            style={{ fontFamily: "Grotesk, sans-serif" }}
+          >
+            CODERED 3.0 is a National Level 24-hour Hackathon where builders,
+            designers, and makers come together to prototype bold ideas.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
+            <div
+              className="border border-gray-800 rounded-xl p-6 sm:p-8 relative cursor-pointer hover:border-red-600 transition"
+              style={{
+                background: "rgba(15, 15, 15, 0.5)",
+                backgroundImage: `
+                  linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)
+                `,
+                backgroundSize: "20px 20px",
+              }}
               onClick={() => {
                 navigate("/problem-statements");
                 window.scrollTo({ top: 0, left: 0, behavior: "auto" });
               }}
             >
-              <div className="flex items-start justify-between mb-6">
-                <h2 className="text-xs uppercase tracking-widest text-gray-500 font-medium">
-                  Tracks
-                </h2>
-                <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-red-600 transition-colors" />
+              <div className="absolute top-4 right-4 text-red-600 text-lg">
+                +
               </div>
-              <div className="space-y-4">
-                <p className="text-2xl sm:text-3xl font-bold text-white group-hover:text-red-600 transition-colors">
-                  Software
-                </p>
-                <p className="text-2xl sm:text-3xl font-bold text-white group-hover:text-red-600 transition-colors">
-                  Hardware
-                </p>
+              <h3
+                className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4"
+                style={{ fontFamily: "Grotesk, sans-serif" }}
+              >
+                Tracks
+              </h3>
+              <div
+                className="space-y-2 text-white text-sm"
+                style={{ fontFamily: "Grotesk, sans-serif" }}
+              >
+                <p>Software</p>
+                <p>Hardware</p>
               </div>
             </div>
 
-            {/* Prizes */}
-            <div 
-              className="group cursor-pointer"
+            <div
+              className="border border-gray-800 rounded-xl p-6 sm:p-8 relative cursor-pointer hover:border-red-600 transition"
+              style={{
+                background: "rgba(15, 15, 15, 0.5)",
+                backgroundImage: `
+                  linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)
+                `,
+                backgroundSize: "20px 20px",
+              }}
               onClick={() => {
                 navigate("/prize-pool");
                 window.scrollTo({ top: 0, left: 0, behavior: "auto" });
               }}
             >
-              <div className="flex items-start justify-between mb-6">
-                <h2 className="text-xs uppercase tracking-widest text-gray-500 font-medium">
-                  Prizes
-                </h2>
-                <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-red-600 transition-colors" />
+              <div className="absolute top-4 right-4 text-red-600 text-lg">
+                +
               </div>
-              <div className="space-y-3">
-                <p className="text-lg sm:text-xl text-gray-300">
-                  <span className="text-red-600 font-bold">₹60,000</span> Winner
-                </p>
-                <p className="text-lg sm:text-xl text-gray-300">
-                  <span className="text-red-600 font-bold">₹30,000</span> Runner-up
-                </p>
-                <p className="text-lg sm:text-xl text-gray-400">
-                  Category Winners
-                </p>
-                <p className="text-lg sm:text-xl text-gray-400">
-                  Networking Opportunities
-                </p>
+              <h3
+                className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4"
+                style={{ fontFamily: "Grotesk, sans-serif" }}
+              >
+                Prizes
+              </h3>
+              <div
+                className="space-y-2 text-white text-sm"
+                style={{ fontFamily: "Grotesk, sans-serif" }}
+              >
+                <p>Overall Winner: ₹60,000</p>
+                <p>Runner-up: ₹30,000</p>
+                <p>Category Winners</p>
+                <p>Networking Opportunities</p>
               </div>
             </div>
 
-            {/* Details */}
-            <div 
-              className="group cursor-pointer"
+            <div
+              className="border border-gray-800 rounded-xl p-6 sm:p-8 relative sm:col-span-2 lg:col-span-1 cursor-pointer hover:border-red-600 transition"
+              style={{
+                background: "rgba(15, 15, 15, 0.5)",
+                backgroundImage: `
+                  linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)
+                `,
+                backgroundSize: "20px 20px",
+              }}
               onClick={() => {
                 navigate("/faq");
                 window.scrollTo({ top: 0, left: 0, behavior: "auto" });
               }}
             >
-              <div className="flex items-start justify-between mb-6">
-                <h2 className="text-xs uppercase tracking-widest text-gray-500 font-medium">
-                  Details
-                </h2>
-                <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-red-600 transition-colors" />
+              <div className="absolute top-4 right-4 text-red-600 text-lg">
+                +
               </div>
-              <div className="space-y-3">
-                <p className="text-lg sm:text-xl text-gray-300">
-                  <span className="text-white font-bold">24 hours</span> Duration
-                </p>
-                <p className="text-lg sm:text-xl text-gray-300">
-                  <span className="text-white font-bold">3-4</span> Team size
-                </p>
-                <p className="text-lg sm:text-xl text-gray-400">
-                  BMS Institute Of Technology & Management
-                </p>
-                <p className="text-lg sm:text-xl text-gray-400">
-                  Dec 12-13, 2025
-                </p>
+              <h3
+                className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4"
+                style={{ fontFamily: "Grotesk, sans-serif" }}
+              >
+                Details
+              </h3>
+              <div
+                className="space-y-2 text-white text-sm"
+                style={{ fontFamily: "Grotesk, sans-serif" }}
+              >
+                <p>Duration: 24 hours</p>
+                <p>Team size: 3-4</p>
+                <p>Venue: BMS Institute Of Technology & Management</p>
+                <p>Date: Dec 12-13, 2025</p>
               </div>
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="pt-8 border-t border-gray-900">
-            <a
-              href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-3 group"
-            >
-              <span className="text-xl sm:text-2xl font-bold text-red-600 group-hover:text-red-500 transition-colors">
-                Register Now
-              </span>
-              <ArrowRight className="w-6 h-6 text-red-600 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
+          <a
+            href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-8 py-3 font-medium text-sm">
+              Register Now
+            </InteractiveHoverButton>
+          </a>
         </div>
       </section>
+
+      {/* Build Bold Section */}
     </div>
   );
 }
