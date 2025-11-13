@@ -298,7 +298,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="\CR3_Brochure_F1.4.pdf"
+              href="https://drive.google.com/file/d/1CbiJmOo-E1F1OhH4Lvy6i8dYi9kEareX/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >
