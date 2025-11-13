@@ -30,7 +30,7 @@ const faqData = [
     ],
   },
   {
-    category: "Registration for Teams",
+    category: "Registration and Teams",
     questions: [
       {
         question: "How do I register for CODERED 3.0?",
