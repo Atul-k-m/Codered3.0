@@ -106,13 +106,7 @@ export default function Hero() {
             >
               FAQ
             </a>
-            <a
-              href="#sponsors"
-              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
-              style={{ fontFamily: "Grotesk, sans-serif" }}
-            >
-              Sponsors
-            </a>
+          
           </div>
 
           <div className="flex items-center gap-3 pr-1">
@@ -208,14 +202,14 @@ export default function Hero() {
             >
               FAQ
             </a>
-            <a
+            {/* <a
               href="#sponsors"
               className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2"
               style={{ fontFamily: "Grotesk, sans-serif" }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Sponsors
-            </a>
+            </a> */}
           </div>
 
           <div className="absolute bottom-6 left-6 right-6">

@@ -45,9 +45,7 @@ export default function Navbar() {
             <a href="/faq" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
               FAQ
             </a>
-            <a href="#sponsors" className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold" style={{ fontFamily: 'Grotesk, sans-serif' }}>
-              Sponsors
-            </a>
+            
           </div>
 
           <div className="flex items-center gap-3 pr-1">
@@ -99,9 +97,7 @@ export default function Navbar() {
             <a href="/faq" className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2" style={{ fontFamily: 'Grotesk, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>
               FAQ
             </a>
-            <a href="#sponsors" className="block text-gray-300 hover:text-red-600 transition-colors text-lg font-semibold uppercase tracking-wide py-2" style={{ fontFamily: 'Grotesk, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>
-              Sponsors
-            </a>
+            
           </div>
           <div className="absolute bottom-6 left-6 right-6">
             <a href="https://unstop.com/o/qjIA3CN?utm_medium=Share&utm_source=ecell-bmsitm&utm_campaign=Online_coding_challenge" target="_blank" rel="noreferrer">

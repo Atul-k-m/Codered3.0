@@ -82,13 +82,7 @@ export default function TechnicalIssuesPage() {
             >
               FAQ
             </a>
-            <a
-              href="#sponsors"
-              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
-              style={{ fontFamily: "Grotesk, sans-serif" }}
-            >
-              Sponsors
-            </a>
+          
           </div>
 
           {/* Right side - Mobile Menu Button & Register Button */}
