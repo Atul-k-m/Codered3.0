@@ -65,7 +65,7 @@ export default function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/problem-statements" element={<PSpage />} />
         <Route path="/prize-pool" element={<PrizePoolPage />} />
-     
+     <Route path="/team" element={<TeamPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

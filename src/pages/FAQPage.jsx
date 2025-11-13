@@ -30,7 +30,7 @@ const faqData = [
     ],
   },
   {
-    category: "Registration -Teams",
+    category: "Registration for Teams",
     questions: [
       {
         question: "How do I register for CODERED 3.0?",
@@ -190,7 +190,7 @@ export default function FAQPage() {
               Problem Statements
             </a>
             <a
-              href="#team"
+              href="/team"
               className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
               style={{ fontFamily: "Grotesk, sans-serif" }}
             >
