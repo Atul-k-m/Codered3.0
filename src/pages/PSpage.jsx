@@ -520,6 +520,20 @@ export default function ProblemStatementPage() {
             <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
               Choose your domain and explore detailed problem statements
             </p>
+            {/* PPT Template Button */}
+            <div className="mt-6 sm:mt-8">
+              <a
+                href="https://docs.google.com/presentation/d/1oTijbF8d3RNmsCbzq644iscukJX2ruzm/edit?usp=sharing&ouid=111853442376170076625&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InteractiveHoverButton
+                  className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-2.5 sm:px-8 sm:py-3 text-sm sm:text-base tracking-wide font-semibold"
+                >
+                  View PPT Template
+                </InteractiveHoverButton>
+              </a>
+            </div>
           </div>
 
           {/* Domain Selector */}
