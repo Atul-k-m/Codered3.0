@@ -126,7 +126,7 @@ const Timeline = () => {
                         ? "#ff2d2d"
                         : isPastEvent
                         ? "#888888"
-                        : "#b3b3b3",
+                        : "#ffffffff",
                     }}
                   >
                     {event.title}
@@ -141,7 +141,7 @@ const Timeline = () => {
                       background: isCurrentEvent
                         ? "rgba(255,45,45,0.12)"
                         : "rgba(255,255,255,0.03)",
-                      color: isCurrentEvent ? "#ff2d2d" : "#888888",
+                      color: isCurrentEvent ? "#ff2d2d" : "#ffffffff",
                       whiteSpace: "nowrap",
                     }}
                   >
