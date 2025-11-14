@@ -18,14 +18,14 @@ export default function Footer() {
       ></div>
 
       {/* Top red bar */}
-      <div className="h-1 bg-red-600 relative z-10"></div>
+      <div className="h-1 bg-[[#d90a16]] relative z-10"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 md:py-28 lg:py-36">
         {/* Main grid - swapped columns: Contact (left), Institute (center), Quick Links (right) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
           {/* Contact - moved to left (md:order-1) */}
           <div className="md:order-1">
-            <h3 className="text-red-600 text-xl md:text-2xl font-bold mb-6 tracking-wide border-b-2 border-red-600 inline-block pb-2">
+            <h3 className="text-[#d90a16] text-xl md:text-2xl font-bold mb-6 tracking-wide border-b-2 border-[#d90a16] inline-block pb-2">
               Contact Us
             </h3>
 
@@ -35,7 +35,7 @@ export default function Footer() {
                   href="tel:+918867162414"
                   aria-label="Call Maxson Mathew"
                   title="Call Maxson Mathew"
-                  className="text-white hover:text-red-600 transition-colors flex items-center gap-3 text-lg"
+                  className="text-white hover:text-[#d90a16] transition-colors flex items-center gap-3 text-lg"
                 >
                   <Phone size={18} className="text-red-500" />
                   <span>Maxson Mathew</span>
@@ -47,7 +47,7 @@ export default function Footer() {
                   href="tel:+919008551551"
                   aria-label="Call Mohit Monnappa T N"
                   title="Call Mohit Monnappa T N"
-                  className="text-white hover:text-red-600 transition-colors flex items-center gap-3 text-lg"
+                  className="text-white hover:text-[#d90a16] transition-colors flex items-center gap-3 text-lg"
                 >
                   <Phone size={18} className="text-red-500" />
                   <span>Mohit Monnappa T N</span>
@@ -59,7 +59,7 @@ export default function Footer() {
                   href="tel:+919141194259"
                   aria-label="Call Vaibhav B"
                   title="Call Vaibhav B"
-                  className="text-white hover:text-red-600 transition-colors flex items-center gap-3 text-lg"
+                  className="text-white hover:text-[#d90a16] transition-colors flex items-center gap-3 text-lg"
                 >
                   <Phone size={18} className="text-red-500" />
                   <span>Vaibhav B</span>
@@ -71,7 +71,7 @@ export default function Footer() {
                   href="tel:+919500144964"
                   aria-label="Call Nishitha Bodipati"
                   title="Call Nishitha Bodipati"
-                  className="text-white hover:text-red-600 transition-colors flex items-center gap-3 text-lg"
+                  className="text-white hover:text-[#d90a16] transition-colors flex items-center gap-3 text-lg"
                 >
                   <Phone size={18} className="text-red-500" />
                   <span>Nishitha Bodipati</span>
@@ -84,7 +84,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-white hover:text-red-600 transition-colors"
+                className="text-white hover:text-[#d90a16] transition-colors"
               >
                 <Instagram size={32} />
               </a>
@@ -94,7 +94,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Discord"
-                className="text-white hover:text-red-600 transition-colors"
+                className="text-white hover:text-[#d90a16] transition-colors"
               >
                 <svg
                   width="32"
@@ -112,7 +112,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-white hover:text-red-600 transition-colors"
+                className="text-white hover:text-[#d90a16] transition-colors"
               >
                 <Linkedin size={32} />
               </a>
@@ -120,7 +120,7 @@ export default function Footer() {
               <a
                 href="mailto:ecell@bmsit.in"
                 aria-label="Email"
-                className="text-white hover:text-red-600 transition-colors"
+                className="text-white hover:text-[#d90a16] transition-colors"
               >
                 <Mail size={32} />
               </a>
@@ -129,13 +129,13 @@ export default function Footer() {
 
           {/* Institute Info - center */}
           <div className="text-center md:order-2 flex flex-col items-center justify-center">
-            <h1 className="text-red-600 text-4xl md:text-3xl lg:text-4xl font-extrabold mb-3 tracking-wider leading-tight text-center">
+            <h1 className="text-[#d90a16] text-4xl md:text-3xl lg:text-4xl font-extrabold mb-3 tracking-wider leading-tight text-center">
               BMS Institute of
             </h1>
-            <h1 className="text-red-600 text-4xl md:text-3xl lg:text-4xl font-extrabold mb-3 tracking-wider leading-tight text-center">
+            <h1 className="text-[#d90a16] text-4xl md:text-3xl lg:text-4xl font-extrabold mb-3 tracking-wider leading-tight text-center">
               Technology and
             </h1>
-            <h1 className="text-red-600 text-4xl md:text-3xl lg:text-4xl font-extrabold mb-6 tracking-wider leading-tight text-center">
+            <h1 className="text-[#d90a16] text-4xl md:text-3xl lg:text-4xl font-extrabold mb-6 tracking-wider leading-tight text-center">
               Management
             </h1>
 
@@ -150,7 +150,7 @@ export default function Footer() {
 
           {/* Quick Links - moved to right (md:order-3) */}
           <div className="md:order-3 md:text-right">
-            <h3 className="text-red-600 text-xl md:text-2xl font-bold mb-6 tracking-wide border-b-2 border-red-600 inline-block pb-2">
+            <h3 className="text-[#d90a16] text-xl md:text-2xl font-bold mb-6 tracking-wide border-b-2 border-[#d90a16] inline-block pb-2">
               Quick Links
             </h3>
 
@@ -158,7 +158,7 @@ export default function Footer() {
               <li>
                 <a
                   href="https://maps.app.goo.gl/RyJvsZVLrH41qCJj7"
-                  className="text-white hover:text-red-600 transition-colors text-lg"
+                  className="text-white hover:text-[#d90a16] transition-colors text-lg"
                 >
                   Campus Map
                 </a>
@@ -168,7 +168,7 @@ export default function Footer() {
                   href="https://drive.google.com/file/d/11r5pY0Dj753Wgoakf-dTFa_RXWh60Q13/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-red-600 transition-colors text-lg"
+                  className="text-white hover:text-[#d90a16] transition-colors text-lg"
                 >
                   Code of Conduct
                 </a>
@@ -178,7 +178,7 @@ export default function Footer() {
                   href="https://drive.google.com/file/d/1cKVELBjOxDpR2r8XHxjsIPd6tag_Y5BS/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-red-600 transition-colors text-lg"
+                  className="text-white hover:text-[#d90a16] transition-colors text-lg"
                 >
                   Privacy Policy
                 </a>
@@ -188,7 +188,7 @@ export default function Footer() {
                     href="https://drive.google.com/file/d/1cxpD6F_3SBUumWCkzfwERu_aHec0FZNX/view?usp=drivesdk"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-red-600 transition-colors text-lg"
+                    className="text-white hover:text-[#d90a16] transition-colors text-lg"
                   >
                     Terms & Conditions
                   </a>
@@ -198,7 +198,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-20 pt-10 border-t border-red-600/30 text-center">
+        <div className="mt-20 pt-10 border-t border-[#d90a16]/30 text-center">
           <p className="text-white text-base">Made with ❤️ by E-CELL BMSIT&M</p>
         </div>
       </div>

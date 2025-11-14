@@ -155,7 +155,7 @@ export default function WhyParticipate() {
 
           {/* Hero Image */}
           <div className="max-w-5xl mx-auto mb-12 sm:mb-16 md:mb-20">
-            <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-red-600">
+            <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-[#d90a16]">
               <img
                 src="/gallery/19.webp"
                 alt="Hackathon collaboration"
@@ -171,12 +171,12 @@ export default function WhyParticipate() {
               {reasons.map((reason, index) => (
                 <div
                   key={index}
-                  className="group relative border-2 border-red-600 p-4 sm:p-6 md:p-8 hover:bg-red-950/20 transition-all duration-300"
+                  className="group relative border-2 border-[#d90a16] p-4 sm:p-6 md:p-8 hover:bg-red-950/20 transition-all duration-300"
                 >
-                  <div className="absolute top-2 left-2 sm:top-3 sm:left-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-600"></div>
-                  <div className="absolute top-2 right-2 sm:top-3 sm:right-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-600"></div>
-                  <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-600"></div>
-                  <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-600"></div>
+                  <div className="absolute top-2 left-2 sm:top-3 sm:left-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#d90a16]"></div>
+                  <div className="absolute top-2 right-2 sm:top-3 sm:right-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#d90a16]"></div>
+                  <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#d90a16]"></div>
+                  <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#d90a16]"></div>
 
                   <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">
                     {reason.title}
@@ -198,7 +198,7 @@ export default function WhyParticipate() {
               target="_blank"
               rel="noreferrer"
             >
-              <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm sm:text-base">
+              <InteractiveHoverButton className="bg-[#d90a16] hover:bg-[#d90a16] border-[#d90a16] text-white px-6 py-3 text-sm sm:text-base">
                     Register
               </InteractiveHoverButton>
             </a>

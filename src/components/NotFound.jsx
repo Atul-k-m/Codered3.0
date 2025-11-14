@@ -21,7 +21,7 @@ export default function NotFound() {
   };
 
   return (
-    <div className="min-h-screen bg-red-600 relative overflow-hidden pt-24 sm:pt-32 md:pt-50">
+    <div className="min-h-screen bg-#d90a16 relative overflow-hidden pt-24 sm:pt-32 md:pt-50">
       
       <div className="grain-effect"></div>
 
@@ -76,7 +76,7 @@ export default function NotFound() {
               target=""
               rel="noreferrer"
             >
-              <InteractiveHoverButton className="bg-black border border-red-600 text-black-500 hover:bg-Black-600 hover:text-white px-6 py-3 text-sm sm:text-base">
+              <InteractiveHoverButton className="bg-black border border-#d90a16 text-black-500 hover:bg-Black-600 hover:text-white px-6 py-3 text-sm sm:text-base">
                 Home
               </InteractiveHoverButton>
             </a>

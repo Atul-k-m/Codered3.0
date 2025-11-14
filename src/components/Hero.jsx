@@ -80,7 +80,7 @@ export default function Hero() {
                 CODE RED{" "}
               </span>
               <span
-                className="not-italic font-light text-red-600"
+                className="not-italic font-light text-[#d90a16]"
                 style={{ fontFamily: "Robit, sans-serif" }}
               >
                 3.0
@@ -93,11 +93,11 @@ export default function Hero() {
             style={{ fontFamily: "Grotesk, sans-serif" }}
           >
             Code Till You{" "}
-            <span className="italic text-red-600 font-semibold tracking-wide mb-6">Drop</span>
+            <span className="italic text-[#d90a16] font-semibold tracking-wide mb-6">Drop</span>
           </p>
 
           <p
-            className="text-red-600 text-sm sm:text-base md:text-lg uppercase tracking-[0.25em] mb-8"
+            className="text-[#d90a16] text-sm sm:text-base md:text-lg uppercase tracking-[0.25em] mb-8"
             style={{ fontFamily: "Grotesk, sans-serif" }}
           >
             National Level 24-Hour Hackathon
@@ -116,7 +116,7 @@ export default function Hero() {
                 <div key={label} className="flex flex-col items-center">
                   <span
                     className={`text-5xl sm:text-6xl md:text-7xl font-semibold tabular-nums mb-1 ${
-                      label === "Secs" ? "text-red-600" : "text-white"
+                      label === "Secs" ? "text-[#d90a16]" : "text-white"
                     }`}
                   >
                     {val.toString().padStart(2, "0")}
@@ -135,7 +135,7 @@ export default function Hero() {
               target="_blank"
               rel="noreferrer"
             >
-              <InteractiveHoverButton className="bg-transparent border border-red-600 text-white-600 hover:bg-red-600 hover:text-white px-8 py-4 text-sm sm:text-base">
+              <InteractiveHoverButton className="bg-transparent border border-[#d90a16] text-white-600 hover:bg-[#d90a16] hover:text-white px-8 py-4 text-sm sm:text-base">
                 Brochure
               </InteractiveHoverButton>
             </a>
@@ -144,7 +144,7 @@ export default function Hero() {
               target="_blank"
               rel="noreferrer"
             >
-              <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-8 py-4 text-sm sm:text-base">
+              <InteractiveHoverButton className="bg-[#d90a16] hover:bg-[#d90a16] border-#d90a16 text-white px-8 py-4 text-sm sm:text-base">
                 Register
               </InteractiveHoverButton>
             </a>

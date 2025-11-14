@@ -64,7 +64,7 @@ export default function FAQComponent() {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">
             <span
-              className="block bg-gradient-to-r from-red-600 via-red-500 to-red-600 bg-clip-text text-transparent"
+              className="block bg-gradient-to-r from-[#d90a16] via-red-500 to-[#d90a16] bg-clip-text text-transparent"
               style={{
                 fontFamily: "Riccione, sans-serif",
                 letterSpacing: "0.05em",
@@ -73,7 +73,7 @@ export default function FAQComponent() {
               FREQUENTLY ASKED
             </span>
             <span
-              className="block bg-gradient-to-r from-red-600 via-red-500 to-red-600 bg-clip-text text-transparent"
+              className="block bg-gradient-to-r from-[#d90a16] via-red-500 to-[#d90a16] bg-clip-text text-transparent"
                 style={{
                   fontFamily: "Riccione, sans-serif",
                   WebkitTextFillColor: "white",
@@ -96,7 +96,7 @@ export default function FAQComponent() {
             return (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-red-900/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-red-600/50 hover:shadow-lg hover:shadow-red-600/10"
+                className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-red-900/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-[#d90a16]/50 hover:shadow-lg hover:shadow-[#d90a16]/10"
               >
                 <button
                   onClick={() => toggleItem(index)}
@@ -110,7 +110,7 @@ export default function FAQComponent() {
                   </span>
                   <ChevronDown
                     size={24}
-                    className={`text-red-600 transition-all duration-300 flex-shrink-0 group-hover:text-red-500 ${
+                    className={`text-[#d90a16] transition-all duration-300 flex-shrink-0 group-hover:text-red-500 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -140,7 +140,7 @@ export default function FAQComponent() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <InteractiveHoverButton className="bg-transparent border border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-6 py-3 text-sm sm:text-base">
+            <InteractiveHoverButton className="bg-transparent border border-[#d90a16] text-red-500 hover:bg-[#d90a16] hover:text-white px-6 py-3 text-sm sm:text-base">
                 View All FAQ's
             </InteractiveHoverButton>
           </Link>
@@ -149,7 +149,7 @@ export default function FAQComponent() {
               target="_blank"
               rel="noreferrer"
             >
-              <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm sm:text-base">
+              <InteractiveHoverButton className="bg-[#d90a16] hover:bg-red-700 border-[#d90a16] text-white px-6 py-3 text-sm sm:text-base">
                 Discord
               </InteractiveHoverButton>
             </a>

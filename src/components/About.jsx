@@ -16,7 +16,7 @@ export default function About() {
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         <div className="max-w-6xl w-full">
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 inline-block bg-red-600 px-6 py-2"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 inline-block bg-[#d90a16] px-6 py-2"
             style={{ fontFamily: "Robit, sans-serif" }}
           >
             What is CODERED 3.0?
@@ -33,7 +33,7 @@ export default function About() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
   {/* Tracks Card */}
   <div
-    className="border-2 border-white-700  p-8 sm:p-10 relative cursor-pointer hover:border-red-600 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 group"
+    className="border-2 border-white-700  p-8 sm:p-10 relative cursor-pointer hover:border-[#d90a16] hover:shadow-2xl hover:shadow-[#d90a16]/20 transition-all duration-300 group"
     style={{
       background: "rgba(20, 20, 20, 0.9)",
       backgroundImage: `
@@ -48,11 +48,11 @@ export default function About() {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }}
   >
-    <div className="absolute top-6 right-6 text-red-600 text-2xl font-bold group-hover:scale-110 transition-transform">
+    <div className="absolute top-6 right-6 text-[#d90a16] text-2xl font-bold group-hover:scale-110 transition-transform">
       +
     </div>
     <h2
-      className="text-4xl font-bold text-red-600 uppercase tracking-wider mb-9"
+      className="text-4xl font-bold text-[#d90a16] uppercase tracking-wider mb-9"
       style={{ fontFamily: "Robit, sans-serif" }}
     >
       Tracks
@@ -68,7 +68,7 @@ export default function About() {
 
   {/* Prizes Card */}
   <div
-    className="border-2 border-white-700  p-8 sm:p-10 relative cursor-pointer hover:border-red-600 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 group"
+    className="border-2 border-white-700  p-8 sm:p-10 relative cursor-pointer hover:border-[#d90a16] hover:shadow-2xl hover:shadow-[#d90a16]/20 transition-all duration-300 group"
     style={{
       background: "rgba(20, 20, 20, 0.9)",
       backgroundImage: `
@@ -83,11 +83,11 @@ export default function About() {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }}
   >
-    <div className="absolute top-6 right-6 text-red-600 text-2xl font-bold group-hover:scale-110 transition-transform">
+    <div className="absolute top-6 right-6 text-[#d90a16] text-2xl font-bold group-hover:scale-110 transition-transform">
       +
     </div>
     <h3
-      className="text-4xl font-bold text-red-600 uppercase tracking-wider mb-6"
+      className="text-4xl font-bold text-[#d90a16] uppercase tracking-wider mb-6"
       style={{ fontFamily: "Robit, sans-serif" }}
     >
       Prizes
@@ -105,7 +105,7 @@ export default function About() {
 
   {/* Details Card */}
   <div
-    className="border-2 border-white-700  p-8 sm:p-10 relative sm:col-span-2 lg:col-span-1 cursor-pointer hover:border-red-600 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 group"
+    className="border-2 border-white-700  p-8 sm:p-10 relative sm:col-span-2 lg:col-span-1 cursor-pointer hover:border-[#d90a16] hover:shadow-2xl hover:shadow-[#d90a16]/20 transition-all duration-300 group"
     style={{
       background: "rgba(20, 20, 20, 0.9)",
       backgroundImage: `
@@ -120,7 +120,7 @@ export default function About() {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }}
   >
-    <div className="absolute top-6 right-6 text-red-600 text-2xl font-bold group-hover:scale-110 transition-transform">
+    <div className="absolute top-6 right-6 text-[#d90a16] text-2xl font-bold group-hover:scale-110 transition-transform">
       +
     </div>
     <h3
@@ -146,7 +146,7 @@ export default function About() {
             target="_blank"
             rel="noreferrer"
           >
-            <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-8 py-3 font-medium text-sm">
+            <InteractiveHoverButton className="bg-[#d90a16] hover:bg-red-700 border-[#d90a16] text-white px-8 py-3 font-medium text-sm">
               Register Now
             </InteractiveHoverButton>
           </a>

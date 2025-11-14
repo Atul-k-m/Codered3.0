@@ -44,28 +44,28 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
              <a
               href="/"
-              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              className="text-gray-300 hover:text-[#d90a16] transition-colors text-sm tracking-wide uppercase font-semibold"
             >
              Home
             </a>
 
             <a
               href="/prize-pool"
-              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              className="text-gray-300 hover:text-[#d90a16] transition-colors text-sm tracking-wide uppercase font-semibold"
             >
               Prizes
             </a>
 
             <a
               href="/problem-statements"
-              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              className="text-gray-300 hover:text-[#d90a16] transition-colors text-sm tracking-wide uppercase font-semibold"
             >
               Problem Statements
             </a>
 
             <a
               href="/faq"
-              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              className="text-gray-300 hover:text-[#d90a16] transition-colors text-sm tracking-wide uppercase font-semibold"
             >
               FAQ
             </a>
@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3 pr-1">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-red-600 transition-colors shrink-0"
+              className="lg:hidden p-2 text-gray-300 hover:text-[#d90a16] transition-colors shrink-0"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -86,7 +86,7 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
             >
-              <InteractiveHoverButton className="bg-red-600 hover:bg-red-700 border-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm tracking-wide font-semibold shrink-0">
+              <InteractiveHoverButton className="bg-[#d90a16] hover:bg-[#d90a16] border-[#d90a16] text-white px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm tracking-wide font-semibold shrink-0">
                 <span className="hidden sm:inline">Register Now</span>
                 <span className="sm:hidden">Register</span>
               </InteractiveHoverButton>
@@ -128,7 +128,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="p-2 text-gray-300 hover:text-red-600 transition-colors"
+              className="p-2 text-gray-300 hover:text-[#d90a16] transition-colors"
             >
               <X size={20} />
             </button>
@@ -138,13 +138,13 @@ export default function Navbar() {
           <div className="p-6 space-y-6">
           <a
               href="/"
-              className="text-gray-300 hover:text-red-600 transition-colors text-sm tracking-wide uppercase font-semibold"
+              className="text-gray-300 hover:text-[#d90a16] transition-colors text-sm tracking-wide uppercase font-semibold"
             >
              Home
             </a>
             <a
               href="/prize-pool"
-              className="block text-gray-300 hover:text-red-600 text-lg font-semibold uppercase tracking-wide py-2"
+              className="block text-gray-300 hover:text-[#d90a16] text-lg font-semibold uppercase tracking-wide py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Prizes
@@ -152,7 +152,7 @@ export default function Navbar() {
 
             <a
               href="/problem-statements"
-              className="block text-gray-300 hover:text-red-600 text-lg font-semibold uppercase tracking-wide py-2"
+              className="block text-gray-300 hover:text-[#d90a16] text-lg font-semibold uppercase tracking-wide py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Problem Statements
@@ -160,7 +160,7 @@ export default function Navbar() {
 
             <a
               href="/faq"
-              className="block text-gray-300 hover:text-red-600 text-lg font-semibold uppercase tracking-wide py-2"
+              className="block text-gray-300 hover:text-[#d90a16] text-lg font-semibold uppercase tracking-wide py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
@@ -175,7 +175,7 @@ export default function Navbar() {
               rel="noreferrer"
             >
               <InteractiveHoverButton
-                className="w-full bg-red-600 hover:bg-red-700 border-red-600 text-white px-6 py-3 text-sm tracking-wide font-semibold"
+                className="w-full bg-[#d90a16] hover:bg-red-700 border-[#d90a16] text-white px-6 py-3 text-sm tracking-wide font-semibold"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Register Now
