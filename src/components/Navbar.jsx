@@ -31,12 +31,13 @@ export default function Navbar() {
                 className="h-10 w-auto sm:h-12 md:h-16 object-contain"
               />
             </a>
-
+            <a href="/" target="_blank" rel="noopener noreferrer">
             <img
               src="/crlogo.png"
               alt="CODERED 3.0"
               className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 object-contain"
             />
+            </a>
           </div>
 
           {/* DESKTOP MENU */}
