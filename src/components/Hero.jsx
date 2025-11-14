@@ -144,7 +144,7 @@ export default function Hero() {
               target="_blank"
               rel="noreferrer"
             >
-              <InteractiveHoverButton className="bg-[#d90a16] hover:bg-[#d90a16] border-#d90a16 text-white px-8 py-4 text-sm sm:text-base">
+              <InteractiveHoverButton className="bg-[#d90a16] hover:bg-[#d90a16] border-[#d90a16] text-white px-8 py-4 text-sm sm:text-base">
                 Register
               </InteractiveHoverButton>
             </a>
