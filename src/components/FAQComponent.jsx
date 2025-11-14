@@ -12,7 +12,7 @@ const faqData = [
   {
     question: "Who can participate in CODERED 3.0?",
     answer:
-      "CODERED 3.0 is open to students and tech enthusiasts from all backgrounds. Whether you're a beginner or an expert, there's a place for you in our hackathon.",
+      "CODERED 3.0 is open to students from all backgrounds. Whether you're a beginner or an expert, there's a place for you in our hackathon.",
   },
   {
     question: "What is the team size limit?",

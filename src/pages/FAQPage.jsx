@@ -15,7 +15,7 @@ const faqData = [
       {
         question: "Who can participate in CODERED 3.0?",
         answer:
-          "CODERED 3.0 is open to students and tech enthusiasts from all backgrounds. Whether you're a beginner or an expert, there's a place for you in our hackathon.",
+          "CODERED 3.0 is open to students from all backgrounds. Whether you're a beginner or an expert, there's a place for you in our hackathon.",
       },
       {
         question: "Do I need to have prior hackathon experience?",
@@ -69,12 +69,12 @@ const faqData = [
       {
         question: "Will there be mentors available?",
         answer:
-          "Yes! We have industry experts and mentors available durin the hackathon to help you with technical challenges and provide guidance.",
+          "Yes! We have industry experts and mentors available during the hackathon to help you with technical challenges and provide guidance.",
       },
       {
         question: "What are the prizes?",
         answer:
-          "We have  an  exciting prize pool of 1,50,000 INR along with networking opportunities with best mindes across the country",
+          "We have  an  exciting prize pool of 1,50,000 INR along with networking opportunities with best minds across the country",
       },
     ],
   },
