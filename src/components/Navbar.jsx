@@ -138,7 +138,7 @@ export default function Navbar() {
           <div className="p-6 space-y-6">
           <a
               href="/"
-              className="text-gray-300 hover:text-[#d90a16] transition-colors text-sm tracking-wide uppercase font-semibold"
+              className="block text-gray-300 hover:text-[#d90a16] text-lg font-semibold uppercase tracking-wide py-2"
             >
              Home
             </a>

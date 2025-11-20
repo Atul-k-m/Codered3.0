@@ -20,13 +20,13 @@ const events = [
   {
     title: "Registrations Ends",
     subtitle: "Registration window closes on Unstop",
-    date: "11:59 PM, 19th November 2025",
+    date: "11:59 PM, 22nd November 2025",
     dateISO: "2025-11-19T23:59:00",
   },
   {
     title: "Round 1 Ends",
     subtitle: "Submission window for Round 1 closes.",
-    date: "11:59 PM, 21st November 2025",
+    date: "11:59 PM, 22nd November 2025",
     dateISO: "2025-11-21T23:59:00",
   },
   {
