@@ -32,7 +32,7 @@ const events = [
   {
     title: "Top 50 Teams Announced",
     subtitle: "The top 50 teams advancing to Round 2 are revealed.",
-    date: "12:01 AM, 1st December 2025",
+    date: "11:59 PM, 1st December 2025",
     dateISO: "2025-12-01T00:01:00",
   },
   {
