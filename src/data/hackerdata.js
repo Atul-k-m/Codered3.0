@@ -77,7 +77,29 @@ const hackersData = [
     { id: 16, name: "Crazzypeeps", lead: "Priyanka TR", quote: "Bold ideas drive bold breakthroughs.", category: "H5", status: "Shortlisted", domain: "Hardware" },
 
     { id: 17, name: "Windows12Devs", lead: "Kshiraja Nelapati", quote: "Building forward with futuristic vision.", category: "H6", status: "Shortlisted", domain: "Hardware" },
-    { id: 18, name: "GENESIS", lead: "Hemanth S", quote: "Every great creation begins with a spark.", category: "H6", status: "Shortlisted", domain: "Hardware" }
+    { id: 18, name: "GENESIS", lead: "Hemanth S", quote: "Every great creation begins with a spark.", category: "H6", status: "Shortlisted", domain: "Hardware" },
+      { id: 1, name: "Aura", lead: "Jayanth DN", quote: "", category: "H1", status: "Waiting", domain: "Hardware" },
+    { id: 2, name: "PeaceOps", lead: "Keerthana gururaj", quote: "", category: "H1", status: "Waiting", domain: "Hardware" },
+
+    // H2
+    { id: 3, name: "Tech Titans", lead: "Rachit Jain", quote: "", category: "H2", status: "Waiting", domain: "Hardware" },
+    { id: 4, name: "NexaTrace", lead: "Naga Venkata Akhilesh Chandluri", quote: "", category: "H2", status: "Waiting", domain: "Hardware" },
+
+    // H3
+    { id: 5, name: "Team InfraRed", lead: "Jiya Kulkarni", quote: "", category: "H3", status: "Waiting", domain: "Hardware" },
+    { id: 6, name: "Innovastra", lead: "M Hasini", quote: "", category: "H3", status: "Waiting", domain: "Hardware" },
+
+    // H4
+    { id: 7, name: "ThunderStack", lead: "Jagruthi Reddy B", quote: "", category: "H4", status: "Waiting", domain: "Hardware" },
+    { id: 8, name: "Circuit Masters", lead: "Sankarshan V sastry", quote: "", category: "H4", status: "Waiting", domain: "Hardware" },
+
+    // H5
+    { id: 9, name: "NextGen", lead: "Dayana B", quote: "", category: "H5", status: "Waiting", domain: "Hardware" },
+    { id: 10, name: "PRIME", lead: "ASHWINI HADAGALI", quote: "", category: "H5", status: "Waiting", domain: "Hardware" },
+
+    // H6
+    { id: 11, name: "STASH Monarchs", lead: "Tharun Susri B S", quote: "", category: "H6", status: "Waiting", domain: "Hardware" }
+
 ];
 
 
