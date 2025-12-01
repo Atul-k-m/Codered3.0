@@ -55,6 +55,13 @@ export default function Navbar() {
             >
               Prizes
             </a>
+         <a
+              href="/hackers"
+              className="block text-gray-300 hover:text-[#d90a16] text-lg font-semibold uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Hackers
+            </a>
 
             <a
               href="/problem-statements"
@@ -148,6 +155,13 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Prizes
+            </a>
+             <a
+              href="/hackers"
+              className="block text-gray-300 hover:text-[#d90a16] text-lg font-semibold uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Hackers
             </a>
 
             <a
