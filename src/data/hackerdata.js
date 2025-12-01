@@ -15,7 +15,7 @@ const hackersData = [
     { id: 12, name: "Runtime Terrors", lead: "Harshendra", quote: "Turning chaos into clarity, one bug at a time.", category: "S3", status: "Shortlisted", domain: "Software" },
     { id: 13, name: "Chai-Fi", lead: "Chethan V", quote: "Fueled by caffeine, guided by passion.", category: "S3", status: "Shortlisted", domain: "Software" },
     { id: 14, name: "Reboot", lead: "Aishwarya J A", quote: "Resetting the ordinary to build the extraordinary.", category: "S3", status: "Shortlisted", domain: "Software" },
-    { id: 15, name: "Dr Code", lead: "Shubham Kumr", quote: "Diagnosing problems to engineer solutions.", category: "S3", status: "Shortlisted", domain: "Software" },
+    { id: 15, name: "Dr Code", lead: "Shubham Kumar", quote: "Diagnosing problems to engineer solutions.", category: "S3", status: "Shortlisted", domain: "Software" },
 
     { id: 16, name: "Brogrammers", lead: "Suditya Kulkarni", quote: "Stronger together, smarter together.", category: "S4", status: "Shortlisted", domain: "Software" },
     { id: 17, name: "KernelKoders", lead: "Pramath J", quote: "Solving problems at the core of complexity.", category: "S4", status: "Shortlisted", domain: "Software" },
@@ -139,7 +139,7 @@ const hackersData = [
     { id: 105, name: "Byte_Me", lead: "Shreyas Santosh Naik", quote: "", category: "U7", status: "Waiting", domain: "Unisys" },
     { id: 106, name: "Minus Zero", lead: "Kishan MN", quote: "", category: "U8", status: "Waiting", domain: "Unisys" }
 
-    
+
 
 
 ];
