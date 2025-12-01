@@ -6,13 +6,13 @@ const hackersData = [
     { id: "s1-1", name: "CodeVortex", lead: "Amogh M G", quote: "Pushing past limits to build what others say is impossible.", category: "S1", status: "Shortlisted", domain: "Software" },
     { id: "s1-2", name: "Blue", lead: "Dharshan S N", quote: "Clear minds, clean code, bold results.", category: "S1", status: "Shortlisted", domain: "Software" },
     { id: "s1-3", name: "Code Wizards", lead: "Neshandra G", quote: "Turnistacng imagination into working innovation.", category: "S1", status: "Shortlisted", domain: "Software" },
-    { id: "s1-4", name: "CodeBlooded", lead: "ANKIT KUMAR", quote: "Where passion fuels persistence and progress.", category: "S1", status: "Shortlisted", domain: "Software" },
+    { id: "s1-4", name: "CodeBlooded", lead: "Ankit Kumar", quote: "Where passion fuels persistence and progress.", category: "S1", status: "Shortlisted", domain: "Software" },
 
-    { id: "s2-1", name: "Neural Nooks", lead: "S SRINIDHI VAS", quote: "Learning from every failure and evolving with every step.", category: "S2", status: "Shortlisted", domain: "Software" },
+    { id: "s2-1", name: "Neural Nooks", lead: "S Srinidhi Vas", quote: "Learning from every failure and evolving with every step.", category: "S2", status: "Shortlisted", domain: "Software" },
     { id: "s2-2", name: "Delusion", lead: "Samyukthaa M", quote: "Dreaming boldly, building bravely.", category: "S2", status: "Shortlisted", domain: "Software" },
     { id: "s2-3", name: "Convoy Command Unit", lead: "Shivang Karol", quote: "Moving as one, achieving as many.", category: "S2", status: "Shortlisted", domain: "Software" },
     { id: "s2-4", name: "WI-FIGTERS", lead: "Shreyank Prabhu CB", quote: "Connected by purpose, driven by ambition.", category: "S2", status: "Shortlisted", domain: "Software" },
-    { id: "s2-5", name: "Apex-AI-X", lead: "KUSHAL P", quote: "Rising to the top through relentless curiosity.", category: "S2", status: "Shortlisted", domain: "Software" },
+    { id: "s2-5", name: "Apex-AI-X", lead: "Kushal P", quote: "Rising to the top through relentless curiosity.", category: "S2", status: "Shortlisted", domain: "Software" },
     { id: "s2-6", name: "Momentum crew", lead: "Neeraja.R", quote: "Progress is our direction, momentum is our engine.", category: "S2", status: "Shortlisted", domain: "Software" },
 
     { id: "s3-1", name: "The Gradient Decendents", lead: "Mehaboob S", quote: "Every step improves us, every iteration sharpens us.", category: "S3", status: "Shortlisted", domain: "Software" },
@@ -28,7 +28,7 @@ const hackersData = [
     { id: "s4-5", name: "Misamisa", lead: "Mohit V S", quote: "Crafting ideas that challenge convention.", category: "S4", status: "Shortlisted", domain: "Software" },
     { id: "s4-6", name: "QudraByte", lead: "Supreetha M", quote: "Small bytes, big vision.", category: "S4", status: "Shortlisted", domain: "Software" },
 
-    { id: "s5-1", name: "Tryanuka", lead: "TEJAS H J", quote: "Exploring, experimenting, excelling.", category: "S5", status: "Shortlisted", domain: "Software" },
+    { id: "s5-1", name: "Tryanuka", lead: "Tejas H J", quote: "Exploring, experimenting, excelling.", category: "S5", status: "Shortlisted", domain: "Software" },
     { id: "s5-2", name: "VitaCore AI", lead: "Poorvi M", quote: "Building intelligence with intention.", category: "S5", status: "Shortlisted", domain: "Software" },
     { id: "s5-3", name: "AutoMatiks", lead: "Sumukh R", quote: "Automating processes to accelerate progress.", category: "S5", status: "Shortlisted", domain: "Software" },
     { id: "s5-4", name: "phishfry", lead: "Harshita Nagesh", quote: "Turning every challenge into an opportunity.", category: "S5", status: "Shortlisted", domain: "Software" },
@@ -36,10 +36,10 @@ const hackersData = [
     { id: "s6-1", name: "LogicHigh", lead: "Keerthan A K", quote: "Thinking deeper to innovate smarter.", category: "S6", status: "Shortlisted", domain: "Software" },
     { id: "s6-2", name: "Material Girlz", lead: "Nishika", quote: "Breaking stereotypes with skill and substance.", category: "S6", status: "Shortlisted", domain: "Software" },
     { id: "s6-3", name: "Wi-Fight club", lead: "Abhilash G", quote: "We never quit – we only iterate.", category: "S6", status: "Shortlisted", domain: "Software" },
-    { id: "s6-4", name: "Kronyx", lead: "VAIBHAV M N", quote: "Strength in focus, success in precision.", category: "S6", status: "Shortlisted", domain: "Software" },
+    { id: "s6-4", name: "Kronyx", lead: "Vaibhav M N", quote: "Strength in focus, success in precision.", category: "S6", status: "Shortlisted", domain: "Software" },
     { id: "s6-5", name: "FourLoop", lead: "Kshitiz Khandelwal", quote: "Looping through challenges to find solutions.", category: "S6", status: "Shortlisted", domain: "Software" },
     { id: "s6-6", name: "VCpro", lead: "Samarth Singh", quote: "Professional minds, purposeful execution.", category: "S6", status: "Shortlisted", domain: "Software" },
-    { id: "s6-7", name: "Invincible_4", lead: "MD UMAR ABDULLAH", quote: "Standing strong against every obstacle.", category: "S6", status: "Shortlisted", domain: "Software" },
+    { id: "s6-7", name: "Invincible_4", lead: "MD Umar Abdullah", quote: "Standing strong against every obstacle.", category: "S6", status: "Shortlisted", domain: "Software" },
 
     { id: "s1-w1", name: "Full Stack Biryani", lead: "Tanmay Kapadnis", quote: "Layering ideas like code — well-structured and flavorful.", category: "S1", status: "Waiting", domain: "Software" },
     { id: "s1-w2", name: "Codeless paradigm", lead: "Vinyas G M", quote: "Thinking beyond syntax to spark innovation.", category: "S1", status: "Waiting", domain: "Software" },
