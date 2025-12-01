@@ -5,7 +5,7 @@ import { Search } from 'lucide-react';
 const hackersData = [
     { id: "s1-1", name: "CodeVortex", lead: "Amogh M G", quote: "Pushing past limits to build what others say is impossible.", category: "S1", status: "Shortlisted", domain: "Software" },
     { id: "s1-2", name: "Blue", lead: "Dharshan S N", quote: "Clear minds, clean code, bold results.", category: "S1", status: "Shortlisted", domain: "Software" },
-    { id: "s1-3", name: "Code Wizards", lead: "Neshandra G", quote: "Turning imagination into working innovation.", category: "S1", status: "Shortlisted", domain: "Software" },
+    { id: "s1-3", name: "Code Wizards", lead: "Neshandra G", quote: "Turnistacng imagination into working innovation.", category: "S1", status: "Shortlisted", domain: "Software" },
     { id: "s1-4", name: "CodeBlooded", lead: "ANKIT KUMAR", quote: "Where passion fuels persistence and progress.", category: "S1", status: "Shortlisted", domain: "Software" },
 
     { id: "s2-1", name: "Neural Nooks", lead: "S SRINIDHI VAS", quote: "Learning from every failure and evolving with every step.", category: "S2", status: "Shortlisted", domain: "Software" },
@@ -41,7 +41,7 @@ const hackersData = [
     { id: "s6-6", name: "VCpro", lead: "Samarth Singh", quote: "Professional minds, purposeful execution.", category: "S6", status: "Shortlisted", domain: "Software" },
     { id: "s6-7", name: "Invincible_4", lead: "MD UMAR ABDULLAH", quote: "Standing strong against every obstacle.", category: "S6", status: "Shortlisted", domain: "Software" },
 
-    { id: "s1-w1", name: "Full Stack Biryani", lead: "Aditya Tripathi", quote: "Layering ideas like code — well-structured and flavorful.", category: "S1", status: "Waiting", domain: "Software" },
+    { id: "s1-w1", name: "Full Stack Biryani", lead: "Tanmay Kapadnis", quote: "Layering ideas like code — well-structured and flavorful.", category: "S1", status: "Waiting", domain: "Software" },
     { id: "s1-w2", name: "Codeless paradigm", lead: "Vinyas G M", quote: "Thinking beyond syntax to spark innovation.", category: "S1", status: "Waiting", domain: "Software" },
 
     { id: "s2-w1", name: "Ohm My God", lead: "Mayur S Nagoji", quote: "Charging creativity with curiosity.", category: "S2", status: "Waiting", domain: "Software" },
@@ -83,6 +83,9 @@ const hackersData = [
     { id: "h6-1", name: "Windows12Devs", lead: "Kshiraja Nelapati", quote: "Building forward with futuristic vision.", category: "H6", status: "Shortlisted", domain: "Hardware" },
     { id: "h6-2", name: "GENESIS", lead: "Hemanth S", quote: "Every great creation begins with a spark.", category: "H6", status: "Shortlisted", domain: "Hardware" },
         // H2
+     // H1
+    { id: 1, name: "Aura", lead: "Jayanth DN", quote: "", category: "H1", status: "Waiting", domain: "Hardware" },
+    { id: 2, name: "PeaceOps", lead: "Keerthana gururaj", quote: "", category: "H1", status: "Waiting", domain: "Hardware" },
     { id: 3, name: "Tech Titans", lead: "Rachit Jain", quote: "", category: "H2", status: "Waiting", domain: "Hardware" },
     { id: 4, name: "NexaTrace", lead: "Naga Venkata Akhilesh Chandluri", quote: "", category: "H2", status: "Waiting", domain: "Hardware" },
 
