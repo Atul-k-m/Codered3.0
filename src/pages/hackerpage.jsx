@@ -81,7 +81,64 @@ const hackersData = [
     { id: "h5-4", name: "Crazzypeeps", lead: "Priyanka TR", quote: "Bold ideas drive bold breakthroughs.", category: "H5", status: "Shortlisted", domain: "Hardware" },
 
     { id: "h6-1", name: "Windows12Devs", lead: "Kshiraja Nelapati", quote: "Building forward with futuristic vision.", category: "H6", status: "Shortlisted", domain: "Hardware" },
-    { id: "h6-2", name: "GENESIS", lead: "Hemanth S", quote: "Every great creation begins with a spark.", category: "H6", status: "Shortlisted", domain: "Hardware" }
+    { id: "h6-2", name: "GENESIS", lead: "Hemanth S", quote: "Every great creation begins with a spark.", category: "H6", status: "Shortlisted", domain: "Hardware" },
+        // H2
+    { id: 3, name: "Tech Titans", lead: "Rachit Jain", quote: "", category: "H2", status: "Waiting", domain: "Hardware" },
+    { id: 4, name: "NexaTrace", lead: "Naga Venkata Akhilesh Chandluri", quote: "", category: "H2", status: "Waiting", domain: "Hardware" },
+
+    // H3
+    { id: 5, name: "Team InfraRed", lead: "Jiya Kulkarni", quote: "", category: "H3", status: "Waiting", domain: "Hardware" },
+    { id: 6, name: "Innovastra", lead: "M Hasini", quote: "", category: "H3", status: "Waiting", domain: "Hardware" },
+
+    // H4
+    { id: 7, name: "ThunderStack", lead: "Jagruthi Reddy B", quote: "", category: "H4", status: "Waiting", domain: "Hardware" },
+    { id: 8, name: "Circuit Masters", lead: "Sankarshan V sastry", quote: "", category: "H4", status: "Waiting", domain: "Hardware" },
+
+    // H5
+    { id: 9, name: "NextGen", lead: "Dayana B", quote: "", category: "H5", status: "Waiting", domain: "Hardware" },
+    { id: 10, name: "PRIME", lead: "ASHWINI HADAGALI", quote: "", category: "H5", status: "Waiting", domain: "Hardware" },
+
+    // H6
+    { id: 11, name: "STASH Monarchs", lead: "Tharun Susri B S", quote: "", category: "H6", status: "Waiting", domain: "Hardware" },
+     { id: 1, name: "The Quadrent", lead: "Manjula Rani", quote: "", category: "U2", status: "Shortlisted", domain: "Unisys" },
+    { id: 2, name: "No code paradigm", lead: "Vinyas G M", quote: "", category: "U2", status: "Shortlisted", domain: "Unisys" },
+
+    // U3
+    { id: 3, name: "Forbidden Phishers", lead: "Shashank Pandey", quote: "", category: "U3", status: "Shortlisted", domain: "Unisys" },
+    { id: 4, name: "INNOVCAMP", lead: "Nithin Naik R", quote: "", category: "U3", status: "Shortlisted", domain: "Unisys" },
+    { id: 5, name: "CODEBREAKER5", lead: "Sidhartha NS", quote: "", category: "U3", status: "Shortlisted", domain: "Unisys" },
+
+    // U4
+    { id: 6, name: "GARUDA", lead: "Srijan U", quote: "", category: "U4", status: "Shortlisted", domain: "Unisys" },
+    { id: 7, name: "Redbyte", lead: "Mansi Kalgudi", quote: "", category: "U4", status: "Shortlisted", domain: "Unisys" },
+    { id: 8, name: "Run Time Terror", lead: "Pratyush Visu", quote: "", category: "U4", status: "Shortlisted", domain: "Unisys" },
+
+    // U5
+    { id: 9, name: "Mjolnir", lead: "Dheeksha N", quote: "", category: "U5", status: "Shortlisted", domain: "Unisys" },
+    { id: 10, name: "MSN", lead: "Nithin J", quote: "", category: "U5", status: "Shortlisted", domain: "Unisys" },
+    { id: 11, name: "Caffeine Crew", lead: "Thejaswini V Bhat", quote: "", category: "U5", status: "Shortlisted", domain: "Unisys" },
+    { id: 12, name: "SlothX", lead: "Nuvvula Geethika", quote: "", category: "U5", status: "Shortlisted", domain: "Unisys" },
+
+    // U6
+    { id: 13, name: "Tesla_Curie", lead: "Abhiragini K", quote: "", category: "U6", status: "Shortlisted", domain: "Unisys" },
+    { id: 14, name: "Team 269", lead: "Keerthi Narayan M V", quote: "", category: "U6", status: "Shortlisted", domain: "Unisys" },
+
+    // U7
+    { id: 15, name: "Infinity Devs", lead: "Sumit Srivastava", quote: "", category: "U7", status: "Shortlisted", domain: "Unisys" },
+    { id: 16, name: "Prototype Pirates", lead: "Nipun Gupta", quote: "", category: "U7", status: "Shortlisted", domain: "Unisys" },
+    { id: 17, name: "Tenet", lead: "Satvika Prashanth Hiremath", quote: "", category: "U7", status: "Shortlisted", domain: "Unisys" },
+
+    // U8
+    { id: 18, name: "Team 0/1", lead: "Sunder Gandhi Ningappa", quote: "", category: "U8", status: "Shortlisted", domain: "Unisys" },
+    { id: 19, name: "LOLgorithms", lead: "Sushruth Kumar", quote: "", category: "U8", status: "Shortlisted", domain: "Unisys" },
+    { id: 20, name: "Unified Cargo Exchange", lead: "V Nanda Kishore Naik", quote: "", category: "U8", status: "Shortlisted", domain: "Unisys" },
+    { id: 100, name: "4Direction", lead: "Aman", quote: "", category: "U2", status: "Waiting", domain: "Unisys" },
+    { id: 101, name: "Team Algorithm", lead: "Mustafa Joyabali Vora", quote: "", category: "U3", status: "Waiting", domain: "Unisys" },
+    { id: 102, name: "Tech Dominators", lead: "Akhil", quote: "", category: "U4", status: "Waiting", domain: "Unisys" },
+    { id: 103, name: "The 8th Question", lead: "Marmik Jain", quote: "", category: "U5", status: "Waiting", domain: "Unisys" },
+    { id: 104, name: "tech titans", lead: "Aditya Kumar Bangre", quote: "", category: "U6", status: "Waiting", domain: "Unisys" },
+    { id: 105, name: "Byte_Me", lead: "Shreyas Santosh Naik", quote: "", category: "U7", status: "Waiting", domain: "Unisys" },
+    { id: 106, name: "Minus Zero", lead: "Kishan MN", quote: "", category: "U8", status: "Waiting", domain: "Unisys" }
 ];
 
 // Hacker Card Component
