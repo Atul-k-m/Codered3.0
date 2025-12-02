@@ -82,9 +82,9 @@ const hackersData = [
 
     { id: "h6-1", name: "Windows12Devs", lead: "Kshiraja Nelapati", quote: "Building forward with futuristic vision.", category: "H6", status: "Shortlisted", domain: "Hardware" },
     { id: "h6-2", name: "GENESIS", lead: "Hemanth S", quote: "Every great creation begins with a spark.", category: "H6", status: "Shortlisted", domain: "Hardware" },
-        // H2
-     // H1
-   { id: 1, name: "Aura", lead: "Jayanth DN", quote: "Code is like humor. When you have to explain it, it’s bad.", category: "H1", status: "Waiting", domain: "Hardware" },
+    // H2
+    // H1
+    { id: 1, name: "Aura", lead: "Jayanth DN", quote: "Code is like humor. When you have to explain it, it’s bad.", category: "H1", status: "Waiting", domain: "Hardware" },
     { id: 2, name: "PeaceOps", lead: "Keerthana gururaj", quote: "Debugging is like being the detective in a crime movie where you are also the murderer.", category: "H1", status: "Waiting", domain: "Hardware" },
     { id: 3, name: "Tech Titans", lead: "Rachit Jain", quote: "Programming is thinking, not typing.", category: "H2", status: "Waiting", domain: "Hardware" },
     { id: 4, name: "NexaTrace", lead: "Naga Venkata Akhilesh Chandluri", quote: "Eat, Sleep, Code, Repeat.", category: "H2", status: "Waiting", domain: "Hardware" },
@@ -271,54 +271,88 @@ const HackersPage = () => {
                     </div>
                 </div>
 
-                {/* Search Bar */}
-                <div className="max-w-2xl mx-auto mb-8">
-                    <div className="relative group">
-                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <Search className="h-5 w-5 text-gray-500 group-focus-within:text-red-500 transition-colors" />
-                        </div>
-                        <input
-                            type="text"
-                            className="block w-full pl-10 pr-3 py-3 border border-gray-800 rounded-none leading-5 bg-black/50 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600 sm:text-sm transition-all duration-300"
-                            placeholder={`Search ${activeDomain} teams...`}
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                    </div>
-                </div>
-
-                {/* Filter Buttons */}
-                <div className="flex flex-wrap justify-center gap-4 mb-16">
-                    {categories.map((category) => (
-                        <button
-                            key={category}
-                            onClick={() => setActiveFilter(category)}
-                            style={{ 
-                                backgroundImage: activeFilter !== category ? 'linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px)' : 'none',
+                {activeDomain === 'Unisys' ? (
+                    <div className="max-w-3xl mx-auto mt-12">
+                        <div
+                            className="relative bg-black border border-gray-800 p-8 md:p-12 flex flex-col justify-center items-center text-center group hover:border-red-600 transition-colors duration-300"
+                            style={{
+                                backgroundImage: 'linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)',
                                 backgroundSize: '20px 20px'
                             }}
-                            className={`px-6 py-2 border transition-all duration-300 uppercase tracking-wider font-bold text-sm
-                ${activeFilter === category
-                                    ? 'bg-red-600 border-red-600 text-white shadow-[0_0_15px_rgba(220,38,38,0.5)]'
-                                    : 'bg-transparent border-red-900/50 text-gray-400 hover:border-red-600 hover:text-white'
-                                }`}
                         >
-                            {category}
-                        </button>
-                    ))}
-                </div>
+                            {/* Corner decorations */}
+                            <div className="absolute bottom-0 right-0 w-2 h-2 bg-red-600/50"></div>
+                            <div className="absolute top-0 left-0 w-2 h-2 bg-red-600/50"></div>
 
-                {/* Teams Grid */}
-                {filteredTeams.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 gap-y-12">
-                        {filteredTeams.map((team) => (
-                            <HackerCard key={team.id} team={team} />
-                        ))}
+                            <div className="mb-6">
+                                <h3 className="text-2xl md:text-3xl font-bold text-red-600 uppercase tracking-wider glow mb-2">
+                                    Unisys Update
+                                </h3>
+                                <div className="w-16 h-1 bg-red-600/50 mx-auto"></div>
+                            </div>
+
+                            <div className="space-y-6 text-gray-300 text-lg md:text-xl leading-relaxed">
+                                <p>
+                                    Kindly note: As per the recent update, all shortlisted teams will receive a confirmation directly from Unisys.
+                                </p>
+                                <p>
+                                    They are currently undergoing an additional round of shortlisting. We request you to kindly wait for the official confirmation over the next 2–3 days.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 ) : (
-                    <div className="text-center text-gray-500 py-12">
-                        <p className="text-xl">No {activeDomain} teams found matching your criteria.</p>
-                    </div>
+                    <>
+                        {/* Search Bar */}
+                        <div className="max-w-2xl mx-auto mb-8">
+                            <div className="relative group">
+                                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <Search className="h-5 w-5 text-gray-500 group-focus-within:text-red-500 transition-colors" />
+                                </div>
+                                <input
+                                    type="text"
+                                    className="block w-full pl-10 pr-3 py-3 border border-gray-800 rounded-none leading-5 bg-black/50 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600 sm:text-sm transition-all duration-300"
+                                    placeholder={`Search ${activeDomain} teams...`}
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                />
+                            </div>
+                        </div>
+
+                        {/* Filter Buttons */}
+                        <div className="flex flex-wrap justify-center gap-4 mb-16">
+                            {categories.map((category) => (
+                                <button
+                                    key={category}
+                                    onClick={() => setActiveFilter(category)}
+                                    style={{
+                                        backgroundImage: activeFilter !== category ? 'linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px)' : 'none',
+                                        backgroundSize: '20px 20px'
+                                    }}
+                                    className={`px-6 py-2 border transition-all duration-300 uppercase tracking-wider font-bold text-sm
+                        ${activeFilter === category
+                                            ? 'bg-red-600 border-red-600 text-white shadow-[0_0_15px_rgba(220,38,38,0.5)]'
+                                            : 'bg-transparent border-red-900/50 text-gray-400 hover:border-red-600 hover:text-white'
+                                        }`}
+                                >
+                                    {category}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Teams Grid */}
+                        {filteredTeams.length > 0 ? (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 gap-y-12">
+                                {filteredTeams.map((team) => (
+                                    <HackerCard key={team.id} team={team} />
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="text-center text-gray-500 py-12">
+                                <p className="text-xl">No {activeDomain} teams found matching your criteria.</p>
+                            </div>
+                        )}
+                    </>
                 )}
             </div>
         </div>
