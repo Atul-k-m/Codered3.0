@@ -106,61 +106,58 @@ const hackersData = [
 
     
  
-  { id: "U1", name: "NexTech", lead: "Chinmayee S Pujar", quote: "Code is the closest thing we have to magic.", category: "U1", status: "Shortlisted", domain: "Unisys" },
+    { id: "u1-1", name: "NexTech", lead: "Chinmayee S Pujar", quote: "Code is the closest thing we have to magic.", category: "U1", status: "Shortlisted", domain: "Unisys" },
+    { id: "u1-2", name: "LogiMind", lead: "Harshil Sharma", quote: "In the world of logic, bugs fear clarity.", category: "U1", status: "Shortlisted", domain: "Unisys" },
+    { id: "u1-3", name: "Vague_Sense", lead: "Amitesh Bhardwaj", quote: "Great ideas begin where comfort ends.", category: "U1", status: "Shortlisted", domain: "Unisys" },
 
-  { id: "U1", name: "LogiMind", lead: "Harshil Sharma", quote: "In the world of logic, bugs fear clarity.", category: "U1", status: "Shortlisted", domain: "Unisys" },
-
-  { id: "U1", name: "Vague_Sense", lead: "Amitesh Bhardwaj", quote: "Great ideas begin where comfort ends.", category: "U1", status: "Shortlisted", domain: "Unisys" },
-
-
-  { id: "U2", name: "The Quadrent", lead: "Manjula Rani", quote: "Code never lies, but comments do.", category: "U2", status: "Shortlisted", domain: "Unisys" },
-
-  { id: "U2", name: "No code paradigm", lead: "Vinyas G M", quote: "When logic gets tough, break it into functions.", category: "U2", status: "Shortlisted", domain: "Unisys" },
+    // -------------------- U2 --------------------
+    { id: "u2-1", name: "The Quadrent", lead: "Manjula Rani", quote: "Code never lies, but comments do.", category: "U2", status: "Shortlisted", domain: "Unisys" },
+    { id: "u2-2", name: "No code paradigm", lead: "Vinyas G M", quote: "When logic gets tough, break it into functions.", category: "U2", status: "Shortlisted", domain: "Unisys" },
 
 
-  { id: "U3", name: "Forbidden Phishers", lead: "Shashank Pandey", quote: "Hack the problem, not the system.", category: "U3", status: "Shortlisted", domain: "Unisys" },
 
-  { id: "U3", name: "INNOVCAMP", lead: "Nithin Naik R", quote: "Innovation begins where templates end.", category: "U3", status: "Shortlisted", domain: "Unisys" },
+ { id: "u3-1", name: "Forbidden Phishers", lead: "Shashank Pandey", quote: "Hack the problem, not the system.", category: "U3", status: "Shortlisted", domain: "Unisys" },
 
-  { id: "U3", name: "CODEBREAKER5", lead: "Sidhartha NS", quote: "If it works, ship it. If it doesn’t, debug it.", category: "U3", status: "Shortlisted", domain: "Unisys" },
+  { id: "u3-2", name: "INNOVCAMP", lead: "Nithin Naik R", quote: "Innovation begins where templates end.", category: "U3", status: "Shortlisted", domain: "Unisys" },
 
-
-  { id: "U4", name: "GARUDA", lead: "Srijan U", quote: "You don’t need wings when you can deploy.", category: "U4", status: "Shortlisted", domain: "Unisys" },
-
-  { id: "U4", name: "Redbyte", lead: "Mansi Kalgudi", quote: "Redefine limits one byte at a time.", category: "U4", status: "Shortlisted", domain: "Unisys" },
-
-  { id: "U4", name: "Run Time Terror", lead: "Pratyush Visu", quote: "Turn runtime errors into runtime excellence.", category: "U4", status: "Shortlisted", domain: "Unisys" },
+  { id: "u3-3", name: "CODEBREAKER5", lead: "Sidhartha NS", quote: "If it works, ship it. If it doesn't, debug it.", category: "U3", status: "Shortlisted", domain: "Unisys" },
 
 
-  { id: "U5", name: "Mjolnir", lead: "Dheeksha N", quote: "A coder’s hammer is logic—strike wisely.", category: "U5", status: "Shortlisted", domain: "Unisys" },
+  { id: "u4-1", name: "GARUDA", lead: "Srijan U", quote: "You don't need wings when you can deploy.", category: "U4", status: "Shortlisted", domain: "Unisys" },
 
-  { id: "U5", name: "MSN", lead: "Nithin J", quote: "Good code is silent; bad code screams.", category: "U5", status: "Shortlisted", domain: "Unisys" },
+  { id: "u4-2", name: "Redbyte", lead: "Mansi Kalgudi", quote: "Redefine limits one byte at a time.", category: "U4", status: "Shortlisted", domain: "Unisys" },
 
-  { id: "U5", name: "Caffeine Crew", lead: "Thejaswini V Bhat", quote: "Caffeine in, creativity out.", category: "U5", status: "Shortlisted", domain: "Unisys" },
-
-  { id: "U5", name: "SlothX", lead: "Nuvvula Geethika", quote: "Slow and steady still wins—especially in debugging.", category: "U5", status: "Shortlisted", domain: "Unisys" },
+  { id: "u4-3", name: "Run Time Terror", lead: "Pratyush Visu", quote: "Turn runtime errors into runtime excellence.", category: "U4", status: "Shortlisted", domain: "Unisys" },
 
 
-  { id: "U6", name: "Tesla_Curie", lead: "Abhiragini K", quote: "Electric ideas need magnetic execution.", category: "U6", status: "Shortlisted", domain: "Unisys" },
+  { id: "u5-1", name: "Mjolnir", lead: "Dheeksha N", quote: "A coder's hammer is logic—strike wisely.", category: "U5", status: "Shortlisted", domain: "Unisys" },
 
-  { id: "U6", name: "Team 269", lead: "Keerthi Narayan M V", quote: "Sometimes all you need is one perfect loop.", category: "U6", status: "Shortlisted", domain: "Unisys" },
+  { id: "u5-2", name: "MSN", lead: "Nithin J", quote: "Good code is silent; bad code screams.", category: "U5", status: "Shortlisted", domain: "Unisys" },
 
+  { id: "u5-3", name: "Caffeine Crew", lead: "Thejaswini V Bhat", quote: "Caffeine in, creativity out.", category: "U5", status: "Shortlisted", domain: "Unisys" },
 
-  { id: "U7", name: "Tenet", lead: "Satvika Prashanth H", quote: "Time bends, but logic doesn’t.", category: "U7", status: "Shortlisted", domain: "Unisys" },
-
-  { id: "U7", name: "Infinity Devs", lead: "Sumit Srivastava", quote: "Infinity is just recursion with style.", category: "U7", status: "Shortlisted", domain: "Unisys" },
-
-  { id: "U7", name: "Prototype Pirates", lead: "Nipun Gupta", quote: "Steal ideas. Build better ones. Ship faster.", category: "U7", status: "Shortlisted", domain: "Unisys" },
+  { id: "u5-4", name: "SlothX", lead: "Nuvvula Geethika", quote: "Slow and steady still wins—especially in debugging.", category: "U5", status: "Shortlisted", domain: "Unisys" },
 
 
-  { id: "U8", name: "LOLgorithms", lead: "Sushruth Kumar", quote: "Algorithms solve problems; laughter solves stress.", category: "U8", status: "Shortlisted", domain: "Unisys" },
+  { id: "u6-1", name: "Tesla_Curie", lead: "Abhiragini K", quote: "Electric ideas need magnetic execution.", category: "U6", status: "Shortlisted", domain: "Unisys" },
 
-  { id: "U8", name: "Team 0/1", lead: "Sunder Gandhi N", quote: "Life is binary—either you code or you don’t.", category: "U8", status: "Shortlisted", domain: "Unisys" },
+  { id: "u6-2", name: "Team 269", lead: "Keerthi Narayan M V", quote: "Sometimes all you need is one perfect loop.", category: "U6", status: "Shortlisted", domain: "Unisys" },
 
-  { id: "U8", name: "Unified Cargo Exchange", lead: "V Nanda Kishore N", quote: "Clean logic moves faster than any cargo.", category: "U8", status: "Shortlisted", domain: "Unisys" },
 
-  // Codered (special)
-  { id: "U8", name: "Kairos", lead: "Srinidhi P", quote: "Perfect timing is the ultimate feature.", category: "U8", status: "Shortlisted", domain: "Unisys" }
+  { id: "u7-1", name: "Tenet", lead: "Satvika Prashanth H", quote: "Time bends, but logic doesn't.", category: "U7", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "u7-2", name: "Infinity Devs", lead: "Sumit Srivastava", quote: "Infinity is just recursion with style.", category: "U7", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "u7-3", name: "Prototype Pirates", lead: "Nipun Gupta", quote: "Steal ideas. Build better ones. Ship faster.", category: "U7", status: "Shortlisted", domain: "Unisys" },
+
+
+  { id: "u8-1", name: "LOLgorithms", lead: "Sushruth Kumar", quote: "Algorithms solve problems; laughter solves stress.", category: "U8", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "u8-2", name: "Team 0/1", lead: "Sunder Gandhi N", quote: "Life is binary—either you code or you don't.", category: "U8", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "u8-3", name: "Unified Cargo Exchange", lead: "V Nanda Kishore N", quote: "Clean logic moves faster than any cargo.", category: "U8", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "u8-4", name: "Kairos", lead: "Srinidhi P", quote: "Perfect timing is the ultimate feature.", category: "U8", status: "Shortlisted", domain: "Unisys" }
 ]
 
 
