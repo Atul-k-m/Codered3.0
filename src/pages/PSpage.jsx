@@ -19,7 +19,7 @@ import SDG14 from "./sdgLogo/E-WEB-Goal-14.png";
 import SDG15 from "./sdgLogo/E-WEB-Goal-15.png";
 import SDG16 from "./sdgLogo/E-WEB-Goal-16.png";
 import SDG17 from "./sdgLogo/E-WEB-Goal-17.png";
-import Navbar from "../components/Navbar.jsx";
+import Navbar from "../data/Navbar.jsx";
 const sdgImages = {
   SDG1,
   SDG2,

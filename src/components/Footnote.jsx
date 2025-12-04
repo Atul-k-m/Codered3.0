@@ -185,7 +185,7 @@ export default function Footer() {
               </li>
                 <li>
                   <a
-                    href="https://drive.google.com/file/d/1cxpD6F_3SBUumWCkzfwERu_aHec0FZNX/view?usp=drivesdk"
+                    href=" "
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-[#d90a16] transition-colors text-lg"

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Trophy, Award, Menu, X } from "lucide-react";
-import { Navbar } from "../components/Navbar.jsx";
+import { Navbar } from "../data/Navbar.jsx";
 // Interactive Hover Button Component
 const InteractiveHoverButton = ({ children, className = "", onClick }) => {
   return (

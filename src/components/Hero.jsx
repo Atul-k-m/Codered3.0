@@ -5,7 +5,7 @@ import { Particles } from "react-tsparticles";
 import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 import HeroBGDesktop from "../assets/elements/desktop.svg";
 import HeroBGMobile from "../assets/elements/mobile.svg";
-import Navbar from "./Navbar.jsx";
+import Navbar from "../data/Navbar.jsx";
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,

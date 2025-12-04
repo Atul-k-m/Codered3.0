@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { InteractiveHoverButton } from "./ui/interactive-hover-button";
+import { InteractiveHoverButton } from "../components/ui/interactive-hover-button";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

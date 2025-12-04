@@ -82,9 +82,9 @@ const hackersData = [
 
     { id: "h6-1", name: "Windows12Devs", lead: "Kshiraja Nelapati", quote: "Building forward with futuristic vision.", category: "H6", status: "Shortlisted", domain: "Hardware" },
     { id: "h6-2", name: "GENESIS", lead: "Hemanth S", quote: "Every great creation begins with a spark.", category: "H6", status: "Shortlisted", domain: "Hardware" },
-    // H2
-    // H1
-    { id: 1, name: "Aura", lead: "Jayanth DN", quote: "Code is like humor. When you have to explain it, it’s bad.", category: "H1", status: "Waiting", domain: "Hardware" },
+        // H2
+     // H1
+   { id: 1, name: "Aura", lead: "Jayanth DN", quote: "Code is like humor. When you have to explain it, it’s bad.", category: "H1", status: "Waiting", domain: "Hardware" },
     { id: 2, name: "PeaceOps", lead: "Keerthana gururaj", quote: "Debugging is like being the detective in a crime movie where you are also the murderer.", category: "H1", status: "Waiting", domain: "Hardware" },
     { id: 3, name: "Tech Titans", lead: "Rachit Jain", quote: "Programming is thinking, not typing.", category: "H2", status: "Waiting", domain: "Hardware" },
     { id: 4, name: "NexaTrace", lead: "Naga Venkata Akhilesh Chandluri", quote: "Eat, Sleep, Code, Repeat.", category: "H2", status: "Waiting", domain: "Hardware" },
@@ -104,47 +104,66 @@ const hackersData = [
     // H6
     { id: 11, name: "STASH Monarchs", lead: "Tharun Susri B S", quote: "Real programmers count from 0.", category: "H6", status: "Waiting", domain: "Hardware" },
 
-    // U2
-    { id: 12, name: "The Quadrent", lead: "Manjula Rani", quote: "Code never lies, but comments do.", category: "U2", status: "Shortlisted", domain: "Unisys" },
-    { id: 13, name: "No code paradigm", lead: "Vinyas G M", quote: "Eat. Sleep. Automate. Repeat.", category: "U2", status: "Shortlisted", domain: "Unisys" },
-    { id: 14, name: "4Direction", lead: "Aman", quote: "Stack overflow is my best friend.", category: "U2", status: "Waiting", domain: "Unisys" },
+    
+ 
+  { id: "U1", name: "NexTech", lead: "Chinmayee S Pujar", quote: "Code is the closest thing we have to magic.", category: "U1", status: "Shortlisted", domain: "Unisys" },
 
-    // U3
-    { id: 15, name: "Forbidden Phishers", lead: "Shashank Pandey", quote: "Hack the planet, ethically.", category: "U3", status: "Shortlisted", domain: "Unisys" },
-    { id: 16, name: "INNOVCAMP", lead: "Nithin Naik R", quote: "Keep it simple, stupid.", category: "U3", status: "Shortlisted", domain: "Unisys" },
-    { id: 17, name: "CODEBREAKER5", lead: "Sidhartha NS", quote: "Ctrl+C, Ctrl+V is a valid strategy.", category: "U3", status: "Shortlisted", domain: "Unisys" },
-    { id: 18, name: "Team Algorithm", lead: "Mustafa Joyabali Vora", quote: "Life would be easier if we had recursion.", category: "U3", status: "Waiting", domain: "Unisys" },
+  { id: "U1", name: "LogiMind", lead: "Harshil Sharma", quote: "In the world of logic, bugs fear clarity.", category: "U1", status: "Shortlisted", domain: "Unisys" },
 
-    // U4
-    { id: 19, name: "GARUDA", lead: "Srijan U", quote: "Think twice, code once.", category: "U4", status: "Shortlisted", domain: "Unisys" },
-    { id: 20, name: "Redbyte", lead: "Mansi Kalgudi", quote: "There’s no place like 127.0.0.1.", category: "U4", status: "Shortlisted", domain: "Unisys" },
-    { id: 21, name: "Run Time Terror", lead: "Pratyush Visu", quote: "Segmentation fault: my life in code.", category: "U4", status: "Shortlisted", domain: "Unisys" },
-    { id: 22, name: "Tech Dominators", lead: "Akhil", quote: "Talk is cheap. Show me the code.", category: "U4", status: "Waiting", domain: "Unisys" },
+  { id: "U1", name: "Vague_Sense", lead: "Amitesh Bhardwaj", quote: "Great ideas begin where comfort ends.", category: "U1", status: "Shortlisted", domain: "Unisys" },
 
-    // U5
-    { id: 23, name: "Mjolnir", lead: "Dheeksha N", quote: "With great code comes great responsibility.", category: "U5", status: "Shortlisted", domain: "Unisys" },
-    { id: 24, name: "MSN", lead: "Nithin J", quote: "Don’t worry if it doesn’t work right. If everything did, you’d be out of a job.", category: "U5", status: "Shortlisted", domain: "Unisys" },
-    { id: 25, name: "Caffeine Crew", lead: "Thejaswini V Bhat", quote: "Coffee first, code later.", category: "U5", status: "Shortlisted", domain: "Unisys" },
-    { id: 26, name: "SlothX", lead: "Nuvvula Geethika", quote: "Slow and steady compiles the code.", category: "U5", status: "Shortlisted", domain: "Unisys" },
-    { id: 27, name: "The 8th Question", lead: "Marmik Jain", quote: "Questions are free, answers cost time.", category: "U5", status: "Waiting", domain: "Unisys" },
 
-    // U6
-    { id: 28, name: "Tesla_Curie", lead: "Abhiragini K", quote: "Innovate or iterate.", category: "U6", status: "Shortlisted", domain: "Unisys" },
-    { id: 29, name: "Team 269", lead: "Keerthi Narayan M V", quote: "If it compiles, ship it.", category: "U6", status: "Shortlisted", domain: "Unisys" },
-    { id: 30, name: "tech titans", lead: "Aditya Kumar Bangre", quote: "Version control saves friendships.", category: "U6", status: "Waiting", domain: "Unisys" },
+  { id: "U2", name: "The Quadrent", lead: "Manjula Rani", quote: "Code never lies, but comments do.", category: "U2", status: "Shortlisted", domain: "Unisys" },
 
-    // U7
-    { id: 31, name: "Infinity Devs", lead: "Sumit Srivastava", quote: "Code like nobody’s watching.", category: "U7", status: "Shortlisted", domain: "Unisys" },
-    { id: 32, name: "Prototype Pirates", lead: "Nipun Gupta", quote: "Debugging is like being a detective.", category: "U7", status: "Shortlisted", domain: "Unisys" },
-    { id: 33, name: "Tenet", lead: "Satvika Prashanth Hiremath", quote: "Time is an illusion, except in loops.", category: "U7", status: "Shortlisted", domain: "Unisys" },
-    { id: 34, name: "Byte_Me", lead: "Shreyas Santosh Naik", quote: "Bytes speak louder than words.", category: "U7", status: "Waiting", domain: "Unisys" },
+  { id: "U2", name: "No code paradigm", lead: "Vinyas G M", quote: "When logic gets tough, break it into functions.", category: "U2", status: "Shortlisted", domain: "Unisys" },
 
-    // U8
-    { id: 35, name: "Team 0/1", lead: "Sunder Gandhi Ningappa", quote: "Binary is life.", category: "U8", status: "Shortlisted", domain: "Unisys" },
-    { id: 36, name: "LOLgorithms", lead: "Sushruth Kumar", quote: "Algorithms before coffee.", category: "U8", status: "Shortlisted", domain: "Unisys" },
-    { id: 37, name: "Unified Cargo Exchange", lead: "V Nanda Kishore Naik", quote: "Stack overflow saves the day.", category: "U8", status: "Shortlisted", domain: "Unisys" },
-    { id: 38, name: "Minus Zero", lead: "Kishan MN", quote: "Zero errors, zero regrets.", category: "U8", status: "Waiting", domain: "Unisys" }
-];
+
+  { id: "U3", name: "Forbidden Phishers", lead: "Shashank Pandey", quote: "Hack the problem, not the system.", category: "U3", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U3", name: "INNOVCAMP", lead: "Nithin Naik R", quote: "Innovation begins where templates end.", category: "U3", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U3", name: "CODEBREAKER5", lead: "Sidhartha NS", quote: "If it works, ship it. If it doesn’t, debug it.", category: "U3", status: "Shortlisted", domain: "Unisys" },
+
+
+  { id: "U4", name: "GARUDA", lead: "Srijan U", quote: "You don’t need wings when you can deploy.", category: "U4", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U4", name: "Redbyte", lead: "Mansi Kalgudi", quote: "Redefine limits one byte at a time.", category: "U4", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U4", name: "Run Time Terror", lead: "Pratyush Visu", quote: "Turn runtime errors into runtime excellence.", category: "U4", status: "Shortlisted", domain: "Unisys" },
+
+
+  { id: "U5", name: "Mjolnir", lead: "Dheeksha N", quote: "A coder’s hammer is logic—strike wisely.", category: "U5", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U5", name: "MSN", lead: "Nithin J", quote: "Good code is silent; bad code screams.", category: "U5", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U5", name: "Caffeine Crew", lead: "Thejaswini V Bhat", quote: "Caffeine in, creativity out.", category: "U5", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U5", name: "SlothX", lead: "Nuvvula Geethika", quote: "Slow and steady still wins—especially in debugging.", category: "U5", status: "Shortlisted", domain: "Unisys" },
+
+
+  { id: "U6", name: "Tesla_Curie", lead: "Abhiragini K", quote: "Electric ideas need magnetic execution.", category: "U6", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U6", name: "Team 269", lead: "Keerthi Narayan M V", quote: "Sometimes all you need is one perfect loop.", category: "U6", status: "Shortlisted", domain: "Unisys" },
+
+
+  { id: "U7", name: "Tenet", lead: "Satvika Prashanth H", quote: "Time bends, but logic doesn’t.", category: "U7", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U7", name: "Infinity Devs", lead: "Sumit Srivastava", quote: "Infinity is just recursion with style.", category: "U7", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U7", name: "Prototype Pirates", lead: "Nipun Gupta", quote: "Steal ideas. Build better ones. Ship faster.", category: "U7", status: "Shortlisted", domain: "Unisys" },
+
+
+  { id: "U8", name: "LOLgorithms", lead: "Sushruth Kumar", quote: "Algorithms solve problems; laughter solves stress.", category: "U8", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U8", name: "Team 0/1", lead: "Sunder Gandhi N", quote: "Life is binary—either you code or you don’t.", category: "U8", status: "Shortlisted", domain: "Unisys" },
+
+  { id: "U8", name: "Unified Cargo Exchange", lead: "V Nanda Kishore N", quote: "Clean logic moves faster than any cargo.", category: "U8", status: "Shortlisted", domain: "Unisys" },
+
+  // Codered (special)
+  { id: "U8", name: "Kairos", lead: "Srinidhi P", quote: "Perfect timing is the ultimate feature.", category: "U8", status: "Shortlisted", domain: "Unisys" }
+]
+
+
 
 // Hacker Card Component
 const HackerCard = ({ team }) => {
@@ -271,88 +290,54 @@ const HackersPage = () => {
                     </div>
                 </div>
 
-                {activeDomain === 'Unisys' ? (
-                    <div className="max-w-3xl mx-auto mt-12">
-                        <div
-                            className="relative bg-black border border-gray-800 p-8 md:p-12 flex flex-col justify-center items-center text-center group hover:border-red-600 transition-colors duration-300"
-                            style={{
-                                backgroundImage: 'linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)',
+                {/* Search Bar */}
+                <div className="max-w-2xl mx-auto mb-8">
+                    <div className="relative group">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <Search className="h-5 w-5 text-gray-500 group-focus-within:text-red-500 transition-colors" />
+                        </div>
+                        <input
+                            type="text"
+                            className="block w-full pl-10 pr-3 py-3 border border-gray-800 rounded-none leading-5 bg-black/50 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600 sm:text-sm transition-all duration-300"
+                            placeholder={`Search ${activeDomain} teams...`}
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                    </div>
+                </div>
+
+                {/* Filter Buttons */}
+                <div className="flex flex-wrap justify-center gap-4 mb-16">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setActiveFilter(category)}
+                            style={{ 
+                                backgroundImage: activeFilter !== category ? 'linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px)' : 'none',
                                 backgroundSize: '20px 20px'
                             }}
+                            className={`px-6 py-2 border transition-all duration-300 uppercase tracking-wider font-bold text-sm
+                ${activeFilter === category
+                                    ? 'bg-red-600 border-red-600 text-white shadow-[0_0_15px_rgba(220,38,38,0.5)]'
+                                    : 'bg-transparent border-red-900/50 text-gray-400 hover:border-red-600 hover:text-white'
+                                }`}
                         >
-                            {/* Corner decorations */}
-                            <div className="absolute bottom-0 right-0 w-2 h-2 bg-red-600/50"></div>
-                            <div className="absolute top-0 left-0 w-2 h-2 bg-red-600/50"></div>
+                            {category}
+                        </button>
+                    ))}
+                </div>
 
-                            <div className="mb-6">
-                                <h3 className="text-2xl md:text-3xl font-bold text-red-600 uppercase tracking-wider glow mb-2">
-                                    Unisys Update
-                                </h3>
-                                <div className="w-16 h-1 bg-red-600/50 mx-auto"></div>
-                            </div>
-
-                            <div className="space-y-6 text-gray-300 text-lg md:text-xl leading-relaxed">
-                                <p>
-                                    Kindly note: As per the recent update, all shortlisted teams will receive a confirmation directly from Unisys.
-                                </p>
-                                <p>
-                                    They are currently undergoing an additional round of shortlisting. We request you to kindly wait for the official confirmation over the next 2–3 days.
-                                </p>
-                            </div>
-                        </div>
+                {/* Teams Grid */}
+                {filteredTeams.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 gap-y-12">
+                        {filteredTeams.map((team) => (
+                            <HackerCard key={team.id} team={team} />
+                        ))}
                     </div>
                 ) : (
-                    <>
-                        {/* Search Bar */}
-                        <div className="max-w-2xl mx-auto mb-8">
-                            <div className="relative group">
-                                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <Search className="h-5 w-5 text-gray-500 group-focus-within:text-red-500 transition-colors" />
-                                </div>
-                                <input
-                                    type="text"
-                                    className="block w-full pl-10 pr-3 py-3 border border-gray-800 rounded-none leading-5 bg-black/50 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600 sm:text-sm transition-all duration-300"
-                                    placeholder={`Search ${activeDomain} teams...`}
-                                    value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)}
-                                />
-                            </div>
-                        </div>
-
-                        {/* Filter Buttons */}
-                        <div className="flex flex-wrap justify-center gap-4 mb-16">
-                            {categories.map((category) => (
-                                <button
-                                    key={category}
-                                    onClick={() => setActiveFilter(category)}
-                                    style={{
-                                        backgroundImage: activeFilter !== category ? 'linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px)' : 'none',
-                                        backgroundSize: '20px 20px'
-                                    }}
-                                    className={`px-6 py-2 border transition-all duration-300 uppercase tracking-wider font-bold text-sm
-                        ${activeFilter === category
-                                            ? 'bg-red-600 border-red-600 text-white shadow-[0_0_15px_rgba(220,38,38,0.5)]'
-                                            : 'bg-transparent border-red-900/50 text-gray-400 hover:border-red-600 hover:text-white'
-                                        }`}
-                                >
-                                    {category}
-                                </button>
-                            ))}
-                        </div>
-
-                        {/* Teams Grid */}
-                        {filteredTeams.length > 0 ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 gap-y-12">
-                                {filteredTeams.map((team) => (
-                                    <HackerCard key={team.id} team={team} />
-                                ))}
-                            </div>
-                        ) : (
-                            <div className="text-center text-gray-500 py-12">
-                                <p className="text-xl">No {activeDomain} teams found matching your criteria.</p>
-                            </div>
-                        )}
-                    </>
+                    <div className="text-center text-gray-500 py-12">
+                        <p className="text-xl">No {activeDomain} teams found matching your criteria.</p>
+                    </div>
                 )}
             </div>
         </div>
