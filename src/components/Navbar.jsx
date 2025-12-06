@@ -169,6 +169,14 @@ export default function Navbar() {
             >
               Prizes
             </a>
+            <a
+              href="/team"
+              className="block text-gray-300 hover:text-[#d90a16] text-lg font-semibold uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Team
+            </a>
+
              <a
               href="/hackers"
               className="block text-gray-300 hover:text-[#d90a16] text-lg font-semibold uppercase tracking-wide py-2"
@@ -183,6 +191,13 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Problem Statements
+            </a>
+            <a
+              href="/sponsors"
+              className="block text-gray-300 hover:text-[#d90a16] text-lg font-semibold uppercase tracking-wide py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Sponsors
             </a>
 
             <a
