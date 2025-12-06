@@ -24,7 +24,7 @@ export default function Footer() {
         {/* Main grid - swapped columns: Contact (left), Institute (center), Quick Links (right) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
           {/* Contact - moved to left (md:order-1) */}
-          <div className="md:order-1">
+          <div className="md:order-1" style={{ fontFamily: "Grotesk, sans-serif" }}>
             <h3 className="text-[#d90a16] text-xl md:text-2xl font-bold mb-6 tracking-wide border-b-2 border-[#d90a16] inline-block pb-2">
               Contact Us
             </h3>
@@ -127,19 +127,20 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Institute Info - center */}
-          <div className="text-center md:order-2 flex flex-col items-center justify-center">
-            <h1 className="text-[#d90a16] text-4xl md:text-3xl lg:text-4xl font-extrabold mb-3 tracking-wider leading-tight text-center">
+          {/* Institute Info - center */} 
+          <div className="text-center md:order-2 flex flex-col items-center justify-center" style={{ fontFamily: "Grotesk, sans-serif" }}>
+          
+            <h1 className="text-[#d90a16] text-4xl md:text-3xl lg:text-4xl  mb-3 tracking-wider leading-tight text-center">
               BMS Institute of
             </h1>
-            <h1 className="text-[#d90a16] text-4xl md:text-3xl lg:text-4xl font-extrabold mb-3 tracking-wider leading-tight text-center">
+            <h1 className="text-[#d90a16] text-4xl md:text-3xl lg:text-4xl  mb-3 tracking-wider leading-tight text-center">
               Technology and
             </h1>
-            <h1 className="text-[#d90a16] text-4xl md:text-3xl lg:text-4xl font-extrabold mb-6 tracking-wider leading-tight text-center">
+            <h1 className="text-[#d90a16] text-4xl md:text-3xl lg:text-4xl  mb-6 tracking-wider leading-tight text-center">
               Management
             </h1>
 
-            <p className="text-white text-base md:text-lg max-w-md leading-relaxed">
+            <p className="text-white text-base md:text-lg max-w-md leading-relaxed" style={{ fontFamily: "Grotesk, sans-serif" }}>
               Doddaballapur Main Road, Avalahalli,
               <br />
               Yelahanka, Bengaluru, Karnataka
@@ -149,7 +150,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links - moved to right (md:order-3) */}
-          <div className="md:order-3 md:text-right">
+          <div className="md:order-3 md:text-right" style={{ fontFamily: "Grotesk, sans-serif" }}>
             <h3 className="text-[#d90a16] text-xl md:text-2xl font-bold mb-6 tracking-wide border-b-2 border-[#d90a16] inline-block pb-2">
               Quick Links
             </h3>
@@ -198,7 +199,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-20 pt-10 border-t border-[#d90a16]/30 text-center">
+        <div className="mt-20 pt-10 border-t border-[#d90a16]/30 text-center" style={{ fontFamily: "Grotesk, sans-serif" }}>
           <p className="text-white text-base">Made with ❤️ by E-CELL BMSIT&M</p>
         </div>
       </div>
