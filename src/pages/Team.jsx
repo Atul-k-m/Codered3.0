@@ -28,7 +28,7 @@ import krishnaImg from './assets/team/krishna.webp';
 import faizanImg from './assets/team/Faizan.webp';
 import ansuImg from './assets/team/ansu.webp';
 import anvitaImg from './assets/team/anvita.webp';
-import arushImg from './assets/team/arush.webp';
+import arushImg from './assets/team/arush.jpeg';
 import ashutoshImg from './assets/team/ashutosh.webp';
 import deepthiImg from './assets/team/deepthijain.webp';
 import gaganhsImg from './assets/team/gagan.webp';
