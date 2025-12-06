@@ -55,6 +55,13 @@ export default function Navbar() {
             >
               Prizes
             </a>
+                         <a
+              href="/team"
+              className="text-gray-300 hover:text-[#d90a16] transition-colors text-sm tracking-wide uppercase font-semibold"
+            >
+             Team
+            </a>
+
          <a
               href="/hackers"
               className="block text-gray-300 hover:text-[#d90a16] text-lg font-semibold uppercase tracking-wide py-2"
@@ -68,6 +75,12 @@ export default function Navbar() {
               className="text-gray-300 hover:text-[#d90a16] transition-colors text-sm tracking-wide uppercase font-semibold"
             >
               Problem Statements
+            </a>
+                     <a
+              href="/sponsors"
+              className="text-gray-300 hover:text-[#d90a16] transition-colors text-sm tracking-wide uppercase font-semibold"
+            >
+             Sponsors
             </a>
 
             <a

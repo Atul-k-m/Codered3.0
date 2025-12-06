@@ -1,0 +1,227 @@
+{
+  "leadership": [
+    {
+      "name": "Maxson Matthew",
+      "position": "President",
+      "image": "./assets/team/maxson.JPG",
+      "instagram": "xyz",
+      "linkedin": "yyy"
+    },
+    {
+      "name": "Mohit Monnappa",
+      "position": "Mentor",
+      "image": "./assets/team/mohit.jpeg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Nishitha Bodipati",
+      "position": "Vice President",
+      "image": "./assets/team/nishitha.jpeg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Vaibhav P",
+      "position": "Vice President",
+      "image": "./assets/team/vaibhav.jpg",
+      "instagram": "",
+      "linkedin": ""
+    }
+  ],
+  "heads": [
+    {
+      "name": "Atul Kumar",
+      "position": "Tech",
+      "image": "./assets/team/atul.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Fardeen K",
+      "position": "Corporate Relations",
+      "image": "./assets/team/fardeen.jpeg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Gaganjith R",
+      "position": "Events & Ops",
+      "image": "./assets/team/gaganjith.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Hitesh R",
+      "position": "Media & Marketing",
+      "image": "./assets/team/hitesh.jpeg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Shriya",
+      "position": "Content",
+      "image": "./assets/team/shriya.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Tirth Panchori",
+      "position": "Design",
+      "image": "./assets/team/tirth.jpg",
+      "instagram": "",
+      "linkedin": ""
+    }
+  ],
+  "viceHeads": [
+    {
+      "name": "Akhilesh Pachnanda",
+      "position": "Design",
+      "image": "./assets/team/akhilesh.jpeg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Bhanu Prasad",
+      "position": "Media",
+      "image": "./assets/team/bhanu.JPG",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Milan S",
+      "position": "Tech",
+      "image": "./assets/team/milan.jpg",
+      "instagram": "",
+      "linkedin": ""
+    }
+  ],
+  "associates": [
+    {
+      "name": "Ananya",
+      "position": "Media",
+      "image": "./assets/team/ananya.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Bhavana",
+      "position": "Marketing",
+      "image": "./assets/team/bhavana.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Dhyeya",
+      "position": "Operations",
+      "image": "./assets/team/Dhyeya.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Jasvanti",
+      "position": "Design",
+      "image": "./assets/team/jasvanti.jpeg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Krishna",
+      "position": "Marketing",
+      "image": "./assets/team/krishna.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Faizan Khan",
+      "position": "Marketing",
+      "image": "./assets/team/Faizan.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Ansu Kumar",
+      "position": "Tech",
+      "image": "./assets/team/ansu.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Anvita",
+      "position": "Marketing",
+      "image": "./assets/team/anvita.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Arush",
+      "position": "Corporate Relations",
+      "image": "./assets/team/arush.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Ashutosh",
+      "position": "Content",
+      "image": "./assets/team/ashutosh.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Deepthi Jain",
+      "position": "Event & Ops",
+      "image": "./assets/team/deepthijain.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Gagan HS",
+      "position": "Operations",
+      "image": "./assets/team/gaganhs.jpeg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Jayakeerthi",
+      "position": "Content",
+      "image": "./assets/team/jayakeerthi.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Krish Jain",
+      "position": "Tech",
+      "image": "./assets/team/krishjain.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Manal",
+      "position": "Marketing",
+      "image": "./assets/team/manal.png",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Raashi",
+      "position": "Design",
+      "image": "./assets/team/raashi.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Rishav",
+      "position": "Event & Ops",
+      "image": "./assets/team/rishav.jpg",
+      "instagram": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Sathya Shivani",
+      "position": "Corporate Relations",
+      "image": "./assets/team/sathyashivani.jpeg",
+      "instagram": "",
+      "linkedin": ""
+    }
+  ]
+}

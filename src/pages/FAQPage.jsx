@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ChevronDown, ArrowLeft, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { InteractiveHoverButton } from "../components/ui/interactive-hover-button";
-import { Navbar } from "../data/Navbar.jsx";
+import { Navbar } from "../components/Navbar.jsx";
 const faqData = [
   {
     category: "General",

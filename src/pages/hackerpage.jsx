@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
-
+import Navbar from '../components/Navbar.jsx';
+import Footnote from '../components/Footnote.jsx';
 // Complete Hacker Data with Unique IDs
 const hackersData = [
     { id: "s1-1", name: "CodeVortex", lead: "Amogh M G", quote: "Pushing past limits to build what others say is impossible.", category: "S1", status: "Shortlisted", domain: "Software" },
@@ -250,6 +251,7 @@ const HackersPage = () => {
     return (
         <div className="min-h-screen bg-black text-white pt-24 pb-12 relative overflow-hidden">
             {/* Background Elements */}
+            <Navbar />
             <div className="fixed inset-0 pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-900/10 via-black to-black"></div>
             </div>
@@ -341,6 +343,7 @@ const HackersPage = () => {
                     </div>
                 )}
             </div>
+            <Footnote />
         </div>
     );
 };

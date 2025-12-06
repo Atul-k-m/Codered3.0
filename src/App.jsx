@@ -13,6 +13,7 @@ import PrizePoolPage from "./pages/PrizePoolPage";
 import NotFound from './components/NotFound';
 import TeamPage from "./pages/Team";
 import HackersPage from "./pages/hackerpage";
+import SponsorsPage from "./pages/Sponsors.jsx";
 function HomePage() {
   return (
     <div className="min-h-screen text-white font-mono bg-black">
@@ -68,6 +69,7 @@ export default function App() {
         <Route path="/prize-pool" element={<PrizePoolPage />} />
      <Route path="/team" element={<TeamPage />} />
      <Route path="/hackers" element={<HackersPage />} />
+        <Route path="/sponsors" element={<SponsorsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
