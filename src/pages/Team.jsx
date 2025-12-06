@@ -45,14 +45,14 @@ import talhaImg from './assets/team/talha.webp';
 const teamData = {
   leadership: [
     { 
-      name: "Maxson Matthew", 
+      name: "Maxson Mathew", 
       position: "President", 
       image: maxsonImg,
-      linkedin: null,
-      instagram: null
+      linkedin: "https://www.linkedin.com/in/maxson-mathew-9022082b1",
+      instagram: "https://www.instagram.com/maxson_mathew"
     },
     { 
-      name: "Mohit Monnappa", 
+      name: "Mohit Monnappa T N", 
       position: "Mentor", 
       image: mohitImg,
       linkedin: "http://linkedin.com/in/mohit-monnappa",
@@ -63,10 +63,10 @@ const teamData = {
       position: "Vice President", 
       image: nishithaImg,
       linkedin: "https://www.linkedin.com/in/nishithabodipati",
-      instagram: "https://www.instagram.com/nishithabodipati?igsh=dGU0NTkwZjYwOHI4"
+      instagram: "https://www.instagram.com/nishithabodipati"
     },
     { 
-      name: "Vaibhav P", 
+      name: "Vaibhav Balakundi", 
       position: "Vice President", 
       image: vaibhavImg,
       linkedin: "https://www.linkedin.com/in/vaibhavbalakundi",
@@ -83,7 +83,7 @@ const teamData = {
       instagram: null
     },
     { 
-      name: "Milan S", 
+      name: "Milan", 
       position: "Tech Vice Head", 
       image: milanImg,
       linkedin: "https://www.linkedin.com/in/milan4606",
@@ -93,15 +93,15 @@ const teamData = {
       name: "Ansu Kumar", 
       position: "Tech Associate", 
       image: ansuImg,
-      linkedin: "https://www.linkedin.com/in/ansu-kumar-24359230a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-      instagram: "https://www.instagram.com/ansu_kumar07?igsh=MTR4eHM0ZDhwZ3o4Yw=="
+      linkedin: "https://www.linkedin.com/in/ansu-kumar-24359230a",
+      instagram: "https://www.instagram.com/ansu_kumar07"
     },
     { 
       name: "Krish Jain", 
       position: "Tech Associate", 
       image: krishImg,
       linkedin: "https://www.linkedin.com/in/krish-jain-28028928b",
-      instagram: "https://www.instagram.com/krish_jain876?igsh=ZDQ3ZXNxdWYza3Rs"
+      instagram: "https://www.instagram.com/krish_jain876"
     }
   ],
 
@@ -114,21 +114,21 @@ const teamData = {
       instagram: null
     },
     { 
-      name: "Akhilesh P", 
+      name: "Akhilesh Pachnanda", 
       position: "Design Vice Head", 
       image: akhileshImg,
       linkedin: "https://linkedin.com/akhilesh-pachnanda",
       instagram: "https://www.instagram.com/akhilesh.pachnanda"
     },
     { 
-      name: "Jasvanti", 
+      name: "Jasvanti M", 
       position: "Design Associate", 
       image: jasvantiImg,
-      linkedin: "https://www.linkedin.com/in/jasvantim?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      instagram: "https://www.instagram.com/jasvanti_17?igsh=MTR3cHV0NzQ2emhwNA%3D%3D&utm_source=qr"
+      linkedin: "https://www.linkedin.com/in/jasvantim",
+      instagram: "https://www.instagram.com/jasvanti_17"
     },
     { 
-      name: "Raashi", 
+      name: "Raashi A", 
       position: "Design Associate", 
       image: raashiImg,
       linkedin: "https://www.linkedin.com/in/raashi-a-85703133a",
@@ -145,32 +145,32 @@ const teamData = {
       instagram: "https://www.instagram.com/hiteshgowdaaa"
     },
     { 
-      name: "Bhanu Prasad", 
+      name: "Bhanu Prasad N", 
       position: "Media Vice Head", 
       image: bhanuImg,
       linkedin: "https://www.linkedin.com/in/bhanu-prasad-n-10706424b",
       instagram: "https://www.instagram.com/bhanu_prasad_30"
     },
     { 
-      name: "Ananya", 
+      name: "Gagan H S", 
+      position: "Operations Associate", 
+      image: gaganhsImg,
+      linkedin: "https://www.linkedin.com/in/gagan-h-s-b12199347",
+      instagram: "https://www.instagram.com/_notgagann"
+    },
+    { 
+      name: "Manal Gupta", 
+      position: "Marketing Associate", 
+      image: manalImg,
+      linkedin: "https://www.linkedin.com/in/manal-gupta-90429532a",
+      instagram: "https://www.instagram.com/manal_gupta_"
+    },
+    { 
+      name: "Ananya Akkihal", 
       position: "Media Associate", 
       image: ananyaImg,
       linkedin: "https://www.linkedin.com/in/ananya-akkihal-212406302",
       instagram: "https://www.instagram.com/ananyaakkihal"
-    },
-    { 
-      name: "Bhavana", 
-      position: "Marketing Associate", 
-      image: bhavanaImg,
-      linkedin: null,
-      instagram: null
-    },
-    { 
-      name: "Krishna", 
-      position: "Marketing Associate", 
-      image: krishnaImg,
-      linkedin: null,
-      instagram: null
     },
     { 
       name: "Faizan Khan", 
@@ -180,19 +180,34 @@ const teamData = {
       instagram: "https://www.instagram.com/faizankhan__17"
     },
     { 
-      name: "Anvita", 
+      name: "Anvita Singh", 
       position: "Marketing Associate", 
       image: anvitaImg,
       linkedin: "https://www.linkedin.com/in/anvita-singh-82377135a",
       instagram: "https://www.instagram.com/anvitasinghh"
     },
     { 
-      name: "Manal", 
-      position: "Marketing Associate", 
-      image: manalImg,
-      linkedin: "https://www.linkedin.com/in/manal-gupta-90429532a",
-      instagram: "https://www.instagram.com/manal_gupta_"
+  name: "Bhavana", 
+  position: "Marketing Associate", 
+  image: bhavanaImg,
+  linkedin: null,
+  instagram: null
+},
+{ 
+  name: "Krishna Kulkarni", 
+  position: "Marketing Associate", 
+  image: krishnaImg,
+  linkedin: "https://www.linkedin.com/in/krishna-kulkarni-a75099339",
+  instagram: "https://www.instagram.com/krishna.01_28"
+},
+{
+      name: "Ujwal U Jawalgi",
+      position: "Event/Ops Associate",
+      image: ujwalImg,
+      linkedin: "https://www.linkedin.com/in/ujwal-u-jawalgi-132944320",
+      instagram: "https://www.instagram.com/the._ujwal"
     }
+    
   ],
 
   events: [
@@ -204,60 +219,47 @@ const teamData = {
       instagram: null
     },
     { 
-      name: "Dhyeya", 
+      name: "Dhyeya Talupula", 
       position: "Ops Associate", 
       image: dhyeyaImg,
       linkedin: "https://www.linkedin.com/in/dhyeya-talupula-7473b1290",
       instagram: "https://www.instagram.com/dhyeya_06"
     },
     { 
-      name: "Deepthi Jain", 
+      name: "P Deepthi Jain", 
       position: "Event/Ops Associate", 
       image: deepthiImg,
       linkedin: "https://www.linkedin.com/in/p-deepthi-jain-931621357",
       instagram: "https://www.instagram.com/deepthiijain"
     },
+    
     { 
-      name: "Gagan HS", 
-      position: "Operations Associate", 
-      image: gaganhsImg,
-      linkedin: "https://www.linkedin.com/in/gagan-h-s-b12199347",
-      instagram: "https://www.instagram.com/_notgagann"
-    },
-    { 
-      name: "Rishav", 
-      position: "Event/Ops Associate", 
-      image: rishavImg,
-      linkedin: null,
-      instagram: null
-    },
-    { 
-      name: "Md Talha", 
+      name: "Mohammed Talha", 
       position: "Event/Ops Associate", 
       image: talhaImg,
-      linkedin: null,
-      instagram: null
-    },
+      linkedin: "https://www.linkedin.com/in/mohammed-talha-9a3428285",
+      instagram: "https://www.instagram.com/_talha__15"
+    },{ 
+  name: "Rishav", 
+  position: "Event/Ops Associate", 
+  image: rishavImg,
+  linkedin: null,
+  instagram: null
+}
 
-    {
-      name: "Ujwal",
-      position: "Event/Ops Associate",
-      image: ujwalImg,
-      linkedin: "https://www.linkedin.com/in/ujwal-u-jawalgi-132944320",
-      instagram: "https://www.instagram.com/the._ujwal?igsh=ZGxrcm11aTE2YmRt"
-    }
+    
   ],
 
   corporate: [
     { 
-      name: "Fardeen K", 
+      name: "Fardeen Khan K", 
       position: "Corporate Relations Head", 
       image: fardeenImg,
-      linkedin: "https://www.linkedin.com/in/kfk1509/",
+      linkedin: "https://www.linkedin.com/in/kfk1509",
       instagram: null
     },
     { 
-      name: "Arush", 
+      name: "Arush Singh", 
       position: "Corporate Relations Associate", 
       image: arushImg,
       linkedin: "https://www.linkedin.com/in/arush-singh-257782341",
@@ -267,28 +269,28 @@ const teamData = {
       name: "Sathya Shivani", 
       position: "Corporate Relations Associate", 
       image: sathyaImg,
-      linkedin: null,
-      instagram: null
+      linkedin: "https://www.linkedin.com/in/sathyashivani",
+      instagram: "https://www.instagram.com/__oyeee_sathyaaa_"
     }
   ],
 
   content: [
     { 
-      name: "Shriya", 
+      name: "Shriya Chowdary", 
       position: "Content Head", 
       image: shriyaImg,
       linkedin: null,
       instagram: null
     },
     { 
-      name: "Ashutosh", 
+      name: "Ashutosh Bhatt", 
       position: "Content Associate", 
       image: ashutoshImg,
       linkedin: "https://www.linkedin.com/in/bhattvashutosh",
       instagram: "https://www.instagram.com/_.ashutosh._26"
     },
     { 
-      name: "Jayakeerthi", 
+      name: "Jayakeerthy N J", 
       position: "Content Associate", 
       image: jayakeerthiImg,
       linkedin: "https://www.linkedin.com/in/jayakeerthy-n-j-37a533334",
@@ -303,6 +305,7 @@ const teamData = {
     }
   ]
 };
+
 
 
 // --- 3. COMPONENTS ---
@@ -541,7 +544,7 @@ const TeamPage = () => {
 
       <h1 className="main-heading" >Meet The Team</h1>
 
-      <SectionDivider title="Leadership" />
+      <SectionDivider title="Co ordinators" />
       <div className="grid-layout">
         {teamData.leadership.map((m, i) => <TeamCard key={i} member={m} />)}
       </div>
