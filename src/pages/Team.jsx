@@ -2,45 +2,45 @@ import React from 'react';
 import Navbar from '../components/Navbar.jsx';
 import Footnote from '../components/Footnote.jsx';
 import maxsonImg from './assets/team/maxson.JPG';
-import mohitImg from './assets/team/mohit.jpeg';
-import nishithaImg from './assets/team/nishitha.jpg';
-import vaibhavImg from './assets/team/vaibhav.jpg';
+import mohitImg from './assets/team/mohit.webp';
+import nishithaImg from './assets/team/nishitha.webp';
+import vaibhavImg from './assets/team/vaibhav.webp';
 
 // Heads
-import atulImg from './assets/team/atul.jpg';
-import fardeenImg from './assets/team/fardeen.jpeg';
-import gaganjithImg from './assets/team/gaganjith.jpg';
-import hiteshImg from './assets/team/hitesh.jpeg';
-import shriyaImg from './assets/team/shriya.jpg';
-import tirthImg from './assets/team/tirth.jpg';
+import atulImg from './assets/team/atul.webp';
+import fardeenImg from './assets/team/fardeen.webp';
+import gaganjithImg from './assets/team/gaganjith.webp';
+import hiteshImg from './assets/team/hitesh.webp';
+import shriyaImg from './assets/team/shriya.webp';
+import tirthImg from './assets/team/tirth.webp';
 
 // Vice Heads
-import akhileshImg from './assets/team/akhilesh.jpeg';
+import akhileshImg from './assets/team/akhilesh.webp';
 import bhanuImg from './assets/team/bhanu.JPG';
-import milanImg from './assets/team/milan.jpeg';
+import milanImg from './assets/team/milan.webp';
 
 // Associates
-import ananyaImg from './assets/team/ananya.jpg';
-import bhavanaImg from './assets/team/bhavana.jpg';
-import dhyeyaImg from './assets/team/Dhyeya.jpg';
-import jasvantiImg from './assets/team/jasvanti.jpeg';
-import krishnaImg from './assets/team/krishna.jpg';
-import faizanImg from './assets/team/Faizan.jpg';
-import ansuImg from './assets/team/ansu.jpg';
-import anvitaImg from './assets/team/anvita.jpeg';
-import arushImg from './assets/team/arush.jpeg';
-import ashutoshImg from './assets/team/ashutosh.jpg';
-import deepthiImg from './assets/team/deepthijain.jpg';
-import gaganhsImg from './assets/team/gagan.jpeg';
-import jayakeerthiImg from './assets/team/jayakeerthi.png';
-import krishImg from './assets/team/krishjain.jpg';
-import manalImg from './assets/team/manal.jpg';
-import raashiImg from './assets/team/raashi.jpg';
-import rishavImg from './assets/team/rishav.jpg';
-import sathyaImg from './assets/team/sathyashivani.jpeg';
-import parikshithImg from './assets/team/parikshith.jpg';
-import ujwalImg from './assets/team/ujwal.jpg';
-import talhaImg from './assets/team/talha.jpeg';
+import ananyaImg from './assets/team/ananya.webp';
+import bhavanaImg from './assets/team/bhavana.webp';
+import dhyeyaImg from './assets/team/Dhyeya.webp';
+import jasvantiImg from './assets/team/jasvanti.webp';
+import krishnaImg from './assets/team/krishna.webp';
+import faizanImg from './assets/team/Faizan.webp';
+import ansuImg from './assets/team/ansu.webp';
+import anvitaImg from './assets/team/anvita.webp';
+import arushImg from './assets/team/arush.webp';
+import ashutoshImg from './assets/team/ashutosh.webp';
+import deepthiImg from './assets/team/deepthijain.webp';
+import gaganhsImg from './assets/team/gagan.webp';
+import jayakeerthiImg from './assets/team/jayakeerthi.webp';
+import krishImg from './assets/team/krishjain.webp';
+import manalImg from './assets/team/manal.webp';
+import raashiImg from './assets/team/raashi.webp';
+import rishavImg from './assets/team/rishav.webp';
+import sathyaImg from './assets/team/sathyashivani.webp';
+import parikshithImg from './assets/team/parikshith.webp';
+import ujwalImg from './assets/team/ujwal.webp';
+import talhaImg from './assets/team/talha.webp';
 // --- 2. CATEGORIZED DATA (Updated & Split) ---
 const teamData = {
   leadership: [
