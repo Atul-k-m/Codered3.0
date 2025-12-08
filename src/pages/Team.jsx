@@ -44,30 +44,30 @@ import talhaImg from './assets/team/talha.webp';
 // --- 2. CATEGORIZED DATA (Updated & Split) ---
 const teamData = {
   leadership: [
-    { 
-      name: "Maxson Mathew", 
-      position: "President", 
+    {
+      name: "Maxson Mathew",
+      position: "President",
       image: maxsonImg,
       linkedin: "https://www.linkedin.com/in/maxson-mathew-9022082b1",
       instagram: "https://www.instagram.com/maxson_mathew"
     },
-    { 
-      name: "Mohit Monnappa T N", 
-      position: "Mentor", 
+    {
+      name: "Mohit Monnappa T N",
+      position: "Mentor",
       image: mohitImg,
       linkedin: "http://linkedin.com/in/mohit-monnappa",
       instagram: "Deactivated"
     },
-    { 
-      name: "Nishitha Bodipati", 
-      position: "Vice President", 
+    {
+      name: "Nishitha Bodipati",
+      position: "Vice President",
       image: nishithaImg,
       linkedin: "https://www.linkedin.com/in/nishithabodipati",
       instagram: "https://www.instagram.com/nishithabodipati"
     },
-    { 
-      name: "Vaibhav Balakundi", 
-      position: "Vice President", 
+    {
+      name: "Vaibhav Balakundi",
+      position: "Vice President",
       image: vaibhavImg,
       linkedin: "https://www.linkedin.com/in/vaibhavbalakundi",
       instagram: "https://www.instagram.com/bvaibhav_1199"
@@ -75,30 +75,30 @@ const teamData = {
   ],
 
   tech: [
-    { 
-      name: "Atul Kumar", 
-      position: "Tech Head", 
+    {
+      name: "Atul Kumar",
+      position: "Tech Head",
       image: atulImg,
       linkedin: null,
       instagram: null
     },
-    { 
-      name: "Milan", 
-      position: "Tech Vice Head", 
+    {
+      name: "Milan",
+      position: "Tech Vice Head",
       image: milanImg,
       linkedin: "https://www.linkedin.com/in/milan4606",
       instagram: "https://www.instagram.com/milxn_18"
     },
-    { 
-      name: "Ansu Kumar", 
-      position: "Tech Associate", 
+    {
+      name: "Ansu Kumar",
+      position: "Tech Associate",
       image: ansuImg,
       linkedin: "https://www.linkedin.com/in/ansu-kumar-24359230a",
       instagram: "https://www.instagram.com/ansu_kumar07"
     },
-    { 
-      name: "Krish Jain", 
-      position: "Tech Associate", 
+    {
+      name: "Krish Jain",
+      position: "Tech Associate",
       image: krishImg,
       linkedin: "https://www.linkedin.com/in/krish-jain-28028928b",
       instagram: "https://www.instagram.com/krish_jain876"
@@ -106,30 +106,30 @@ const teamData = {
   ],
 
   design: [
-    { 
-      name: "Tirth Panchori", 
-      position: "Design Head", 
+    {
+      name: "Tirth Panchori",
+      position: "Design Head",
       image: tirthImg,
       linkedin: null,
       instagram: null
     },
-    { 
-      name: "Akhilesh Pachnanda", 
-      position: "Design Vice Head", 
+    {
+      name: "Akhilesh Pachnanda",
+      position: "Design Vice Head",
       image: akhileshImg,
       linkedin: "https://linkedin.com/akhilesh-pachnanda",
       instagram: "https://www.instagram.com/akhilesh.pachnanda"
     },
-    { 
-      name: "Jasvanti M", 
-      position: "Design Associate", 
+    {
+      name: "Jasvanti M",
+      position: "Design Associate",
       image: jasvantiImg,
       linkedin: "https://www.linkedin.com/in/jasvantim",
       instagram: "https://www.instagram.com/jasvanti_17"
     },
-    { 
-      name: "Raashi A", 
-      position: "Design Associate", 
+    {
+      name: "Raashi A",
+      position: "Design Associate",
       image: raashiImg,
       linkedin: "https://www.linkedin.com/in/raashi-a-85703133a",
       instagram: "@rraa.shii"
@@ -137,137 +137,138 @@ const teamData = {
   ],
 
   media: [
-    { 
-      name: "Hitesh R", 
-      position: "Media Head", 
+    {
+      name: "Hitesh R",
+      position: "Media Head",
       image: hiteshImg,
       linkedin: "https://www.linkedin.com/in/hiteshgowdaaa",
       instagram: "https://www.instagram.com/hiteshgowdaaa"
     },
-    { 
-      name: "Bhanu Prasad N", 
-      position: "Media Vice Head", 
+    {
+      name: "Bhanu Prasad N",
+      position: "Media Vice Head",
       image: bhanuImg,
       linkedin: "https://www.linkedin.com/in/bhanu-prasad-n-10706424b",
       instagram: "https://www.instagram.com/bhanu_prasad_30"
     },
-    { 
-      name: "Gagan H S", 
-      position: "Operations Associate", 
+    {
+      name: "Gagan H S",
+      position: "Marketing Associate",
       image: gaganhsImg,
       linkedin: "https://www.linkedin.com/in/gagan-h-s-b12199347",
       instagram: "https://www.instagram.com/_notgagann"
     },
-    { 
-      name: "Manal Gupta", 
-      position: "Marketing Associate", 
+    {
+      name: "Manal Gupta",
+      position: "Marketing Associate",
       image: manalImg,
       linkedin: "https://www.linkedin.com/in/manal-gupta-90429532a",
       instagram: "https://www.instagram.com/manal_gupta_"
     },
-    { 
-      name: "Ananya Akkihal", 
-      position: "Media Associate", 
+    {
+      name: "Ujwal U",
+      position: "Marketing Associate",
+      image: ujwalImg,
+      linkedin: "https://www.linkedin.com/in/ujwal-u-jawalgi-132944320",
+      instagram: "https://www.instagram.com/the._ujwal"
+    },
+    {
+      name: "Ananya Akkihal",
+      position: "Media Associate",
       image: ananyaImg,
       linkedin: "https://www.linkedin.com/in/ananya-akkihal-212406302",
       instagram: "https://www.instagram.com/ananyaakkihal"
     },
-    { 
-      name: "Faizan Khan", 
-      position: "Marketing Associate", 
+    {
+      name: "Faizan Khan",
+      position: "Marketing Associate",
       image: faizanImg,
       linkedin: "https://www.linkedin.com/in/faizan-khan-a88720286",
       instagram: "https://www.instagram.com/faizankhan__17"
     },
-    { 
-      name: "Anvita Singh", 
-      position: "Marketing Associate", 
+    {
+      name: "Anvita Singh",
+      position: "Marketing Associate",
       image: anvitaImg,
       linkedin: "https://www.linkedin.com/in/anvita-singh-82377135a",
       instagram: "https://www.instagram.com/anvitasinghh"
     },
-    { 
-  name: "Bhavana", 
-  position: "Marketing Associate", 
-  image: bhavanaImg,
-  linkedin: null,
-  instagram: null
-},
-{ 
-  name: "Krishna Kulkarni", 
-  position: "Marketing Associate", 
-  image: krishnaImg,
-  linkedin: "https://www.linkedin.com/in/krishna-kulkarni-a75099339",
-  instagram: "https://www.instagram.com/krishna.01_28"
-},
-{
-      name: "Ujwal U Jawalgi",
-      position: "Event/Ops Associate",
-      image: ujwalImg,
-      linkedin: "https://www.linkedin.com/in/ujwal-u-jawalgi-132944320",
-      instagram: "https://www.instagram.com/the._ujwal"
-    }
-    
+    {
+      name: "Bhavana",
+      position: "Marketing Associate",
+      image: bhavanaImg,
+      linkedin: null,
+      instagram: null
+    },
+    {
+      name: "Krishna Kulkarni",
+      position: "Marketing Associate",
+      image: krishnaImg,
+      linkedin: "https://www.linkedin.com/in/krishna-kulkarni-a75099339",
+      instagram: "https://www.instagram.com/krishna.01_28"
+    },
+
+
   ],
 
   events: [
-    { 
-      name: "Gaganjith R", 
-      position: "Events Head", 
+    {
+      name: "Gaganjith R",
+      position: "Events Head",
       image: gaganjithImg,
       linkedin: null,
       instagram: null
     },
-    { 
-      name: "Dhyeya Talupula", 
-      position: "Ops Associate", 
+    {
+      name: "Dhyeya Talupula",
+      position: "Ops Associate",
       image: dhyeyaImg,
       linkedin: "https://www.linkedin.com/in/dhyeya-talupula-7473b1290",
       instagram: "https://www.instagram.com/dhyeya_06"
     },
-    { 
-      name: "P Deepthi Jain", 
-      position: "Event/Ops Associate", 
+    {
+      name: "P Deepthi Jain",
+      position: "Event/Ops Associate",
       image: deepthiImg,
       linkedin: "https://www.linkedin.com/in/p-deepthi-jain-931621357",
       instagram: "https://www.instagram.com/deepthiijain"
     },
-    
-    { 
-      name: "Mohammed Talha", 
-      position: "Event/Ops Associate", 
+
+    {
+      name: "Mohammed Talha",
+      position: "Event/Ops Associate",
       image: talhaImg,
       linkedin: "https://www.linkedin.com/in/mohammed-talha-9a3428285",
       instagram: "https://www.instagram.com/_talha__15"
-    },{ 
-  name: "Rishav", 
-  position: "Event/Ops Associate", 
-  image: rishavImg,
-  linkedin: null,
-  instagram: null
-}
+    }, {
+      name: "Rishav",
+      position: "Event/Ops Associate",
+      image: rishavImg,
+      linkedin: null,
+      instagram: null
+    }
 
-    
+
   ],
 
   corporate: [
-    { 
-      name: "Fardeen Khan K", 
-      position: "Corporate Relations Head", 
+    {
+      name: "Fardeen Khan K",
+      position: "Corporate Relations Head",
       image: fardeenImg,
       linkedin: "https://www.linkedin.com/in/kfk1509",
       instagram: null
     },
-    { 
-      name: "Arush Singh", 
-      position: "Corporate Relations Associate", 
+    {
+      name: "Arush Singh",
+      position: "Corporate Relations Associate",
       image: arushImg,
       linkedin: "https://www.linkedin.com/in/arush-singh-257782341",
       instagram: "https://www.instagram.com/_not.arush_"
     },
-    { 
-      name: "Sathya Shivani", 
-      position: "Corporate Relations Associate", 
+    {
+      name: "Sathya Shivani",
+      position: "Corporate Relations Associate",
       image: sathyaImg,
       linkedin: "https://www.linkedin.com/in/sathyashivani",
       instagram: "https://www.instagram.com/__oyeee_sathyaaa_"
@@ -275,28 +276,28 @@ const teamData = {
   ],
 
   content: [
-    { 
-      name: "Shriya Chowdary", 
-      position: "Content Head", 
+    {
+      name: "Shriya Chowdary",
+      position: "Content Head",
       image: shriyaImg,
       linkedin: null,
       instagram: null
     },
-    { 
-      name: "Ashutosh Bhatt", 
-      position: "Content Associate", 
+    {
+      name: "Ashutosh Bhatt",
+      position: "Content Associate",
       image: ashutoshImg,
       linkedin: "https://www.linkedin.com/in/bhattvashutosh",
       instagram: "https://www.instagram.com/_.ashutosh._26"
     },
-    { 
-      name: "Jayakeerthy N J", 
-      position: "Content Associate", 
+    {
+      name: "Jayakeerthy N J",
+      position: "Content Associate",
       image: jayakeerthiImg,
       linkedin: "https://www.linkedin.com/in/jayakeerthy-n-j-37a533334",
       instagram: "https://www.instagram.com/jayakeerthyy"
     },
-    { 
+    {
       name: "Parikshith S",
       position: "Content Associate",
       image: parikshithImg,
@@ -322,9 +323,9 @@ const SectionDivider = ({ title }) => (
   <div className="section-divider">
     <div className="line"></div>
     <div className="divider-content">
-       <span className="diamond">❖</span>
-       <span className="divider-text">{title}</span>
-       <span className="diamond">❖</span>
+      <span className="diamond">❖</span>
+      <span className="divider-text">{title}</span>
+      <span className="diamond">❖</span>
     </div>
     <div className="line"></div>
   </div>
@@ -335,17 +336,17 @@ const TeamCard = ({ member }) => {
 
     <div className="shard-card">
       <div className="shard-image-wrapper">
-        <img 
-          src={member.image} 
-          alt={member.name} 
+        <img
+          src={member.image}
+          alt={member.name}
           className="shard-img"
-          onError={(e) => {e.target.src = `https://ui-avatars.com/api/?name=${member.name}&background=111&color=fff&size=256`}}
+          onError={(e) => { e.target.src = `https://ui-avatars.com/api/?name=${member.name}&background=111&color=fff&size=256` }}
         />
       </div>
       <div className="shard-content">
         <h3 className="shard-name">{member.name}</h3>
         <p className="shard-role">{member.position}</p>
-        
+
         <div className="shard-socials">
           {member.instagram && <a href={member.instagram} className="social-link"><InstagramIcon /></a>}
           {member.linkedin && <a href={member.linkedin} className="social-link"><LinkedinIcon /></a>}
